@@ -1,33 +1,47 @@
 <header class="page-header">
-  <div class="page-header__wrapper">
-    <a class="logo page-header__logo" href="index.html"></a>
-    <section class="header-contacts">
-      <ul class="header-contacts__list">
-        <li class="header-contacts__item">
-          <a class="header-contacts__mail" href="mailto:mail@tehstroiproekt.ru">mail@tehstroiproekt.ru</a>
-        </li>
-        <li class="header-contacts__item">
-          <a class="header-contacts__messenger header-contacts__messenger--telegram" href="#">Контакт телеги</a>
-        </li>
-        <li class="header-contacts__item">
-          <a class="header-contacts__messenger header-contacts__messenger--whatsup" href="#">Контакт вотсапа</a>
-        </li>
-        <li class="header-contacts__item">
-          <a class="header-contacts__phone" href="tel:+74992131580">8 (499) 213-15-80</a>
-        </li>
-      </ul>
-      <a class="header-contacts__back-call"href="#">Обратный звонок</a>
-    </section>
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <div class="main-nav__logo">
-        </div>
-        <div class="main-nav__contacts">
-        </div>
-        {% for link in menu %}
-          <a{% if link.href == page %} class="{{active_menu_link}}"{% endif %} href="{{ link.href }}.html">{{ link.title }}</a>
-        {% endfor %}
-      </div>
-    </nav>
+  <div class="page-header__top">
+    <div class="container">
+      <a class="logo page-header__logo" href="index.html"></a>
+      <section class="header-contacts">
+        <ul class="header-contacts__list">
+          <li class="header-contacts__item">
+            <a class="header-contacts__mail" href="mailto:mail@tehstroiproekt.ru">mail@tehstroiproekt.ru</a>
+          </li>
+          <li class="header-contacts__item">
+            <a class="header-contacts__messenger header-contacts__messenger--telegram" href="#">Контакт телеги</a>
+          </li>
+          <li class="header-contacts__item">
+            <a class="header-contacts__messenger header-contacts__messenger--whatsup" href="#">Контакт вотсапа</a>
+          </li>
+          <li class="header-contacts__item">
+            <a class="header-contacts__phone" href="tel:+74992131580">8 (499) 213-15-80</a>
+          </li>
+        </ul>
+        <a class="header-contacts__back-call"href="#">Обратный звонок</a>
+      </section>
+    </div>
+  </div>
+  <div class="page-header__bottom">
+    <div class="page-header__nav-container container">
+      <nav class="site-nav nav">
+        <ul class="site-nav__list nav__list">
+          {% for link in menu %}
+            <li class="site-nav__item nav__item">
+              <a {% if link.href == page %} class="nav__link nav__link--active"{% endif %} class="nav__link" href="{{ link.href }}.html">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <nav class="user-nav nav">
+        <ul class="user-nav__list nav__list">
+          <li class="user-nav__item nav__item">
+            <a href="#" class="user-nav__link nav__link">Сравнение</a>
+          </li>
+          <li class="user-nav__item nav__item">
+            <a href="#" class="user-nav__link nav__link">Поиск</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
