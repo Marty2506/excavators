@@ -4,8 +4,28 @@
   "active_menu_link": "link--active",
   "menu": [
     {
-      "title": "Главная",
-      "href": "index"
+      "title": "Каталог техники",
+      "href": "catalog"
+    },
+    {
+      "title": "Оборудование",
+      "href": "#"
+    },
+    {
+      "title": "Лизинг",
+      "href": "#"
+    },
+    {
+      "title": "Спецпредложения",
+      "href": "#"
+    },
+    {
+      "title": "Запчасти",
+      "href": "#"
+    },
+    {
+      "title": "О нас",
+      "href": "about"
     },
     {
       "title": "Контакты",

@@ -27,7 +27,7 @@
         <ul class="site-nav__list nav__list">
           {% for link in menu %}
             <li class="site-nav__item nav__item">
-              <a {% if link.href == page %} class="nav__link nav__link--active"{% endif %} class="nav__link" href="{{ link.href }}.html">{{ link.title }}</a>
+              <a class="site-nav__link {% if link.href == page %} site-nav__link--active {% endif %} {% if link.href == "catalog" %} site-nav__link--catalog {% endif %} nav__link" href="{{ link.href }}.html">{{ link.title }}</a>
             </li>
           {% endfor %}
         </ul>
