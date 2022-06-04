@@ -11,6 +11,7 @@
   position: relative;
   &::before {
     position: absolute;
+    z-index: 1;
     content: "";
     top: 25px;
     bottom: 25px;
@@ -19,6 +20,7 @@
   }
 }
 .nav__link {
+  position: relative;
   display: block;
   max-width: 210px;
   padding: 20px 20px;
@@ -27,6 +29,11 @@
   font-weight: 600;
   color: #000000;
   text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+.nav__link-icon {
+  position: absolute;
+  left: 20px;
   transition: color 0.3s, background-color 0.3s;
 }
 
@@ -78,6 +85,9 @@
   flex-shrink: 0;
   margin-left: auto;
 }
+.user-nav__item + .user-nav__item::before {
+  background-color: $blue-color;
+}
 .user-nav__list {
 
 }
@@ -87,6 +97,21 @@
 
   &:hover {
     color: $yellow-color;
-   background-color: $blue-color;
+    background-color: $blue-color;
   }
 }
+
+.user-nav__link--comparison,
+.user-nav__link--search {
+  padding-left: 57px;
+}
+
+.user-nav__link .nav__link-icon {
+  fill: $blue-color;
+  stroke: $blue-color;
+}
+.user-nav__link:hover .nav__link-icon {
+  fill: $yellow-color;
+  stroke: $yellow-color;
+}
+
