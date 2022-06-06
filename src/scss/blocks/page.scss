@@ -5,8 +5,9 @@
 .page__body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   min-width: $min-mobile-width;
+  min-height: 100%;
   margin: 0 auto;
+
   font-family: "Proxima Nova", "Arial", sans-serif;
 }

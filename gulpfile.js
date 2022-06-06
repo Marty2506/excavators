@@ -117,13 +117,13 @@ export const scssSort = () => {
 const styles = () => {
   return gulp.src(path.src.scss, { sourcemaps: true })
     .pipe(plumber())
-    .pipe(replace(/@img\//g, '../img/'))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(csso())
     .pipe(rename({
       extname: ".min.css"
     }))
+    .pipe(replace(/@img\//g, '../img/'))
     .pipe(gulp.dest(path.build.css))
     .pipe(browserSync.stream());
 }
