@@ -1,6 +1,7 @@
 .article {
   padding-top: 30px;
   padding-bottom: 30px;
+
   font-size: 17px;
   line-height: calc(21 / 17) * 100%;
   color: $dark-color;
@@ -66,12 +67,14 @@
 }
 .article__list-item {
   &::before {
+    content: "";
+
     display: block;
     flex-shrink: 0;
-    content: "";
     width: 38px;
     height: 48px;
     margin-right: 14px;
+
     background-repeat: no-repeat;
     background-position: center;
   }

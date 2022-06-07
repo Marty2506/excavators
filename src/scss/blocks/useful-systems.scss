@@ -1,0 +1,72 @@
+.useful-systems {
+  color: $dark-color;
+}
+.useful-systems__container {
+  width: 1640px;
+  margin: 0 auto;
+  margin: 0 auto;
+  padding-right: 162px;
+}
+.useful-sytems__content {
+  display: flex;
+}
+.useful-sytems__images-container {
+  flex-shrink: 0;
+  width: 827px;
+}
+.useful-systems__image-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.useful-systems__image {
+  max-height: 350px;
+}
+.useful-systems__main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+}
+.useful-systems__header {
+  margin-bottom: 20px;
+}
+.useful-systems__list {
+  flex-grow: 1;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style-type: none;
+}
+.useful-systems__list-item {
+  position: relative;
+
+  padding-left: 40px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(22 / 18) * 100%;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 22px;
+    height: 18px;
+
+    background-image: url("@img/icons/list-check-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
