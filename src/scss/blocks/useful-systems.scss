@@ -59,7 +59,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
 
     width: 22px;
@@ -68,5 +68,6 @@
     background-image: url("@img/icons/list-check-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
+    transform: translateY(-50%);
   }
 }
