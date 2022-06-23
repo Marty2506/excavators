@@ -146,7 +146,7 @@ const scripts = () => {
     //     filename: 'app.min.js'
     //   }
     // }))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(rename({
       suffix: '.min'
     }))
