@@ -1,23 +1,28 @@
 <header class="page-header">
   <div class="page-header__top">
-    <div class="container">
-      <a class="logo page-header__logo" href="index.html"></a>
-      <section class="header-contacts">
-        <ul class="header-contacts__list">
-          <li class="header-contacts__item">
-            <a class="header-contacts__mail" href="mailto:mail@tehstroiproekt.ru">mail@tehstroiproekt.ru</a>
-          </li>
-          <li class="header-contacts__item">
-            <a class="header-contacts__messenger header-contacts__messenger--telegram" href="#">Контакт телеги</a>
-          </li>
-          <li class="header-contacts__item">
-            <a class="header-contacts__messenger header-contacts__messenger--whatsup" href="#">Контакт вотсапа</a>
-          </li>
-          <li class="header-contacts__item">
-            <a class="header-contacts__phone" href="tel:+74992131580">8 (499) 213-15-80</a>
-          </li>
-        </ul>
-        <a class="header-contacts__back-call"href="#">Обратный звонок</a>
+    <div class="page-header__container container">
+      <div class="page-header__logos">
+        <a class="logo page-header__logo page-header__logo--techstroiproject" href="index.html">
+          <img src="@img/logo-techstroiproject.svg" alt="Логотип техстройпроекта" width="317" height="110">
+        </a>
+        <a class="logo page-header__logo page-header__logo--xcmg" href="index.html">
+          <img src="@img/logo-xcmg.svg" alt="Логотип XCMG" width="251" height="62">
+        </a>
+      </div>
+      <section class="page-header__contacts">
+        <a class="page-header__mail" href="mailto:mail@tehstroiproekt.ru">mail@tehstroiproekt.ru</a>
+        <div class="page-header__phones">
+          <div class="page-header__messengers">
+            <a class="page-header__messenger page-header__messenger--telegram" href="#">
+              <span class="visually-hidden">Контакт телеги</span>
+            </a>
+            <a class="page-header__messenger page-header__messenger--whatsup" href="#">
+              <span class="visually-hidden">Контакт вотсапа</span>
+            </a>
+            <a class="page-header__phone" href="tel:+74992131580">8 (499) 213-15-80</a>
+          </div>
+          <a class="page-header__back-call"href="#">Обратный звонок</a>
+        </div>
       </section>
     </div>
   </div>

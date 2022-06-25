@@ -3,5 +3,84 @@
 }
 
 .page-header__bottom {
-  background-color: $blue-color;
+  background-color: $primary-color;
+}
+
+.page-header__logos {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__container {
+  display: flex;
+}
+
+.page-header__logo--techstroiproject {
+  margin-right: 30px;
+}
+
+.page-header__contacts {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+.page-header__mail {
+  display: block;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 117.69%;
+
+  color: #252525;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.page-header__phones {
+  margin-left: 95px;
+}
+.page-header__messengers {
+  display: flex;
+  max-width: 400px;
+}
+.page-header__messenger {
+  display: block;
+  width: 27px;
+  height: 27px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-header__messenger--telegram {
+  background-image: url("@img/icons/telegramm-icon.svg");
+}
+.page-header__messenger--whatsup {
+  background-image: url("@img/icons/watsapp-icon.svg");
+}
+.page-header__phone {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  color: $dark-color;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.page-header__back-call {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  text-decoration: none;
+  color: $primary-color;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.6;
+  }
 }

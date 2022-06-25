@@ -4,7 +4,7 @@
 
   color: #f0f0f3;
 
-  background-color: $blue-color;
+  background-color: $primary-color;
 }
 
 .page-footer__content {
@@ -19,7 +19,7 @@
 
   transition: color 0.3s ease 0s;
   &:hover {
-    color: $yellow-color;
+    color: $secondary-color;
   }
 }
 

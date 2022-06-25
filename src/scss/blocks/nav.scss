@@ -51,9 +51,9 @@
   color: #ffffff;
 
   &:hover {
-    color: $blue-color;
+    color: $primary-color;
 
-    background-color: $yellow-color;
+    background-color: $secondary-color;
   }
 }
 
@@ -78,8 +78,8 @@
 
   &:hover {
     &::before {
-      background-color: $blue-color;
-      box-shadow: 0 8px 0 0 $blue-color, 0 16px 0 0 $blue-color;
+      background-color: $primary-color;
+      box-shadow: 0 8px 0 0 $primary-color, 0 16px 0 0 $primary-color;
     }
   }
 }
@@ -91,18 +91,18 @@
   margin-left: auto;
 }
 .user-nav__item + .user-nav__item::before {
-  background-color: $blue-color;
+  background-color: $primary-color;
 }
 
 .user-nav__link {
-  color: $blue-color;
+  color: $primary-color;
 
-  background-color: $yellow-color;
+  background-color: $secondary-color;
 
   &:hover {
-    color: $yellow-color;
+    color: $secondary-color;
 
-    background-color: $blue-color;
+    background-color: $primary-color;
   }
 }
 
@@ -112,10 +112,10 @@
 }
 
 .user-nav__link .nav__link-icon {
-  fill: $blue-color;
-  stroke: $blue-color;
+  fill: $primary-color;
+  stroke: $primary-color;
 }
 .user-nav__link:hover .nav__link-icon {
-  fill: $yellow-color;
-  stroke: $yellow-color;
+  fill: $secondary-color;
+  stroke: $secondary-color;
 }
