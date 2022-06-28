@@ -1,12 +1,53 @@
 .index-header {
+  position: relative;
+
+  margin-bottom: 60px;
+
+  color: $white-color;
+
+  background-image: url("@img/index-header-shadow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .index-header__container {
+  position: relative;
+
+  min-height: 467px;
 }
 .index-header__content {
+  display: flex;
+  flex-direction: column;
 }
 .index-header__title {
+  width: 830px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.index-header__text-container {
+  width: 460px;
+  padding-bottom: 30px;
 }
 .index-header__text {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
 }
 .index-header__features {
+  position: absolute;
+  right: 0;
+  bottom: -60px;
+}
+.index-header__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
