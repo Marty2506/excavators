@@ -1,9 +1,22 @@
+{% set tabs = [
+  "Экскаваторы",
+  "Самосвалы",
+  "Башенные краны",
+  "Гусеничные краны",
+  "Короткобазные автокраны",
+  "Краны на спецшасси",
+  "Дорожная техника",
+  "Погрузчики",
+  "Буровая техника",
+  "Карьерные самосвалы",
+  "Самоходные подъёмники"
+] %}
 <section class="tech-tabs">
   <h2 class="visually-hidden">Виды техники</h2>
   <div class="tech-tabs__container container">
     <ul class="tech-tabs__list">
-      <li class="tech-tabs__item">
-        <button class="tech-tabs__button" type="button">Экскаваторы</button>
+      <li class="tech-tabs__item tech-tabs__item--active">
+        <button class="tech-tabs__button" type="button">{{ tabs[0] }}</button>
       </li>
       <li class="tech-tabs__item">
         <button class="tech-tabs__button" type="button">Самосвалы</button>
@@ -37,8 +50,8 @@
       </li>
     </ul>
     <div class="tech-tabs__tabs">
-      <div class="tech-tabs__tab">
-        <h3 class="tech-tabs__tab-title">Экскаваторы</h3>
+      <div class="tech-tabs__tab tech-tabs__tab--active">
+        <h3 class="tech-tabs__tab-title">{{ tabs[0] }}</h3>
         <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
         <ul class="tech-tabs__tab-list">
           <li class="tech-tabs__tab-list-item">
@@ -52,7 +65,7 @@
           </li>
         </ul>
         <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
-        <ul class="tech-tabs__tab-list">
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
           <li class="tech-tabs__tab-list-item">
             <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
           </li>
@@ -76,7 +89,7 @@
           </li>
         </ul>
         <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
-        <ul class="tech-tabs__tab-list">
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
           <li class="tech-tabs__tab-list-item">
             <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
           </li>
@@ -92,7 +105,587 @@
         </ul>
         <picture>
           <source type="image/webp" srcset="./img/tab-excavators.webp 1x">
-          <img class="tech-tabs__tab-image" src="./img/tab-excavators.jpg" alt="Изображение экскаватора">
+          <img class="tech-tabs__tab-image tech-tabs__tab-image--excavator" src="./img/tab-excavators.png" alt="Изображение экскаватора">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[1] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-tippers.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-tipperss.png" alt="Изображение самосвала">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[2] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-tower-cranes.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-tower-cranes.png" alt="Изображение башеного крана">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[3] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-crawler-cranes.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-crawler-cranes.png" alt="Изображение гусеничного крана">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[4] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-short-auto-cranes.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-short-auto-cranes.png" alt="Изображение короткобазного автокрана">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[5] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-special-chasse-cranes.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-special-chasse-cranes.png" alt="Изображение крана на спецшасси">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[6] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-road-tech.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-road-tech.png" alt="Изображение дорожной техники">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[7] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-loaders.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-loaders.png" alt="Изображение погрузчика">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[8] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-drilling-tech.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-drilling-tech.png" alt="Изображение буровой техники">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[9] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-dumpers.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-dumpers.png" alt="Изображение карьерного самосвала">
+        </picture>
+      </div>
+      <div class="tech-tabs__tab">
+        <h3 class="tech-tabs__tab-title">{{ tabs[10] }}</h3>
+        <h4 class="tech-tabs__tab-subtitle">Типы техники</h4>
+        <ul class="tech-tabs__tab-list">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Гусеничные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Колесные</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >Экскаваторы-погрузчики</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Популярные модели</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE265C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+        </ul>
+        <h4 class="tech-tabs__tab-subtitle">Спецпредложения</h4>
+        <ul class="tech-tabs__tab-list tech-tabs__tab-list--grid">
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE700C</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+          <li class="tech-tabs__tab-list-item">
+            <a class="tech-tabs__tab-list-link" href="#" >XE60СА</a>
+          </li>
+        </ul>
+        <picture>
+          <source type="image/webp" srcset="./img/tab-elevators.webp 1x">
+          <img class="tech-tabs__tab-image" src="./img/tab-elevators.png" alt="Изображение самоходного подъемника">
         </picture>
       </div>
     </div>
