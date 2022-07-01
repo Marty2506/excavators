@@ -1,0 +1,71 @@
+{% set tabs = [
+  "Экскаваторы",
+  "Краны",
+  "Погрузчики",
+  "Самосвалы",
+  "Буровая техника",
+  "Дорожная техника",
+  "Карьерные самосвалы"
+] %}
+<section class="new-offers">
+  <div class="new-offers__container container">
+    <h2 class="new-offers__title title title--black">Свежие спецпредложения</h2>
+    <div class="tabs">
+      <ul class="tabs__list">
+        <li class="tabs__item">
+          <button class="tabs__button tabs__button--active" type="button">{{ tabs[0] }}</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__button" type="button">{{ tabs[1] }}</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__button" type="button">{{ tabs[2] }}</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__button" type="button">{{ tabs[3] }}</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__button" type="button">{{ tabs[4] }}</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__button" type="button">{{ tabs[5] }}</button>
+        </li>
+      </ul>
+      <div class="tabs__panel tabs__panel--active">
+        <h3 class="visually-hidden">{{ tabs[0] }} спецпредложения.</h3>
+        <ul class="new-offers__list">
+          <li class="new-offers__item product-card">
+            <a class="product-card__link" href="">
+              <span class="visually-hidden">Перейти на страницу товара</span>
+            </a>
+            <figure class="product-card__figure">
+              <img src="" alt="">
+            </figure>
+            <h3 class="product-card__title">Универсальный гусеничный экскаватор XE700C</h3>
+            <dl class="product-card__features">
+              <div class="product-card__feature">
+                <dt class="product-card__feature-name">Грузоподъемность:</dt>
+                <dd class="product-card__feature-value">25 тонн</dd>
+              </div>
+              <div class="product-card__feature">
+                <dt class="product-card__feature-name">Длина телескоп. стрелы:</dt>
+                <dd class="product-card__feature-value">34 метра</dd>
+              </div>
+              <div class="product-card__feature">
+                <dt class="product-card__feature-name">Тормозная система</dt>
+                <dd class="product-card__feature-value">с АВС</dd>
+              </div>
+            </dl>
+            <span class="product-card__price">4 700 000 ₽</span>
+            <div class="product-card__attributes">
+              <span class="product-card__new"></span>
+              <span class="product-card__discount">20%</span>
+            </div>
+            <a class="product-card__button" href="#">Запросить предложение</a>
+            <a class="product-card__button" href="#">Запросить цену</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
