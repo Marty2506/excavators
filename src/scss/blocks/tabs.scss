@@ -5,7 +5,9 @@
   display: flex;
   margin: 0;
   padding: 0;
+
   list-style-type: none;
+
   gap: 9px;
 }
 .tabs__item {
@@ -13,10 +15,10 @@
 }
 .tabs__button {
   display: flex;
+  justify-content: center;
   width: 100%;
   margin: 0;
   padding: 10px 42px 10px 42px;
-  justify-content: center;
 
   font-weight: 600;
   font-size: 17px;
@@ -26,7 +28,6 @@
   border: 1px solid $secondary-color;
   border-radius: 1px;
   cursor: pointer;
-
 
   transition: color 0.3s, background-color 0.3s;
   &:hover {
@@ -39,8 +40,4 @@
   color: $primary-color;
 
   background-color: $secondary-color;
-}
-.tabs__panel {
-}
-.tabs__panel--active {
 }
