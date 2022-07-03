@@ -5,6 +5,8 @@
 .new-offers__title {
 }
 .new-offers__list {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   margin-top: 38px;
   padding: 0;

@@ -1,12 +1,22 @@
 .product-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   width: 402px;
+  // min-height: 662px;
   padding: 30px 38px 65px 38px;
   border: 3px solid #004496;
 }
+.product-card__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .product-card__link {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .product-card__compare-button {
   display: inline-flex;
@@ -39,7 +49,10 @@
 .product-card__image {
   display: block;
   height: 100%;
-  object-fit: contain;
+  max-height: 100%;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 1px;
 }
 .product-card__title {
   margin: 0;
@@ -92,9 +105,6 @@
 .product-card__price-container {
   margin-bottom: 15px;
 }
-.product-card--no-price .product-card__price-container {
-  display: none;
-}
 .product-card__price {
   font-weight: 600;
   font-size: 27px;
@@ -129,13 +139,57 @@
   color: $primary-color;
   background-color: $secondary-color;
 }
-.product-card__price {
-}
 .product-card__attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 90%;
+  position: absolute;
+  top: 15px;
+  left: 2px;
+  overflow: hidden;
 }
-.product-card__new {
+.product-card__attribute {
+  display: none;
+  height: 32px;
+  padding: 7px 21px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  text-align: center;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
-.product-card__discount {
+.product-card__attribute--new {
+  background-color: $primary-color;
+}
+.product-card__attribute--sale {
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+.product-card--new .product-card__attribute--new {
+  display: inline-block;
+}
+.product-card--sale .product-card__attribute--sale {
+  display: inline-block;
 }
 .product-card__button {
+  z-index: 1;
+  height: 65px;
+}
+.product-card--no-price .product-card__price-container {
+  display: none;
+}
+.product-card__button--no-price {
+  display: none;
+}
+.product-card--no-price .product-card__button {
+  display: none;
+}
+.product-card--no-price .product-card__button--no-price {
+  display: inline-flex;
+  height: 65px;
 }
