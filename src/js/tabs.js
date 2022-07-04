@@ -1,15 +1,18 @@
-const tabsItems = document.querySelectorAll('.tech-tabs__item');
-const tabs = document.querySelectorAll('.tech-tabs__tab');
+const tabs = document.querySelectorAll('.tabs');
 
-tabsItems.forEach((tabsItem, i) => {
-  tabsItem.addEventListener('click', (evt) => {
-    tabsItems.forEach((element, j) => {
-      if (element.classList.contains('tech-tabs__item--active')) {
-        element.classList.remove('tech-tabs__item--active');
-        tabs[j].classList.remove('tech-tabs__tab--active');
-      }
-    });
-    tabsItem.classList.add('tech-tabs__item--active');
-    tabs[i].classList.add('tech-tabs__tab--active');
-  })
+tabs.forEach(tabsElement => {
+  let panels = tabsElement.querySelectorAll('.tabs__panel');
+  let tabButtons = tabsElement.querySelectorAll('.tabs__button');
+  tabButtons.forEach((tabButton, i) => {
+    tabButton.addEventListener('click', (evt) => {
+      tabButtons.forEach((element, j) => {
+        if (element.classList.contains('tabs__button--active')) {
+          element.classList.remove('tabs__button--active');
+          panels[j].classList.remove('tabs__panel--active');
+        }
+      });
+      evt.target.classList.add('tabs__button--active');
+      panels[i].classList.add('tabs__panel--active');
+    })
+  });
 });

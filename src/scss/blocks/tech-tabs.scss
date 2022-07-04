@@ -1,5 +1,6 @@
 .tech-tabs {
   margin-top: 75px;
+  margin-bottom: 90px;
 
   color: $dark-color;
 }
@@ -10,11 +11,7 @@
   display: flex;
   flex-direction: column;
   width: 292px;
-  margin: 0;
   margin-right: 30px;
-  padding: 0;
-
-  list-style-type: none;
 
   gap: 11px;
 }
@@ -23,41 +20,23 @@
 }
 .tech-tabs__button {
   display: flex;
-  width: 100%;
-  margin: 0;
+  justify-content: flex-start;
   padding: 10px 20px 10px 42px;
-
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 21px;
-
-  background-color: transparent;
-  border: 1px solid $secondary-color;
-  border-radius: 1px;
-  cursor: pointer;
-
-  transition: color 0.3s, background-color 0.3s;
-  &:hover {
-    color: $primary-color;
-
-    background-color: $secondary-color;
-  }
 }
 .tech-tabs__item--active .tech-tabs__button {
   color: $primary-color;
 
   background-color: $secondary-color;
 }
-.tech-tabs__tabs {
+.tech-tabs__panels {
   flex-grow: 1;
 
   background: linear-gradient(89.78deg, rgba(117, 163, 214, 0.2) 0.21%, rgba(151, 202, 251, 0.2) 42.41%, rgba(100, 151, 220, 0.2) 99.83%);
 }
-.tech-tabs__tab {
+.tech-tabs__panel {
   position: relative;
   z-index: 1;
 
-  display: none;
   height: 100%;
   padding-top: 60px;
   padding-left: 110px;
@@ -65,14 +44,8 @@
 
   border: 3px solid #004496;
   border-radius: 1px;
-  opacity: 0;
 }
-.tech-tabs__tab--active {
-  display: block;
-
-  opacity: 1;
-}
-.tech-tabs__tab-title {
+.tech-tabs__panel-title {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -81,7 +54,7 @@
   font-size: 40px;
   line-height: 49px;
 }
-.tech-tabs__tab-subtitle {
+.tech-tabs__panel-subtitle {
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
@@ -90,7 +63,7 @@
   font-size: 20px;
   line-height: 24px;
 }
-.tech-tabs__tab-list {
+.tech-tabs__panel-list {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -100,7 +73,7 @@
     margin-bottom: 0;
   }
 }
-.tech-tabs__tab-list--grid {
+.tech-tabs__panel-list--grid {
   display: grid;
   width: 200px;
   overflow: hidden;
@@ -111,10 +84,10 @@
   grid-template-columns: max-content max-content;
   grid-template-rows: repeat(5, auto);
 }
-.tech-tabs__tab-list-item {
+.tech-tabs__panel-list-item {
   margin-bottom: 5px;
 }
-.tech-tabs__tab-list-link {
+.tech-tabs__panel-list-link {
   font-size: 17px;
   line-height: 18px;
   color: inherit;
@@ -125,13 +98,13 @@
     opacity: 0.7;
   }
 }
-.tech-tabs__tab-image {
+.tech-tabs__panel-image {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: -1;
 }
-.tech-tabs__tab-image--excavator {
+.tech-tabs__panel-image--excavator {
   right: -81px;
   bottom: -80px;
 }

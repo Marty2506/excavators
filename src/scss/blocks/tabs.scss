@@ -41,3 +41,9 @@
 
   background-color: $secondary-color;
 }
+.tabs__panel  {
+  display: none;
+}
+.tabs__panel--active  {
+  display: block;
+}
