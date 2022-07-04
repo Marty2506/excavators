@@ -176,8 +176,11 @@
 .product-card--sale .product-card__attribute--sale {
   display: inline-block;
 }
-.product-card__button {
+.product-card__buttons {
   z-index: 1;
+  margin-top: auto;
+}
+.product-card__button {
   height: 65px;
 }
 .product-card--no-price .product-card__price-container {
