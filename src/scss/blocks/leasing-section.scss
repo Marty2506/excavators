@@ -1,0 +1,52 @@
+.leasing-section {
+  color: #fbfbfb;
+}
+.leasing-section__container {
+  display: flex;
+  padding: 125px 54px 122px 68px;
+  background-image: url('@img/leasing-section-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.leasing-section__content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 50px;
+  flex-shrink: 0;
+}
+.leasing-section__title {
+  margin-bottom: 15px;
+}
+.leasing-section__list {
+}
+.leasing-section__item {
+}
+.leasing-section__button {
+  width: 280px;
+  margin-top: auto;
+  color: $primary-color;
+  background-color: $secondary-color;
+  font-size: 20px;
+
+  &:hover {
+    color: $secondary-color;
+    background-color: $primary-color;
+  }
+}
+.leasing-section__features {
+  margin-top: 10px;
+}
+.leasing-section__features-list {
+  display: grid;
+  row-gap: 80px;
+  column-gap: 60px;
+  grid-template-columns: auto auto;
+}
+.leasing-section__feature-item {
+  width: 250px;
+  font-size: 22px;
+  padding-right: 20px;
+  padding-left: 25px;
+  padding-bottom: 20px;
+}

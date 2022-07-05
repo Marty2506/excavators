@@ -1,0 +1,39 @@
+.daw-list {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+.daw-list__item {
+  position: relative;
+
+  padding-left: 40px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(22 / 18) * 100%;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 22px;
+    height: 18px;
+
+    background-image: url("@img/icons/list-check-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+  }
+}
+.daw-list--yellow .daw-list__item {
+  &::before {
+    background-image: url("@img/icons/list-check-icon-yellow.svg");
+  }
+}
