@@ -2,10 +2,6 @@
   color: $dark-color;
 }
 .useful-systems__container {
-  width: 1640px;
-  margin: 0 auto;
-  margin: 0 auto;
-  padding-right: 162px;
 }
 .useful-sytems__content {
   display: flex;
@@ -30,6 +26,7 @@
 .useful-systems__main {
   display: flex;
   flex-direction: column;
+  margin: auto 0;
   margin-left: 80px;
 }
 .useful-systems__header {
