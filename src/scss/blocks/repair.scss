@@ -1,0 +1,38 @@
+.repair {
+}
+.repair__container {
+}
+.repair__content {
+}
+.repair__main {
+  width: 40%;
+}
+.repair__title {
+}
+.repair__text {
+
+}
+.repair__list {
+  width: 90%;
+  margin-top: 40px;
+}
+.repair__list-item {
+  padding-right: 82px;
+}
+.repair__item-text {
+}
+.repair__item--gear::before {
+  background-image: url("@img/icons/gear-icon.svg");
+}
+.repair__item--warehouse::before {
+  background-image: url("@img/icons/delivery-icon.svg");
+}
+.repair__item--personal::before {
+  background-image: url("@img/icons/repair-icon.svg");
+}
+.repair__image-container {
+}
+.section__image-container {
+}
+.repair__image {
+}
