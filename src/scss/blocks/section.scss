@@ -48,7 +48,7 @@
   &:not(:last-child) {
     margin-bottom: 15px;
   }
-
+  // TODO: переделать
   &::before {
     content: "";
 

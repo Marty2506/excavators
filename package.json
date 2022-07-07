@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Marty2506/my-gulp#readme",
   "devDependencies": {
     "browser-sync": "^2.27.9",
+    "custom-select": "^1.1.15",
     "del": "^6.0.0",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",

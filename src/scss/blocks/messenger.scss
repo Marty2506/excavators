@@ -1,0 +1,15 @@
+.messenger {
+  display: block;
+  width: 31px;
+  height: 31px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.messenger--telegram {
+  background-image: url("@img/icons/telegramm-icon.svg");
+}
+.messenger--whatsup {
+  background-image: url("@img/icons/watsapp-icon.svg");
+}
