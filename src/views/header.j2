@@ -1,28 +1,30 @@
 <header class="page-header">
   <div class="page-header__top">
     <div class="page-header__container container">
+      <button class="burger">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
       <div class="page-header__logos">
         <a class="logo page-header__logo page-header__logo--techstroiproject" href="index.html">
-          <img src="@img/logo-techstroiproject.svg" alt="Логотип техстройпроекта" width="317" height="110">
+          <img src="@img/logo-techstroiproject.svg" alt="Логотип техстройпроекта">
         </a>
         <a class="logo page-header__logo page-header__logo--xcmg" href="index.html">
-          <img src="@img/logo-xcmg.svg" alt="Логотип XCMG" width="251" height="62">
+          <img src="@img/logo-xcmg.svg" alt="Логотип XCMG">
         </a>
       </div>
       <section class="page-header__contacts">
-        <a class="page-header__mail" href="mailto:mail@tehstroiproekt.ru">mail@tehstroiproekt.ru</a>
         <div class="page-header__phones">
           <div class="page-header__messengers">
-            <a class="page-header__messenger page-header__messenger--telegram" href="#">
-              <span class="visually-hidden">Контакт телеги</span>
+            <a class="page-header__messenger messenger messenger--telegram" href="#">
+              <span class="visually-hidden">Контакт телеграма</span>
             </a>
-            <a class="page-header__messenger page-header__messenger--whatsup" href="#">
+            <a class="page-header__messenger messenger messenger--whatsup" href="#">
               <span class="visually-hidden">Контакт вотсапа</span>
             </a>
-            <a class="page-header__phone" href="tel:+74992131580">8 (499) 213-15-80</a>
           </div>
-          <a class="page-header__back-call"href="#">Обратный звонок</a>
+          <a class="page-header__phone" href="tel:+74992131580">8 (499) 213-15-80</a>
         </div>
+        <a class="page-header__mail" href="mailto:mail@tehstroiproekt.ru">mail@tehstroiproekt.ru</a>
       </section>
     </div>
   </div>
@@ -38,24 +40,18 @@
         </ul>
       </nav>
       <nav class="user-nav nav">
-        <ul class="user-nav__list nav__list">
-          <li class="user-nav__item nav__item">
-            <a href="#" class="user-nav__link user-nav__link--comparison nav__link">
-              <svg class="nav__link-icon" width="22" height="22">
-                <use xlink:href="img/sprite.svg#comparison-icon"></use>
-              </svg>
-              <span>Сравнение</span>
-            </a>
-          </li>
-          <li class="user-nav__item nav__item">
-            <a href="#" class="user-nav__link user-nav__link--search nav__link">
-              <svg class="nav__link-icon" width="19" height="20">
-                <use xlink:href="img/sprite.svg#search-icon"></use>
-              </svg>
-              <span>Поиск</span>
-            </a>
-          </li>
-        </ul>
+        <form class="user-nav__search search" action="https://echo.htmlacademy.ru/courses" method="post">
+          <label class="search__label" for="search">
+            <span class="visually-hidden">Поиск.</span>
+          </label>
+          <input class="search__input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+          <button class="search__button" type="submit">
+            <span class="visually-hidden">Найти</span>
+            <svg class="search__icon" width="19" height="20" viwbox="0 0 19 20">
+              <use xlink:href="img/sprite.svg#search-icon"></use>
+            </svg>
+          </button>
+        </form>
       </nav>
     </div>
   </div>

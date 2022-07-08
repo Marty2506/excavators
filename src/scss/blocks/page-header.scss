@@ -1,8 +1,31 @@
 .page-header__nav-container {
   display: flex;
 }
+.page-header__top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 120px;
+  margin-bottom: 2px;
+  z-index: 1;
+  background-color: #014898;
 
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2.2px;
+    bottom: 0;
+    left: 70%;
+    right: 0;
+    background-color: #fcc200;
+    z-index: -1;
+    @media (min-width: $br5) {
+      left: 55%;
+    }
+  }
+}
 .page-header__bottom {
+  position: relative;
   padding-top: 2px;
   padding-bottom: 2px;
 
@@ -12,38 +35,36 @@
 .page-header__logos {
   display: flex;
   align-items: center;
+  max-width: 580px;
+  height: 100%;
+  align-self: center;
 }
 
 .page-header__container {
   display: flex;
+  flex-grow: 1;
+  height: 100%;
 }
 
 .page-header__logo--techstroiproject {
-  margin-right: 30px;
+  margin-right: 39px;
+  max-width: 100%;
 }
 
 .page-header__contacts {
   display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-  align-items: center;
-}
-.page-header__mail {
-  display: block;
-
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 117.69%;
-  color: #252525;
-  text-decoration: none;
-
-  transition: opacity 0.3s ease;
-  &:hover {
-    opacity: 0.7;
-  }
+  flex-direction: column;
+  margin-left: auto;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("@img/header-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
 }
 .page-header__phones {
-  margin-left: 95px;
+  display: flex;
 }
 .page-header__messengers {
   display: flex;
@@ -56,12 +77,6 @@
 
   background-repeat: no-repeat;
   background-position: center;
-}
-.page-header__messenger--telegram {
-  background-image: url("@img/icons/telegramm-icon.svg");
-}
-.page-header__messenger--whatsup {
-  background-image: url("@img/icons/watsapp-icon.svg");
 }
 .page-header__phone {
   margin-left: 10px;
@@ -77,18 +92,17 @@
     opacity: 0.6;
   }
 }
-.page-header__back-call {
+.page-header__mail {
   display: block;
 
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
-  text-align: right;
-  color: $primary-color;
+  line-height: 21 зч;
+  color: $dark-color;
   text-decoration: none;
 
   transition: opacity 0.3s ease;
   &:hover {
-    opacity: 0.6;
+    opacity: 0.7;
   }
 }

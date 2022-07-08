@@ -11,13 +11,13 @@
   &::before {
     content: "";
     position: absolute;
-    top: 25px;
-    bottom: 25px;
+    top: 0;
+    bottom: 0;
     z-index: 1;
 
-    width: 1px;
+    width: 0.5px;
 
-    background-color: #dddddd;
+    background-color: #e0e0e0;
   }
 }
 .nav__link {
@@ -46,13 +46,24 @@
 // ---------------------------------------------------------------
 // site-nav
 
+.site-nav {
+  background-color: #fff;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 0;
+    right: 40%;
+    background-color: #fff;
+  }
+}
 .site-nav__link {
-  color: #ffffff;
+  color: $primary-color;
+  transition: 0.5s background-color ease;
 
   &:hover {
-    color: $primary-color;
-
     background-color: $secondary-color;
   }
 }
@@ -71,16 +82,9 @@
     width: 23px;
     height: 4px;
 
-    background-color: #ffffff;
+    background-color: $primary-color;
     border-radius: 2px;
-    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
-  }
-
-  &:hover {
-    &::before {
-      background-color: $primary-color;
-      box-shadow: 0 8px 0 0 $primary-color, 0 16px 0 0 $primary-color;
-    }
+    box-shadow: 0 8px 0 0 $primary-color, 0 16px 0 0 $primary-color;
   }
 }
 
@@ -88,7 +92,8 @@
 // site-nav
 .user-nav {
   flex-shrink: 0;
-  margin-left: auto;
+  flex-grow: 1;
+  margin-left: 3px;
 }
 .user-nav__item + .user-nav__item::before {
   background-color: $primary-color;
@@ -118,4 +123,6 @@
 .user-nav__link:hover .nav__link-icon {
   fill: $secondary-color;
   stroke: $secondary-color;
+}
+.user-nav__search {
 }

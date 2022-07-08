@@ -1,0 +1,17 @@
+.burger {
+  position: absolute;
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+  width: 34px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("@img/icons/burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.burger--opened {
+}
