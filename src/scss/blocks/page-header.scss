@@ -1,10 +1,13 @@
+.page-header__container {
+  position: relative;
+}
 .page-header__nav-container {
   display: flex;
 }
 .page-header__top {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   min-height: 120px;
   margin-bottom: 2px;
   z-index: 1;
@@ -22,6 +25,20 @@
     @media (min-width: $br5) {
       left: 55%;
     }
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    min-height: auto;
+    height: 99px;
+    padding-top: 5px;
+    padding-bottom: 14px;
+    background-image: url("@img/header-bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 102%;
   }
 }
 .page-header__bottom {
@@ -30,6 +47,9 @@
   padding-bottom: 2px;
 
   background-color: $primary-color;
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .page-header__logos {
@@ -38,6 +58,14 @@
   max-width: 580px;
   height: 100%;
   align-self: center;
+  @media (max-width: $desktop-width) {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .page-header__container {
@@ -45,10 +73,34 @@
   flex-grow: 1;
   height: 100%;
 }
-
+.page-header__logo {
+  min-height: 0;
+  max-height: 100%;
+  width: 100%;
+  & img {
+    display: block;
+    object-fit: contain;
+  }
+}
 .page-header__logo--techstroiproject {
   margin-right: 39px;
   max-width: 100%;
+  @media (max-width: $desktop-width) {
+
+  }
+  @media (max-width: $tablet-width) {
+    max-width: 151px;
+    margin-right: 0px;
+    margin-bottom: 9px;
+  }
+}
+.page-header__logo--xcmg {
+  @media (max-width: $desktop-width) {
+
+  }
+  @media (max-width: $tablet-width) {
+    max-width: 87px;
+  }
 }
 
 .page-header__contacts {
@@ -62,6 +114,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }
 .page-header__phones {
   display: flex;

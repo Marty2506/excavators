@@ -1,17 +1,37 @@
 .burger {
   position: absolute;
+  top: 25px;
+  right: 17px;
   @media (min-width: $desktop-width) {
     display: none;
   }
-  width: 34px;
-  height: 25px;
+  width: 39px;
+  height: 50px;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
   background-image: url("@img/icons/burger.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "Меню";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fbfbfb;
+  }
 }
 .burger--opened {
+  width: 25px;
+  height: 25px;
+  background-image: url("@img/icons/burger-close.svg");
+
+  &::after {
+    content: none;
+  }
 }
