@@ -6,6 +6,11 @@
 
   list-style-type: none;
 }
+.nav__item {
+  &--dropdown {
+    position: relative;
+  }
+}
 .nav__item + .nav__item {
   position: relative;
   &::before {

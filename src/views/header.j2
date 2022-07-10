@@ -33,8 +33,47 @@
       <nav class="site-nav nav">
         <ul class="site-nav__list nav__list">
           {% for link in menu %}
-            <li class="site-nav__item nav__item">
+            <li class="site-nav__item nav__item {% if link.hasDropdown %} nav__item--dropdown {% endif %}">
               <a class="site-nav__link {% if link.href == page %} site-nav__link--active {% endif %} {% if link.href == "catalog" %} site-nav__link--catalog {% endif %} nav__link" href="{{ link.href }}.html">{{ link.title }}</a>
+              {% if link.href == "catalog"%}
+                <div class="site-nav__dropdown dropdown">
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Экскаваторы</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Самосвалы</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Башенные краны</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Гусеничные краны</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Дорожная техника</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Короткобазные автокраны</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Краны на спецшасси</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Погрузчики</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Буровая техника</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Карьерные самосвалы</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Самоходные подъёмники</a>
+                    </li>
+                  </ul>
+                </div>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>
