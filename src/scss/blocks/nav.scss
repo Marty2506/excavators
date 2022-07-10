@@ -28,9 +28,11 @@
 .nav__link {
   position: relative;
 
-  display: block;
+  display: flex;
   max-width: 210px;
-  padding: 20px 20px;
+  padding: 0 20px;
+  height: 63px;
+  align-items: center;
 
   font-weight: 600;
   font-size: 18px;
@@ -55,13 +57,19 @@
   background-color: #fff;
 
   &::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    bottom: 2px;
-    left: 0;
-    right: 40%;
-    background-color: #fff;
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: 2px;
+      bottom: 2px;
+      left: 0;
+      right: 40%;
+      background-color: #fff;
+    }
+
+  }
+  @media (max-width: $desktop-width) {
+    order: 2;
   }
 }
 .site-nav__link {
@@ -92,6 +100,13 @@
     box-shadow: 0 8px 0 0 $primary-color, 0 16px 0 0 $primary-color;
   }
 }
+.site-nav__dropdown {
+  display: none;
+  animation: showing-animation 0.3s forwards;
+}
+.nav__item--dropdown:hover .site-nav__dropdown{
+  display: block;
+}
 
 // ---------------------------------------------------------------
 // site-nav
@@ -99,6 +114,10 @@
   flex-shrink: 0;
   flex-grow: 1;
   margin-left: 3px;
+
+  @media (max-width: $desktop-width) {
+    order: 1;
+  }
 }
 .user-nav__item + .user-nav__item::before {
   background-color: $primary-color;
@@ -130,4 +149,8 @@
   stroke: $secondary-color;
 }
 .user-nav__search {
+  @media (max-width: $desktop-width) {
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
 }

@@ -3,6 +3,9 @@
 }
 .page-header__nav-container {
   display: flex;
+  @media (max-width: $desktop-width) {
+    flex-direction: column;
+  }
 }
 .page-header__top {
   position: relative;
@@ -48,7 +51,9 @@
 
   background-color: $primary-color;
   @media (max-width: $desktop-width) {
-    display: none;
+    // display: none;
+    overflow: hidden;
+    background-color: $primary-color;
   }
 }
 
