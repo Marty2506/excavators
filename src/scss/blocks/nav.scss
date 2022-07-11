@@ -70,6 +70,7 @@
   }
   @media (max-width: $desktop-width) {
     order: 2;
+    display: none;
   }
 }
 .site-nav__link {
@@ -109,7 +110,8 @@
 }
 
 // ---------------------------------------------------------------
-// site-nav
+// .user-nav
+
 .user-nav {
   flex-shrink: 0;
   flex-grow: 1;

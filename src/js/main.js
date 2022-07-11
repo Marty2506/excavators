@@ -10,5 +10,3 @@ const selectDefaultParams = {
   isOpenClass: 'is-open'
 }
 const mySelects = customSelect(document.querySelector('.contacts__select'), selectDefaultParams);
-
-console.log(mySelects);
