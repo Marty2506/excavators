@@ -1,5 +1,9 @@
 const menu = document.querySelector('.menu');
 const menuSubs = menu.querySelectorAll('.menu__sub');
+const pageHeaderBottom = document.querySelector('.page-header__bottom');
+
+menu.classList.remove('menu--no-js');
+pageHeaderBottom.classList.remove('page-header__bottom--no-js');
 
 menuSubs.forEach(submenu => {
   const link = submenu.parentNode.querySelector('.menu__link');

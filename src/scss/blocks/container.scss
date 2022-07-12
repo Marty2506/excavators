@@ -2,11 +2,11 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  // padding-left: 17px;
-  // padding-right: 17px;
+  padding-left: 17px;
+  padding-right: 17px;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
+    // max-width: $tablet-width;
   }
 
   @media (min-width: $desktop-width) {

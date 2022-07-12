@@ -1,12 +1,27 @@
 .menu {
   order: 3;
-  display: flex;
+  display: none;
   flex-direction: column;
   color: #fbfbfb;
+  background-color: $primary-color;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 .menu--no-js {
+  @media (max-width: $desktop-width) {
+    display: flex;
+  }
+}
+.menu--opened {
+  @media (max-width: $desktop-width) {
+    display: flex;
+    width: 100%;
+  }
 }
 .menu__main {
+  margin-bottom: 25px;
 }
 .menu__list {
   margin: 0;
@@ -72,6 +87,7 @@
 }
 .menu__sub--active {
   display: block;
+  padding-top: 20px;
   padding-left: 17px;
   padding-right: 17px;
   z-index: 1;
@@ -79,20 +95,86 @@
   height: 100%;
   width: 100%;
   animation: showing-animation 0.3s forwards;
+  // transform: translateX(50px);
 }
 .menu__back-button {
+  position: relative;
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 13px 0;
+  padding-left: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  line-height: 22px;
+  color: inherit;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 12px;
+    height: 19px;
+    transform: translateY(-50%) rotate(180deg);
+    background-image: url("@img/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 .menu__second {
+  color: #fbfbfb;
+  margin-bottom: 15px;
 }
 .menu__second-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 .menu__second-item {
+  margin-right: 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .menu__second-link {
+  display: inline-flex;
+  padding: 5px 0;
+  font-size: 16px;
+  line-height: 19px;
+  color: inherit;
+  text-decoration: none;
 }
 .menu__contacts {
+  display: flex;
+  flex-direction: column;
 }
 .menu__phone {
+  display: block;
+  font-size: 31px;
+  line-height: 38px;
+  color: inherit;
+  text-decoration: none;
+}
+.menu__mail {
+  display: block;
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 35px;
 }
 .menu__back-call-button {
+  background-color: $secondary-color;
+  color: $primary-color;
+  align-self: center;
+  width: 100%;
+  max-width: 500px;
+  height: 54px;
+  margin-left: -17px;
+  margin-right: -17px;
+  box-sizing: content-box;
 }

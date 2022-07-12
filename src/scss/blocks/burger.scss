@@ -2,6 +2,7 @@
   position: absolute;
   top: 25px;
   right: 17px;
+  z-index: 100;
   @media (min-width: $desktop-width) {
     display: none;
   }
@@ -34,4 +35,7 @@
   &::after {
     content: none;
   }
+}
+.burger--no-js {
+  display: none;
 }

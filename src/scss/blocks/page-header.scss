@@ -46,14 +46,34 @@
 }
 .page-header__bottom {
   position: relative;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // z-index: 1;
   padding-top: 2px;
   padding-bottom: 2px;
 
   background-color: $primary-color;
   @media (max-width: $desktop-width) {
-    // display: none;
+    display: none;
     overflow: hidden;
     background-color: $primary-color;
+  }
+}
+.page-header__bottom--no-js {
+  @media (max-width: $desktop-width) {
+    display: block;
+  }
+}
+.page-header__bottom--opened {
+  @media (max-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    animation: showing-animation 0.5s forwards;
   }
 }
 
