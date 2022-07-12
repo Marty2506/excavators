@@ -59,6 +59,11 @@
     background-position: center;
   }
 }
+.menu__link--end {
+  &::after {
+    content: none;
+  }
+}
 .menu__sub {
   display: none;
   position: fixed;
@@ -68,6 +73,7 @@
 .menu__sub--active {
   display: block;
   padding-left: 17px;
+  padding-right: 17px;
   z-index: 1;
   background-color: $primary-color;
   height: 100%;
@@ -75,11 +81,6 @@
   animation: showing-animation 0.3s forwards;
 }
 .menu__back-button {
-}
-.menu__list--lvl2 .menu__link {
-  &::after {
-    content: none;
-  }
 }
 .menu__second {
 }
