@@ -1,6 +1,16 @@
 .tech-tabs {
   margin-top: 75px;
   margin-bottom: 90px;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+.tech-tabs__title {
+  margin-bottom: 15px;
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 .tech-tabs__container {
   display: flex;
@@ -12,6 +22,11 @@
   margin-right: 30px;
 
   gap: 11px;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .tech-tabs__item {
   width: 100%;
@@ -20,11 +35,17 @@
   display: flex;
   justify-content: flex-start;
   padding: 10px 20px 10px 42px;
+  text-decoration: none;
+  color: inherit;
 }
 .tech-tabs__panels {
   flex-grow: 1;
 
   background: linear-gradient(89.78deg, rgba(117, 163, 214, 0.2) 0.21%, rgba(151, 202, 251, 0.2) 42.41%, rgba(100, 151, 220, 0.2) 99.83%);
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }
 .tech-tabs__panel {
   position: relative;
