@@ -10,8 +10,16 @@
 <section class="new-offers">
   <div class="new-offers__container container">
     <h2 class="new-offers__title title title--black">Свежие спецпредложения</h2>
-    <div class="tabs">
-      <ul class="tabs__list">
+    <select class="new-offers__select" id="new-offers" name="new-offers">
+      <option value="{{ tabs[0] }}">{{ tabs[0] }}</option>
+      <option value="{{ tabs[1] }}">{{ tabs[1] }}</option>
+      <option value="{{ tabs[2] }}">{{ tabs[2] }}</option>
+      <option value="{{ tabs[3] }}">{{ tabs[3] }}</option>
+      <option value="{{ tabs[4] }}">{{ tabs[4] }}</option>
+      <option value="{{ tabs[5] }}">{{ tabs[5] }}</option>
+    </select>
+    <div class="new-offers__tabs tabs">
+      <ul class="new-offers__list tabs__list">
         <li class="tabs__item">
           <button class="tabs__button tabs__button--active" type="button">{{ tabs[0] }}</button>
         </li>
@@ -40,7 +48,7 @@
           <li class="new-offers__item">
             <div class="product-card new-offers__product-card product-card--sale product-card--new">
               <div class="product-card__content">
-                <a class="product-card__link" href="#">
+                <a class="product-card__link" href="#!">
                   <span class="visually-hidden">Перейти на страницу товара</span>
                 </a>
                 {# <button class="product-card__compare-button">
@@ -91,7 +99,7 @@
           <li class="new-offers__item">
             <div class="new-offers__product-card product-card product-card--sale product-card--new">
               <div class="product-card__content">
-                <a class="product-card__link" href="#">
+                <a class="product-card__link" href="#!">
                   <span class="visually-hidden">Перейти на страницу товара</span>
                 </a>
                 {# <button class="product-card__compare-button">
@@ -142,7 +150,7 @@
           <li class="new-offers__item">
             <div class="new-offers__product-card product-card product-card--new product-card--no-price">
               <div class="product-card__content">
-                <a class="product-card__link" href="#">
+                <a class="product-card__link" href="#!">
                   <span class="visually-hidden">Перейти на страницу товара</span>
                 </a>
                 {# <button class="product-card__compare-button">

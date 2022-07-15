@@ -16,6 +16,102 @@
   margin-top: 38px;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }
 .new-offers__item {
 }
+.new-offers__select {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+// Стили для селекта
+
+.new-offers__select-container {
+  position: relative;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: $dark-color;
+}
+.new-offers__select-container * {
+  box-sizing: border-box;
+}
+.new-offers__select-container.is-disabled {
+  opacity: .333;
+}
+.new-offers__select-opener {
+  display: block;
+  height: 55px;
+  cursor: pointer;
+  width: 100%;
+  padding: 17px 32px;
+  background-color: $secondary-color;
+  color: $primary-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 19px;
+    height: 13px;
+    background-image: url("@img/icons/select-arrow-blue.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+  }
+}
+.new-offers__select-container select {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.new-offers__select-panel {
+  max-height: 0;
+  // transition: max-height .5s ease-out, overflow-y 0.1s 0.5s;
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+}
+.new-offers__select-container.is-open .new-offers__select-panel {
+  max-height: 10.7em;
+  overflow-y: auto;
+  border: 0.3px solid $secondary-color;
+  border-top: none;
+  border-radius: 1px;
+}
+.new-offers__select-option {
+  height: 50px;
+  padding: 14.5px 32px;
+  border: 1px solid $secondary-color;
+  border-radius: 1px;
+}
+.new-offers__select.has-focus {
+  background-color: LightBlue;
+}
+.new-offers__select-option.is-selected {
+  // background-color: tomato;
+}
+.new-offers__select-option.is-selected::before {
+  content: "✔";
+  padding-right: 0.5em;
+}
+.new-offers__select-optgroup > .new-offers__select-option {
+  padding-left: 2em;
+}
+// .new-offers__select-optgroup::before {
+//   content: attr(data-label);
+//   display: block;
+//   padding: 0.5em;
+//   color: #888;
+// }
