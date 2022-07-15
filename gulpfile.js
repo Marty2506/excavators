@@ -57,7 +57,7 @@ const path = {
     scss: `${dirs.src}/scss/**/*.scss`,
     //html: `${dirs.src}/**/*.html`,
     files: `${dirs.src}/files/**/*.*`,
-    images: `${dirs.src}/img/**/*.{jpg,png,jpeg,gif,webp}`,
+    images: `${dirs.src}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     sprite: `${dirs.src}/img/sprite/*.svg`,
     svg: `${dirs.src}/img/**/*.svg`,
     views: `${dirs.src}/views/**/*.j2`,
@@ -172,13 +172,23 @@ const images = () => {
       })
     ))
     .pipe(newer(path.build.images))
+    .pipe(squoosh())
+    .pipe(gulp.dest(path.build.images))
+    .pipe(browserSync.stream());
+}
+
+const imagesWebp = () => {
+  return gulp.src(path.src.images)
+    .pipe(plumber(
+      notify.onError({
+        title: "IMAGES-WEBP",
+        message: "Error: <%= error.message %>"
+      })
+    ))
+    .pipe(newer(path.build.images))
     .pipe(squoosh({
       webp: {}
     }))
-    .pipe(gulp.dest(path.build.images))
-    .pipe(gulp.src(path.src.images))
-    .pipe(newer(path.build.images))
-    .pipe(squoosh())
     .pipe(gulp.dest(path.build.images))
     .pipe(browserSync.stream());
 }
@@ -215,11 +225,12 @@ function watcher() {
   gulp.watch(path.watch.scss, styles);
   gulp.watch(path.watch.js, scripts);
   gulp.watch(path.watch.images, images);
+  gulp.watch(path.watch.images, imagesWebp);
   gulp.watch(path.watch.sprite, sprite);
   gulp.watch([path.src.svg, `!${path.src.sprite}`], svg);
 }
 
-const mainTasks = gulp.parallel(copy, fonts, views, styles, scripts, images, sprite, svg);
+const mainTasks = gulp.parallel(copy, fonts, views, styles, scripts, images, imagesWebp, sprite, svg);
 
 // Построение сценариев выполнения задач
 export const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));
