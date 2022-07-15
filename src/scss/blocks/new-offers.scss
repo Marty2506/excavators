@@ -3,6 +3,11 @@
 }
 .new-offers__container {
 }
+.new-offers__tabs-list {
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
 .new-offers__title {
   margin-bottom: 35px;
 }
@@ -18,7 +23,8 @@
   list-style-type: none;
 
   @media (max-width: $desktop-width) {
-    display: none;
+    gap: 17px;
+    overflow-x: hidden;
   }
 }
 .new-offers__item {
@@ -38,6 +44,10 @@
   font-size: 17px;
   line-height: 21px;
   color: $dark-color;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 .new-offers__select-container * {
   box-sizing: border-box;

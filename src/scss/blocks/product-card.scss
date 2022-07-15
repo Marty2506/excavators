@@ -1,8 +1,15 @@
 .product-card {
+  min-width: 284px;
+  max-width: 402px;
   width: 402px;
   // min-height: 662px;
   padding: 30px 38px 65px 38px;
   border: 3px solid #004496;
+
+  @media (max-width: $desktop-width) {
+    width: 284px;
+    padding: 22px 27px;
+  }
 }
 .product-card__content {
   position: relative;
@@ -20,6 +27,7 @@
 }
 .product-card__compare-button {
   display: inline-flex;
+  z-index: 1;
   width: fit-content;
   align-items: center;
   justify-content: flex-end;
@@ -32,10 +40,33 @@
   color: $grey-color;
   cursor: pointer;
   margin-bottom: 5px;
+
+  & span {
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
 }
 .product-card__compare-icon {
   margin-left: 5px;
   fill: $grey-color;
+  stroke: $grey-color;
+  stroke-width: 0.8px;
+  @media (max-width: $desktop-width) {
+    fill: $primary-color;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    stroke: $primary-color;
+    stroke-width: 1.8px;
+  }
 }
 .product-card__figure {
   display: flex;
@@ -44,7 +75,8 @@
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
-  height: 224px;
+  max-height: 224px;
+  min-height: 158px;
 }
 .product-card__image {
   display: block;
@@ -62,15 +94,24 @@
   font-size: 22px;
   line-height: 29px;
   color: $dark-color;
+
+  @media (max-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .product-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
 }
 .product-card__feature {
   position: relative;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   color: $dark-color-second;
   font-weight: 600;
   font-size: 15px;
@@ -92,6 +133,11 @@
     background-size: contain;
     transform: translateY(-50%);
   }
+
+  @media (max-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .product-card__feature-name {
   margin: 0;
@@ -103,6 +149,8 @@
   padding: 0;
 }
 .product-card__price-container {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 15px;
 }
 .product-card__price {
@@ -110,6 +158,12 @@
   font-size: 27px;
   line-height: 33px;
   color: $dark-color;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 2px;
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 .product-card__sale-container {
   display: none;
@@ -126,6 +180,11 @@
   text-align: center;
   text-decoration-line: line-through;
   color: #9b9b9b;
+
+  @media (max-width: $desktop-width) {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 .product-card__discount-value {
   display: inline-flex;
@@ -138,6 +197,13 @@
   line-height: 17px;
   color: $primary-color;
   background-color: $secondary-color;
+
+  @media (max-width: $desktop-width) {
+    height: 20px;
+    padding: 0 3px;
+    font-size: 11px;
+    line-height: 13px;
+  }
 }
 .product-card__attributes {
   display: flex;
@@ -145,9 +211,16 @@
   gap: 10px;
   max-width: 90%;
   position: absolute;
-  top: 15px;
+  top: 35px;
   left: 2px;
   overflow: hidden;
+
+  @media (max-width: $desktop-width) {
+    position: static;
+    flex-direction: row;
+    max-width: 70%;
+    margin-bottom: 10px;
+  }
 }
 .product-card__attribute {
   display: none;
@@ -158,10 +231,20 @@
   font-size: 14px;
   line-height: 17px;
   color: #ffffff;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none;
+
+  @media (max-width: $desktop-width) {
+    width: 84px;
+    height: 28px;
+    padding: 0;
+    font-size: 12px;
+    line-height: 15px;
+
+  }
 }
 .product-card__attribute--new {
   background-color: $primary-color;
@@ -171,10 +254,10 @@
   color: $primary-color;
 }
 .product-card--new .product-card__attribute--new {
-  display: inline-block;
+  display: inline-flex;
 }
 .product-card--sale .product-card__attribute--sale {
-  display: inline-block;
+  display: inline-flex;
 }
 .product-card__buttons {
   z-index: 1;
@@ -182,6 +265,10 @@
 }
 .product-card__button {
   height: 65px;
+
+  @media (max-width: $desktop-width) {
+    height: 60px;
+  }
 }
 .product-card--no-price .product-card__price-container {
   display: none;
