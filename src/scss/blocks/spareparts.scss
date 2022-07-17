@@ -20,16 +20,8 @@
   }
 }
 .spareparts__content {
-  display: flex;
-
-  @media (max-width: $max-mobile-width) {
-    flex-direction: column;
-  }
 }
 .spareparts__main {
-  display: flex;
-  flex-direction: column;
-
   @media (min-width: $tablet-width) {
     width: 60%;
     margin-right: 20px;
@@ -41,20 +33,7 @@
     margin-right: 33px;
   }
 }
-.spareparts__header {
-  margin: 0;
-  margin-bottom: 10px;
-  padding: 0;
 
-  font-weight: 700;
-  font-size: 40px;
-  line-height: calc(49 / 40) * 100%;
-
-  @media (max-width: $desktop-width) {
-    font-size: 30px;
-    line-height: 37px;
-  }
-}
 .spareparts__add-info {
   margin: 0;
   padding: 0;
@@ -67,52 +46,21 @@
 }
 .spareparts__list {
   flex-grow: 1;
-  margin: 0;
   margin-bottom: 20px;
-  padding: 0;
   margin-top: 30px;
-
-  list-style-type: none;
+  // width: 70%;
 }
-.spareparts__list-item {
-  display: flex;
-  align-items: center;
-
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-}
-.spareparts__list-item {
-  &::before {
-    content: "";
-
-    display: block;
-    flex-shrink: 0;
-    width: 58px;
-    height: 72px;
-    margin-right: 14px;
-
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (max-width: $max-mobile-width) {
-      // width: 39px;
-      // height: 50px;
-      // background-size: contain;
-    }
-  }
-}
-.spareparts__list-item--urgent::before {
+.spareparts__item--urgent::before {
   background-image: url("@img/icons/urgently-icon.svg");
 }
-.spareparts__list-item--warehouse::before {
+.spareparts__item--warehouse::before {
   background-image: url("@img/icons/delivery-icon.svg");
 }
-.spareparts__list-item--help::before {
+.spareparts__item--help::before {
   background-image: url("@img/icons/gear-icon.svg");
 }
 
-.spareparts__list-item-content {
+.spareparts__item-text {
   margin: 0;
   padding: 0;
 }
@@ -129,30 +77,6 @@
     // width: 100%;
   }
 }
-
-.spareparts__image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  max-width: 860px;
-  margin-left: auto;
-  flex-grow: 1;
-  border: 4px solid #004496;
-  border-radius: 1px;
-
-  @media (max-width: $max-mobile-width) {
-    margin: 0;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-}
 .spareparts__image {
-  display: block;
-  height: 100%;
-  width: 100%;
   object-fit: cover;
 }

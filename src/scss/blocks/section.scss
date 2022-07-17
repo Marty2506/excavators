@@ -29,7 +29,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 30%;
+    width: 35%;
     // flex-shrink: 0;
     margin-right: 33px;
   }
@@ -57,6 +57,8 @@
   line-height: 22px;
 }
 .section__list {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   margin: 0;
   margin-bottom: 20px;
@@ -72,17 +74,65 @@
     margin-bottom: 15px;
   }
   // TODO: переделать
+  // &::before {
+  //   content: "";
+
+  //   display: block;
+  //   flex-shrink: 0;
+  //   width: 36px;
+  //   height: 36px;
+  //   margin-right: 14px;
+
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  // }
+}
+.section__item-icon {
+  position: relative;
+  flex-shrink: 0;
+  display: block;
+  box-sizing: content-box;
+  width: 36px;
+  height: 36px;
+  margin: 10px 0;
+  margin-right: 45px;
+  border-radius: 50%;
+  background-color: $secondary-color;
+
   &::before {
     content: "";
-
+    position: absolute;
     display: block;
-    flex-shrink: 0;
-    width: 58px;
-    height: 72px;
-    margin-right: 14px;
+    bottom: 50%;
+    left: 50%;
+
+    width: 40px;
+    height: 50px;
 
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  &--urgent::before {
+    background-image: url('@img/icons/urgently-icon.svg');
+    transform: translate(-5px, 5px);
+  }
+  &--warehouse::before {
+    background-image: url('@img/icons/delivery-icon.svg');
+    transform: translate(-5px, 5px);
+  }
+  &--spec::before {
+    background-image: url('@img/icons/gear_and_search-icon.svg');
+    transform: translate(-5px, 5px);
+  }
+  &--help::before {
+    background-image: url('@img/icons/repair-icon.svg');
+    transform: translate(-5px, 5px);
+  }
+  &--gear::before {
+    background-image: url('@img/icons/gear-icon.svg');
+    transform: translate(-5px, 5px);
   }
 }
 .section__item-text {
