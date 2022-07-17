@@ -1,4 +1,5 @@
 .leasing-section {
+
   color: #fbfbfb;
   margin-bottom: 110px;
 
@@ -9,57 +10,78 @@
   }
 }
 .leasing-section__container {
+  position: relative;
   display: flex;
+  flex-direction: column;
 
-  background-image: url('@img/leasing-section-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  // background-position: center;
-  border: 5px solid $primary-color;
-  border-radius: 2px;
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, rgba(5, 21, 39, 0.62) 40.36%, rgba(0, 0, 0, 0) 75.26%);
+  }
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    padding: 50px 30px;
+    padding-left: 50px;
+    // background-color: fade-out($grey-color, 0.5);
 
+  }
   @media (min-width: $desktop-width) {
     padding: 125px 54px 122px 68px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    flex-direction: column;
-    background: none;
-    border: none;
-    border-radius: 5px;
+    border: 5px solid $primary-color;
+    border-radius: 2px;
   }
 }
 .leasing-section__content {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin-right: 50px;
-  flex-shrink: 0;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+  @media (min-width: $min-mobile-width) and (max-width: $tablet-width-only) {
+    margin-bottom: 15px;
+  }
+}
+.leasing-section__text-content {
 
-  @media (max-width: $mobile-width-only) {
-    width: 100%;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 50px;
+    flex-shrink: 0;
   }
 }
 .leasing-section__title {
   margin-bottom: 15px;
 }
 .leasing-section__figure {
-  display: none;
+  margin: 0;
+  padding: 0;
+
   @media (max-width: $mobile-width-only) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
     margin-bottom: 15px;
-    padding: 0;
     width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 }
 .leasing-section__image {
   display: block;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 .leasing-section__list {
 }

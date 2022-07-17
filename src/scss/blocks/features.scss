@@ -11,6 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 40px;
+    max-width: 500px;
   }
 }
 .feature__item {
@@ -66,6 +67,12 @@
 }
 .feature__icon--contract {
   transform: translateX(4px);
+}
+.feature__icon--calendar {
+  transform: translateX(-4px);
+}
+.feature__icon--lightning {
+  max-height: 60%;
 }
 .feature__name {
   order: 2;

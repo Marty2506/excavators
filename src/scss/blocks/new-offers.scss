@@ -1,5 +1,9 @@
 .new-offers {
   margin-bottom: 110px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 50px;
+  }
 }
 .new-offers__container {
 }
