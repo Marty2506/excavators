@@ -1,0 +1,25 @@
+{% extends "layout.j2" %}
+
+{% set page = "catalog" %}
+
+{% block content %}
+  <main class="page-main">
+    <h1 class="visually-hidden">Каталог компании техстройпроект - федерального дилера спецтехники XCMG</h1>
+    {% include "./blocks/catalog-header.j2" %}
+    {# {% include "./blocks/leasing-section.j2" %}
+    {% include "./blocks/spareparts.j2" %}
+    {% include "./blocks/useful-systems.j2" %}
+    {% include "./blocks/repair.j2" %} #}
+    {# {% include "./blocks/contacts.j2" %} #}
+  </main>
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/jquery-3.4.1.slim.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+  <script src="./js/custom-select.min.js"></script>
+  <script src="./js/menu.min.js"></script>
+  <script src="./js/burger.min.js"></script>
+  <script src="./js/main.min.js"></script>
+{% endblock %}
