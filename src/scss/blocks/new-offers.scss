@@ -23,17 +23,23 @@
   list-style-type: none;
 
   @media (max-width: $desktop-width) {
-    gap: 17px;
-    overflow-x: hidden;
+    flex-direction: row;
+    padding-bottom: 70px;
+    gap: 15px;
   }
 }
 .new-offers__item {
+  // height: 100%;
 }
 .new-offers__select {
   @media (min-width: $desktop-width) {
     display: none;
   }
 }
+// .new-offers__slider-arrows {
+//   display: flex;
+//   gap: 5px;
+// }
 
 // Стили для селекта
 

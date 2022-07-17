@@ -1,3 +1,13 @@
+//  Включение автоматического воспроизведения видео
+const videoLocation  = document.querySelector('.index-header__video');
+window.onload = addAutoplay();
+function addAutoplay() {
+  if(window.innerWidth > 1315){
+    videoLocation.setAttribute("preload", "");
+    videoLocation.setAttribute("autoplay","");
+  };
+}
+
 // Кастомный селект
 const selectDefaultParams = {
   containerClass: 'custom-select-container',
@@ -10,7 +20,7 @@ const selectDefaultParams = {
   isDisabledClass: 'is-disabled',
   isOpenClass: 'is-open'
 };
-const contactsSelect = new customSelect(document.querySelector('.contacts__select'), selectDefaultParams);
+const contactsSelect = customSelect(document.querySelector('.contacts__select'), selectDefaultParams);
 
 const newOffersSelectParams = {
   containerClass: 'new-offers__select-container',
@@ -23,13 +33,42 @@ const newOffersSelectParams = {
   isDisabledClass: 'is-disabled',
   isOpenClass: 'is-open'
 };
-const newOffersSelect = new customSelect(document.querySelector('.new-offers__select'), newOffersSelectParams);
+const newOffersSelect = customSelect(document.querySelector('.new-offers__select'), newOffersSelectParams);
 
-//  Включение автоматического воспроизведения видео
-const videoLocation  = document.querySelector('.index-header__video');
-window.onload = addAutoplay();
-function addAutoplay() {
-  if(window.innerWidth > 1315){
-    videoLocation.setAttribute("autoplay","");
-  };
-}
+let newOffersSlider = false;
+let isSliderInit = false;
+
+window.addEventListener("resize", onWindowResize);
+
+function onWindowResize() {
+  if (window.innerWidth < 930) {
+    if (!isSliderInit) {
+      $('.new-offers__slider').slick({
+        arrows: false,
+        mobileFirst: true,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        // appendArrows: $('.new-offers__slider-arrows'),
+        responsive: [
+          {
+            breakpoint: 660,
+            settings: {
+              slidesToShow: 2
+            }
+          }
+        ]
+      });
+      isSliderInit = true;
+    }
+  } else {
+    if (isSliderInit) {
+      $('.new-offers__slider').slick('unslick');
+      isSliderInit = false;
+    }
+  }
+};
+
+$(document).ready(function(){
+  onWindowResize();
+});

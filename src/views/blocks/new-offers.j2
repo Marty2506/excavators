@@ -39,9 +39,9 @@
           <button class="tabs__button" type="button">{{ tabs[5] }}</button>
         </li>
       </ul>
-      <div class="tabs__panel tabs__panel--active">
+      <div class="new-offers__panel tabs__panel tabs__panel--active">
         <h3 class="visually-hidden">{{ tabs[0] }} спецпредложения.</h3>
-        <ul class="new-offers__list">
+        <ul class="new-offers__list new-offers__slider">
           {# ? Если нет цены - добавить класс product-card--no-price
              ? Если есть скидка - добавить класс product-card--sale
              ? Если новый продукт - добавить класс product-card--new #}
@@ -199,6 +199,7 @@
             </div>
           </li>
         </ul>
+        {# <div class="new-offers__slider-arrows"></div> #}
       </div>
       <div class="tabs__panel"></div>
       <div class="tabs__panel"></div>

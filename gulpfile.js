@@ -41,6 +41,7 @@ const path = {
   src: {
     // js: `${dirs.src}/js/app.js`,
     js: `${dirs.src}/js/**/*.js`,
+    jsVendor: `${dirs.src}/js/vendor/*.js`,
     scss: `${dirs.src}/scss/style.scss`,
     //html: `${dirs.src}/*.html`,
     files: `${dirs.src}/files/**/*.*`,
@@ -130,7 +131,7 @@ const styles = () => {
 
 // Сборка скриптов
 const scripts = () => {
-  return gulp.src(path.src.js, { sourcemaps: true })
+  return gulp.src([path.src.js, `!${path.src.jsVendor}`], { sourcemaps: true })
     .pipe(plumber(
       notify.onError({
         title: "JS",
@@ -150,6 +151,8 @@ const scripts = () => {
     .pipe(rename({
       suffix: '.min'
     }))
+    .pipe(gulp.dest(path.build.js))
+    .pipe(gulp.src(path.src.jsVendor, { sourcemaps: true }))
     .pipe(gulp.dest(path.build.js))
     .pipe(browserSync.stream());
 }
