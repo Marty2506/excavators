@@ -5,7 +5,11 @@
 .repair__content {
 }
 .repair__main {
-  width: 40%;
+
+  @media (min-width: $tablet-width) {
+    // width: 40%;
+    // flex-shrink: 0;
+  }
 }
 .repair__title {
 }
@@ -14,7 +18,8 @@
 }
 .repair__list {
   width: 90%;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 .repair__list-item {
   padding-right: 82px;
@@ -31,8 +36,10 @@
   background-image: url("@img/icons/repair-icon.svg");
 }
 .repair__image-container {
-}
-.section__image-container {
+  @media (min-width: $desktop-width) {
+    max-width: 794px;
+    flex-shrink: 0;
+  }
 }
 .repair__image {
 }

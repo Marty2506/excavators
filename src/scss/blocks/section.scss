@@ -2,20 +2,39 @@
   font-size: 17px;
   line-height: calc(21 / 17) * 100%;
   color: $dark-color;
-  margin-bottom: 110px;
+
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 110px;
+  }
 }
 .section__content {
   display: flex;
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
 }
 .section__main {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  flex-shrink: 0;
-  margin-right: 33px;
+
+  @media (min-width: $tablet-width) {
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30%;
+    // flex-shrink: 0;
+    margin-right: 33px;
+  }
 }
 .section__title {
-  width: 80%;
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
@@ -24,11 +43,15 @@
   font-size: 40px;
   line-height: calc(49 / 40) * 100%;
   color: $dark-color;
+
+  @media (max-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 .section__text {
   margin: 0;
   padding: 0;
-  width: 80%;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
@@ -77,10 +100,22 @@
   flex-grow: 1;
   border: 4px solid #004496;
   border-radius: 1px;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }
 .section__image {
   display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
+
+  @media (min-width: $desktop-width) {
+    object-fit: contain;
+  }
 }

@@ -24,8 +24,10 @@
       </div>
       <figure class="repair__image-container section__image-container">
         <picture>
-          <source type="image/webp" srcset="./img/repair-desktop.webp 1x">
-          <img class="repair__image section__image" src="./img/repair-desktop.jpg" alt="">
+          <source type="image/webp" media="(min-width: 768px)" srcset="@img/repair-desktop.webp 1x, @img/repair-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="@img/repair-mobile.webp 1x, @img/repair-mobile@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="@img/repair-desktop.jpg 1x, @img/repair-desktop@2x.jpg 2x">
+          <img class="repair__image section__image" src="@img/repair-mobile.jpg" srcset="@img/repair-mobile@2x.jpg 2x" alt="">
         </picture>
       </figure>
     </div>
