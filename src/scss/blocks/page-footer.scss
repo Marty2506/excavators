@@ -12,21 +12,38 @@
   flex-wrap: wrap;
 
   gap: 25px;
+
+  font-size: 17px;
+  line-height: calc(21 / 17) * 100%;
+
+  @media (max-width: $max-tablet-width) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .page-footer__link {
+  display: inline-flex;
   color: inherit;
   text-decoration: none;
 
   transition: color 0.3s ease 0s;
   &:hover {
     color: $secondary-color;
+
+    & .page-footer__link-icon {
+      fill: $secondary-color;
+    }
+
   }
 }
-
+.page-footer__link-icon {
+  margin-right: 5px;
+  fill: #fbfbfb;
+}
 .page-footer__copyright {
   margin-left: auto;
-}
-.page-footer__text {
-  font-size: 17px;
-  line-height: calc(21 / 17) * 100%;
+  @media (max-width: $max-tablet-width) {
+    margin-left: 0;
+  }
 }
