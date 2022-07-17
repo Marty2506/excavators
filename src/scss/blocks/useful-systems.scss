@@ -1,34 +1,101 @@
 .useful-systems {
   color: $dark-color;
-  margin-bottom: 110px;
+  margin-bottom: 50px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 110px;
+  }
 }
 .useful-systems__container {
 }
 .useful-sytems__content {
   display: flex;
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
 }
-.useful-sytems__images-container {
-  flex-shrink: 0;
-  width: 827px;
+.useful-systems__images {
+  max-width: 827px;
+  order: 1;
+
+  @media (max-width: $max-mobile-width) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-shrink: 0;
+  }
 }
-.useful-systems__image-list {
+.useful-systems__images-row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: $max-mobile-width) {
+    &:not(:first-child) {
+      display: none;
+    }
+    justify-content: center;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
+}
+.useful-systems__images-item {
+  max-height: 350px;
   margin: 0;
   padding: 0;
 
-  list-style-type: none;
-}
+  &:first-child {
+    margin-right: 7px;
+  }
 
+  @media (max-width: $max-mobile-width) {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    border: 2px solid $primary-color;
+  }
+}
 .useful-systems__image {
-  max-height: 350px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .useful-systems__main {
   display: flex;
   flex-direction: column;
-  margin: auto 0;
-  margin-left: 80px;
+  order: 2;
+
+  @media (max-width: $max-mobile-width) {
+    order: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: auto 0;
+    margin-left: 80px;
+  }
 }
 .useful-systems__header {
   margin-bottom: 20px;
@@ -46,9 +113,6 @@
 
   padding-left: 40px;
 
-  font-weight: 600;
-  font-size: 18px;
-  line-height: calc(22 / 18) * 100%;
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
