@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $tablet-width-only;
+    max-width: $max-tablet-width;
   }
 
   @media (max-width: $desktop-width) {

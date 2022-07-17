@@ -1,10 +1,12 @@
 // Viewports
-$tablet-width: 820px; //ipad air
-// TODO: 768px для планшетов
-$tablet-width-only: 1314px;
-$desktop-width: 1314.99px;
-$mobile-width-only: 819px;
 $min-mobile-width: 320px;
+$tablet-width: 768px; //ipad air
+$desktop-width: 1315px;
+
+// TODO: 768px для планшетов
+$max-mobile-width: 767px;
+$max-tablet-width: 1314px;
+
 $br5: 3000px;
 
 // Colors

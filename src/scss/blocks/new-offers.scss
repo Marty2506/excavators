@@ -1,8 +1,11 @@
 .new-offers {
-  margin-bottom: 110px;
+  margin-bottom: 50px;
 
-  @media (max-width: $mobile-width-only) {
-    margin-bottom: 50px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 110px;
   }
 }
 .new-offers__container {
@@ -26,11 +29,14 @@
   padding: 0;
   list-style-type: none;
 
-  @media (max-width: $desktop-width) {
-    flex-direction: row;
+  @media (max-width: $max-mobile-width) {
     padding-bottom: 70px;
+  }
+  @media (max-width: $max-tablet-width) {
+    flex-direction: row;
     gap: 15px;
   }
+
 }
 .new-offers__item {
   // height: 100%;

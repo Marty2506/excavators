@@ -5,13 +5,13 @@
 
   color: $white-color;
 
-  @media (min-width: $mobile-width-only) {
+  @media (min-width: $max-mobile-width) {
     background-image: url("@img/index-header-shadow.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $max-mobile-width) {
     color: $dark-color-second;
   }
 }
@@ -53,7 +53,7 @@
 }
 .index-header__figure {
   display: none;
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $max-mobile-width) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +89,7 @@
 
   object-fit: cover;
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $max-mobile-width) {
     display: none;
   }
 }

@@ -1,12 +1,15 @@
 .leasing-section {
 
-  color: #fbfbfb;
-  margin-bottom: 110px;
+  color: $dark-color;
 
-  overflow: hidden;
+  margin-bottom: 50px;
 
-  @media (max-width: $mobile-width-only) {
-    color: $dark-color;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+    color: #fbfbfb;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 110px;
   }
 }
 .leasing-section__container {
@@ -17,7 +20,7 @@
   @media (min-width: $tablet-width) {
     background: linear-gradient(90deg, rgba(5, 21, 39, 0.62) 40.36%, rgba(0, 0, 0, 0) 75.26%);
   }
-  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding: 50px 30px;
     padding-left: 50px;
     // background-color: fade-out($grey-color, 0.5);
@@ -35,7 +38,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
   }
-  @media (min-width: $min-mobile-width) and (max-width: $tablet-width-only) {
+  @media (min-width: $min-mobile-width) and (max-width: $max-tablet-width) {
     margin-bottom: 15px;
   }
 }
@@ -58,7 +61,7 @@
   margin: 0;
   padding: 0;
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $max-mobile-width) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,8 +102,9 @@
     background-color: $primary-color;
   }
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $max-mobile-width) {
     width: 100%;
+    font-size: 17px;
     max-width: 480px;
   }
 }
@@ -114,7 +118,7 @@
     column-gap: 60px;
     grid-template-columns: auto auto;
   }
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $max-mobile-width) {
     padding-top: 30px;
     margin-bottom: 15px;
   }
