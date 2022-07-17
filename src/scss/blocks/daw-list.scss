@@ -17,6 +17,11 @@
     margin-bottom: 10px;
   }
 
+  @media (max-width: $mobile-width-only) {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
   &::before {
     content: "";
     position: absolute;

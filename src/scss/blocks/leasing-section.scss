@@ -1,16 +1,33 @@
 .leasing-section {
   color: #fbfbfb;
   margin-bottom: 110px;
+
+  overflow: hidden;
+
+  @media (max-width: $mobile-width-only) {
+    color: $dark-color;
+  }
 }
 .leasing-section__container {
   display: flex;
-  padding: 125px 54px 122px 68px;
+
   background-image: url('@img/leasing-section-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   // background-position: center;
   border: 5px solid $primary-color;
   border-radius: 2px;
+
+  @media (min-width: $desktop-width) {
+    padding: 125px 54px 122px 68px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+    background: none;
+    border: none;
+    border-radius: 5px;
+  }
 }
 .leasing-section__content {
   display: flex;
@@ -18,9 +35,31 @@
   width: 50%;
   margin-right: 50px;
   flex-shrink: 0;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+  }
 }
 .leasing-section__title {
   margin-bottom: 15px;
+}
+.leasing-section__figure {
+  display: none;
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    width: 100%;
+  }
+}
+.leasing-section__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .leasing-section__list {
 }
@@ -37,15 +76,26 @@
     color: $secondary-color;
     background-color: $primary-color;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    max-width: 480px;
+  }
 }
 .leasing-section__features {
   margin-top: 10px;
 }
 .leasing-section__features-list {
-  display: grid;
-  row-gap: 80px;
-  column-gap: 60px;
-  grid-template-columns: auto auto;
+  @media (min-width: $desktop-width) {
+    display: grid;
+    row-gap: 80px;
+    column-gap: 60px;
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: $mobile-width-only) {
+    padding-top: 30px;
+    margin-bottom: 15px;
+  }
 }
 .leasing-section__feature-item {
   width: 250px;
@@ -53,4 +103,10 @@
   padding-right: 20px;
   padding-left: 25px;
   padding-bottom: 20px;
+
+  @media (max-width: $desktop-width) {
+    width: 210px;
+    font-size: 17px;
+    line-height: 21px;
+  }
 }

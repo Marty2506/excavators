@@ -8,7 +8,7 @@ function addAutoplay() {
   };
 }
 
-// Кастомный селект
+// Кастомные селекты
 const selectDefaultParams = {
   containerClass: 'custom-select-container',
   openerClass: 'custom-select-opener',
@@ -35,6 +35,8 @@ const newOffersSelectParams = {
 };
 const newOffersSelect = customSelect(document.querySelector('.new-offers__select'), newOffersSelectParams);
 
+
+// Слайдеры
 let newOffersSlider = false;
 let isSliderInit = false;
 
