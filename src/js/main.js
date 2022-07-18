@@ -2,10 +2,12 @@
 const videoLocation  = document.querySelector('.index-header__video');
 window.onload = addAutoplay();
 function addAutoplay() {
-  if(window.innerWidth > 1315){
-    videoLocation.setAttribute("preload", "");
-    videoLocation.setAttribute("autoplay","");
-  };
+  if (videoLocation) {
+    if(window.innerWidth > 1315){
+      videoLocation.setAttribute("preload", "");
+      videoLocation.setAttribute("autoplay","");
+    };
+  }
 }
 
 // Кастомные селекты
@@ -72,4 +74,14 @@ function onWindowResize() {
 
 $(document).ready(function(){
   onWindowResize();
+});
+
+const sliderElement = document.querySelector('.filters-form__slider');
+noUiSlider.create(sliderElement, {
+  start: [400, 1000],
+  connect: true,
+  range: {
+    min: 100,
+    max: 10000,
+  }
 });

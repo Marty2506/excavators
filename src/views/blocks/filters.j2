@@ -1,0 +1,24 @@
+<section class="filters">
+  <div class="filters__container container">
+    <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="filters-form__fieldset">
+        <legend class="filters-form__legend">Макс. грузоподъемность, кг</legend>
+        <div class="filters-form__price-controls">
+          <div class="filters-form__field">
+            <label class="filters-form__label visually-hidden" for="min-load-mask">от</label>
+            <input class="filters-form__input" type="text" name="min-load" value="100" id="min-load-mask">
+          </div>
+          <div class="filters-form__field">
+            <label class="filters-form__label visually-hidden" for="max-load-mask">до</label>
+            <input class="filters-form__input" type="text" name="max-load" value="10000" id="max-price-mask">
+          </div>
+        </div>
+        <div class="filters-form__slider" id="slider"></div>
+        <div class="filters-form__min-max">
+          <span class="filters-form__slider-value filters-form__slider-value--min">100</span>
+          <span class="filters-form__slider-value filters-form__slider-value--max">10000</span>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

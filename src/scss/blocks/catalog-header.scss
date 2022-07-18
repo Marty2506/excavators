@@ -63,6 +63,11 @@
   height: 100%;
   object-fit: cover;
 }
+.catalog-header--sub .catalog-header__figure {
+ @media (max-width: $max-mobile-width) {
+   display: none;
+ }
+}
 .catalog-section__list {
 }
 .catalog-section__item {
