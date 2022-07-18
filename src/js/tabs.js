@@ -1,5 +1,5 @@
 const tabs = document.querySelectorAll('.tabs');
-const DESKTOP_WIDTH = 1315;
+const DESKTOP_WIDTH = 1349;
 
 tabs.forEach(tabsElement => {
   let panels = tabsElement.querySelectorAll('.tabs__panel');
