@@ -2,7 +2,7 @@
 const videoLocation  = document.querySelector('.index-header__video');
 window.onload = addAutoplay();
 function addAutoplay() {
-  if(window.innerWidth > 1349){
+  if(window.innerWidth > 1315){
     videoLocation.setAttribute("preload", "");
     videoLocation.setAttribute("autoplay","");
   };
@@ -51,7 +51,6 @@ function onWindowResize() {
         dots: false,
         arrows: true,
         infinite: false,
-        // appendArrows: $('.new-offers__slider-arrows'),
         responsive: [
           {
             breakpoint: 660,
