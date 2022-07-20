@@ -4,7 +4,6 @@ let isCardsSliderInit = false;
 window.addEventListener("resize", onWindowResize__cards);
 
 function onWindowResize__cards() {
-  console.log(window.innerWidth);
   if (window.innerWidth < 1348) {
     if (!isCardsSliderInit) {
       $(cardsSliderSelector).slick({

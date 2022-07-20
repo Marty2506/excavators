@@ -76,12 +76,14 @@ $(document).ready(function(){
   onWindowResize();
 });
 
-const sliderElement = document.querySelector('.filters-form__slider');
-noUiSlider.create(sliderElement, {
-  start: [400, 1000],
-  connect: true,
-  range: {
-    min: 100,
-    max: 10000,
-  }
-});
+// $('select').amsifySelect({
+//   type : 'amsify',
+//   classes: {
+//     clear : '',
+//     close : 'button',
+//     label: '.myLabelArea'
+//   }
+// });
+// const multiSelectCloseButton = document.querySelector('.amsify-select-close');
+// multiSelectCloseButton.textContent = "Применить";
+// multiSelectCloseButton.classList.add('button');

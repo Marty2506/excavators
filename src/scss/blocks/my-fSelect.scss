@@ -1,0 +1,75 @@
+.fs-wrap {
+  position: relative;
+  width: 100%;
+
+  & .fs-label {
+    display: flex;
+    width: 100%;
+    padding: 12.5px 16px;
+    font-size: 18px;
+    line-height: 22px;
+    border: 0.3px solid fade-out(#85939A, 0.7);
+    border-radius: 1px;
+  }
+}
+.fs-dropdown {
+  width: 100%;
+  margin-top: 0;
+  padding: 30px;
+  border: 0.3px solid fade-out(#85939A, 0.7);
+  border-top: none;
+  cursor: default;
+}
+.fs-option-label {
+  transition: opacity 0.5s ease;
+}
+.fs-wrap.multiple .fs-option {
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 35px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  border: none;
+
+  &:hover .fs-option-label,
+  &:active .fs-option-label {
+    opacity: 0.7;
+  }
+}
+
+.fs-wrap.multiple .fs-option .fs-checkbox i {
+  width: 20px;
+  height: 20px;
+  background-color: $secondary-color;
+  border: none;
+  outline: 1px solid $secondary-color;
+  transition: outline-color 0.5s ease;
+}
+.fs-wrap.multiple .fs-option.selected .fs-checkbox i {
+  background-color: $secondary-color;
+  background-image: url("@img/icons/list-check-icon.svg");
+  background-size: 70%;
+}
+.fs-wrap.multiple .fs-option:hover .fs-checkbox i {
+  outline: 1px solid $primary-color;
+
+}
+
+.fs-arrow {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 9px;
+  margin: 0;
+  border: none;
+  background-image: url("@img/icons/fs-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.fs-open .fs-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}

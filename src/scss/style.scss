@@ -5,6 +5,12 @@
 
 @import "./slick.scss";
 @import "./nouislider.scss";
+@import "./amsify.select.scss";
+// @import "./nice-select2.scss";
+// @import "./multiple-select.scss";
+@import "./multiple-select.scss";
+@import "./fSelect.scss";
+@import "./blocks/my-fSelect.scss"; // мои стили к fSelect
 
 @import "./blocks/container.scss";
 @import "./blocks/button.scss";
@@ -24,6 +30,7 @@
 @import "./blocks/dropdown.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/breadcumbs.scss";
+@import "./blocks/filters-form.scss";
 
 @import "./blocks/page.scss";
 @import "./blocks/page-header.scss";
