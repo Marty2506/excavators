@@ -32,3 +32,13 @@
 
   background-color: $secondary-color;
 }
+
+.button--yellow {
+  color: $primary-color;
+  background-color: $secondary-color;
+
+  &:hover {
+    color: #fff;
+    background-color: $primary-color;
+  }
+}

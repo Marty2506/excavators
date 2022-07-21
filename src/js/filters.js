@@ -26,6 +26,15 @@ loadSlider.noUiSlider.on('update', (values, handle) => {
   loadInputs[handle].value = values[handle];
 })
 
+loadInputs[0].addEventListener('change', function() {
+  console.log(this);
+  loadSlider.noUiSlider.set([this.value, null]);
+})
+loadInputs[1].addEventListener('change', function() {
+  console.log(this);
+  loadSlider.noUiSlider.set([null, this.value]);
+})
+
 // Настройка слайдера длиный стрелы
 
 const arrowLengthSlider = document.querySelector('.filters-form__slider--arrow-length');
@@ -50,6 +59,15 @@ const arrowLengthInputs = [
 
 arrowLengthSlider.noUiSlider.on('update', (values, handle) => {
   arrowLengthInputs[handle].value = values[handle];
+})
+
+arrowLengthInputs[0].addEventListener('change', function() {
+  console.log(this);
+  arrowLengthSlider.noUiSlider.set([this.value, null]);
+})
+arrowLengthInputs[1].addEventListener('change', function() {
+  console.log(this);
+  arrowLengthSlider.noUiSlider.set([null, this.value]);
 })
 
 // Настройка селектов
@@ -126,3 +144,59 @@ absSelect.closest('.fs-wrap').querySelector('.fs-option').click(); // Сразу
 const absSelectButton = selectButton.cloneNode(true);
 absSelect.closest('.fs-wrap').querySelector('.fs-dropdown').appendChild(absSelectButton);
 absSelectButton.addEventListener('click', closeFsDropdown);
+
+// Открытие/закртыие фильтра в мобилке
+const showFiltersButton = document.querySelector('.filters-form__show-button');
+const hideFiltersButton = document.querySelector('.filters-form__back-button');
+
+showFiltersButton.addEventListener('click', () => {
+  document.body.classList.toggle('filter-opened');
+});
+hideFiltersButton.addEventListener('click', () => {
+  document.body.classList.remove('filter-opened');
+});
+
+// Сброс фильтров
+const resetFiltersButton = document.querySelector('.filters-form__reset-filters-button');
+resetFiltersButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  const pavingItems = pavingSelect.closest('.fs-wrap').querySelector('.fs-dropdown').querySelectorAll('.selected');
+  pavingItems.forEach((el) => {
+    el.click();
+  })
+  pavingSelect.closest('.fs-wrap').querySelector('.fs-option').click();
+
+  const workingWeighItems = workingWeightSelect.closest('.fs-wrap').querySelector('.fs-dropdown').querySelectorAll('.selected');
+  workingWeighItems.forEach((el) => {
+    el.click();
+  })
+  workingWeightSelect.closest('.fs-wrap').querySelector('.fs-option').click();
+
+  const absItems = absSelect.closest('.fs-wrap').querySelector('.fs-dropdown').querySelectorAll('.selected');
+  absItems.forEach((el) => {
+    el.click();
+  })
+  absSelect.closest('.fs-wrap').querySelector('.fs-option').click();
+
+  // Сброс слайдеров
+  loadInputs[0].value = 400;
+  loadInputs[1].value = 1000;
+  loadSlider.noUiSlider.set([loadInputs[0].value, loadInputs[1].value]);
+
+  arrowLengthInputs[0].value = 15;
+  arrowLengthInputs[1].value = 18;
+  arrowLengthSlider.noUiSlider.set([arrowLengthInputs[0].value, arrowLengthInputs[1].value]);
+
+  // Сброс чекбосков
+  document.querySelectorAll('.filters-form__checbox').forEach(el => {
+    el.checked = true;
+  });
+});
+
+
+// Кнопка отправки формы
+const submitFormButton = document.querySelector('.filters-form__submit-button');
+submitFormButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  // Дописать что делать
+})

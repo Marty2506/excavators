@@ -99,7 +99,9 @@
 
             buildOptions: function($element) {
                 var $this = this;
-
+                if (!$element) {
+                  $element = $this.$select;
+                }
                 var choices = '';
                 $element.children().each(function(i, el) {
                     var $el = $(el);

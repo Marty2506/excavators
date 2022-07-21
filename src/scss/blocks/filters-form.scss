@@ -1,5 +1,48 @@
 .filters-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   color: $dark-color;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+}
+.filters-form__show-button {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+.filters-form__group {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+.filters-form__group--sliders-selects {
+  @media (max-width: $max-mobile-width) {
+    position: relative;
+    display: none;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 30px;
+  }
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    column-gap: 47px;
+  }
 }
 .filters-form__fieldset {
   display: flex;
@@ -9,7 +52,25 @@
   padding: 0;
   border: none;
   max-width: 100%;
-
+  min-width: 219px;
+}
+.filters-form__fieldset--checkboxes {
+  width: 100%;
+  gap: 16px;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+.filters-form__fieldset--load {
+  @media (min-width: $desktop-width) {
+    max-width: 236px;
+  }
+}
+.filters-form__fieldset--arrow {
+  @media (min-width: $desktop-width) {
+    max-width: 233px;
+  }
 }
 .filters-form__legend {
   margin-bottom: 13px;
@@ -27,6 +88,48 @@
   flex-grow: 1;
 }
 .filters-form__label {
+  display: flex;
+  flex-shrink: 0;
+}
+.filters-form__label:hover {
+  & .filters-form__text {
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+  }
+
+  & .filters-form__mark {
+    border: 1px solid $primary-color;
+  }
+}
+.filters-form__label--checkbox {
+
+}
+.filters-form__mark {
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  transition: border 0.5s ease;
+}
+.filters-form__text {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+}
+.filters-form__reset-filters-button {
+  // width: 100%;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: $primary-color;
+  cursor: pointer;
 }
 .filters-form__input {
   display: flex;
@@ -36,6 +139,13 @@
   line-height: 22px;
   border: 0.3px solid fade-out(#85939A, 0.7);
   border-radius: 1px;
+}
+.filters-form__checbox[type="checkbox"]:checked + .filters-form__mark {
+  background-color: $secondary-color;
+  background-image: url("@img/icons/list-check-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
 }
 .filters-form__slider {
   margin-bottom: 10px;
@@ -55,7 +165,53 @@
 }
 .filters-form__select-submit {
   height: 51px;
-  width: 170px;
+  min-width: 0;
+  width: 100%;
+  max-width: 170px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+.filter-opened {
+  @media (max-width: $max-mobile-width) {
+    & .page-header {
+      display: none;
+    }
+    & .page-footer {
+      display: none;
+    }
+    & .page-main > :not(.product-catalog) {
+      display: none;
+    }
+    & .product-catalog__container > :not(.product-catalog__form) {
+      display: none;
+    }
+    & .filters-form > :not(.filters-form__group--sliders-selects) {
+      display: none;
+    }
+    & .filters-form__group--sliders-selects {
+      display: flex;
+    }
+  }
+}
+
+.filters-form__back-button {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media (max-width: $max-mobile-width) {
+    position: absolute;
+    top: 15px;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    background-image: url('@img/icons/select-arrow-blue.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
 }

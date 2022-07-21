@@ -1,71 +1,88 @@
-<section class="filters">
-  <div class="filters__container container">
-    <form class="filters__form filters-form" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="filters-form__fieldset">
-        <legend class="filters-form__legend">Макс. грузоподъемность, кг</legend>
-        <div class="filters-form__controls">
-          <div class="filters-form__field">
-            <label class="filters-form__label visually-hidden" for="min-load-mask">от</label>
-            <input class="filters-form__input" type="text" name="min-load" value="100" id="min-load-mask">
-          </div>
-          <div class="filters-form__field">
-            <label class="filters-form__label visually-hidden" for="max-load-mask">до</label>
-            <input class="filters-form__input" type="text" name="max-load" value="10000" id="max-load-mask">
-          </div>
-        </div>
-        <div class="filters-form__slider filters-form__slider--load" id="slider"></div>
-        <div class="filters-form__min-max">
-          <span class="filters-form__slider-value filters-form__slider-value--min">100</span>
-          <span class="filters-form__slider-value filters-form__slider-value--max">10000</span>
-        </div>
-      </fieldset>
-      <fieldset class="filters-form__fieldset">
-        <legend class="filters-form__legend">Длина стрелы, м</legend>
-        <div class="filters-form__controls">
-          <div class="filters-form__field">
-            <label class="filters-form__label visually-hidden" for="min-load-mask">от</label>
-            <input class="filters-form__input" type="text" name="min-arrow-length" value="15" id="min-arrow-length">
-          </div>
-          <div class="filters-form__field">
-            <label class="filters-form__label visually-hidden" for="max-load-mask">до</label>
-            <input class="filters-form__input" type="text" name="max-arrow-length" value="18" id="max-arrow-length">
-          </div>
-        </div>
-        <div class="filters-form__slider filters-form__slider--arrow-length" id="slider"></div>
-        <div class="filters-form__min-max">
-          <span class="filters-form__slider-value filters-form__slider-value--min">10</span>
-          <span class="filters-form__slider-value filters-form__slider-value--max">25</span>
-        </div>
-      </fieldset>
-      <fieldset class="filters-form__fieldset">
-        <legend class="filters-form__legend">Ширина укладки</legend>
-        <select class="filters-form__select filters-form__select--paving" id="paving-select" name="paving-select" multiple>
-          <option value="25мм">25мм</option>
-          <option value="30мм">30мм</option>
-          <option value="40мм">40мм</option>
-          <option value="50мм">50мм</option>
-        </select>
-      </fieldset>
-      <fieldset class="filters-form__fieldset">
-        <legend class="filters-form__legend">Рабочий вес</legend>
-        <select class="filters-form__select filters-form__select--working-weight" id="working-weight-select" name="working-weight-select" multiple>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="100">100</option>
-        </select>
-      </fieldset>
-      <fieldset class="filters-form__fieldset">
-        <legend class="filters-form__legend">Тормозная система</legend>
-        <select class="filters-form__select filters-form__select--abs" id="abs-select" name="abs-select" multiple>
-          <option value="ABS">ABS</option>
-          <option value="не ABS">не ABS</option>
-          <option value="Что-то типа ABS">Что-то типа ABS</option>
-          <option value="Обычные тормоза">Обычные тормоза</option>
-        </select>
-      </fieldset>
-      {# <button class="button" type="submit">Отправить форму</button> #}
-
-    </form>
+<form class="product-catalog__form filters-form" action="https://echo.htmlacademy.ru" method="get">
+  <div class="filters-form__group">
+    <button class="button button--yellow filters-form__show-button" type="button">Показать фильтр</button>
+    <fieldset class="filters-form__fieldset filters-form__fieldset--checkboxes">
+      <legend class="visually-hidden">Спецпредложения и новинки</legend>
+      <label class="filters-form__label filters-form__label--checkbox">
+        <input class="filters-form__checbox visually-hidden" type="checkbox" name="special-offer" value="true" checked>
+        <span class="filters-form__mark"></span>
+        <span class="filters-form__text">Только спецпредложения</span>
+      </label>
+      <label class="filters-form__label filters-form__label--checkbox">
+        <input class="filters-form__checbox visually-hidden" type="checkbox" name="new-product" value="true" checked>
+        <span class="filters-form__mark"></span>
+        <span class="filters-form__text">Только новинки</span>
+      </label>
+      <button class="filters-form__reset-filters-button" type="reset">Сбросить фильтр</button>
+    </fieldset>
   </div>
-</section>
+  <div class="filters-form__group filters-form__group--sliders-selects">
+    <button class="filters-form__back-button" type="button">
+      <span class="visually-hidden">Назад</span>
+    </button>
+    <fieldset class="filters-form__fieldset filters-form__fieldset--load">
+      <legend class="filters-form__legend">Макс. грузоподъемность, кг</legend>
+      <div class="filters-form__controls">
+        <div class="filters-form__field">
+          <label class="filters-form__label visually-hidden" for="min-load-mask">от</label>
+          <input class="filters-form__input" type="text" name="min-load" value="100" id="min-load-mask">
+        </div>
+        <div class="filters-form__field">
+          <label class="filters-form__label visually-hidden" for="max-load-mask">до</label>
+          <input class="filters-form__input" type="text" name="max-load" value="1000" id="max-load-mask">
+        </div>
+      </div>
+      <div class="filters-form__slider filters-form__slider--load" id="slider"></div>
+      <div class="filters-form__min-max">
+        <span class="filters-form__slider-value filters-form__slider-value--min">100</span>
+        <span class="filters-form__slider-value filters-form__slider-value--max">10000</span>
+      </div>
+    </fieldset>
+    <fieldset class="filters-form__fieldset filters-form__fieldset--arrow">
+      <legend class="filters-form__legend">Длина стрелы, м</legend>
+      <div class="filters-form__controls">
+        <div class="filters-form__field">
+          <label class="filters-form__label visually-hidden" for="min-load-mask">от</label>
+          <input class="filters-form__input" type="text" name="min-arrow-length" value="15" id="min-arrow-length">
+        </div>
+        <div class="filters-form__field">
+          <label class="filters-form__label visually-hidden" for="max-load-mask">до</label>
+          <input class="filters-form__input" type="text" name="max-arrow-length" value="18" id="max-arrow-length">
+        </div>
+      </div>
+      <div class="filters-form__slider filters-form__slider--arrow-length" id="slider"></div>
+      <div class="filters-form__min-max">
+        <span class="filters-form__slider-value filters-form__slider-value--min">10</span>
+        <span class="filters-form__slider-value filters-form__slider-value--max">25</span>
+      </div>
+    </fieldset>
+    <fieldset class="filters-form__fieldset">
+      <legend class="filters-form__legend">Ширина укладки</legend>
+      <select class="filters-form__select filters-form__select--paving" id="paving-select" name="paving-select" multiple>
+        <option value="25мм">25мм</option>
+        <option value="30мм">30мм</option>
+        <option value="40мм">40мм</option>
+        <option value="50мм">50мм</option>
+      </select>
+    </fieldset>
+    <fieldset class="filters-form__fieldset">
+      <legend class="filters-form__legend">Рабочий вес</legend>
+      <select class="filters-form__select filters-form__select--working-weight" id="working-weight-select" name="working-weight-select" multiple>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="100">100</option>
+      </select>
+    </fieldset>
+    <fieldset class="filters-form__fieldset">
+      <legend class="filters-form__legend">Тормозная система</legend>
+      <select class="filters-form__select filters-form__select--abs" id="abs-select" name="abs-select" multiple>
+        <option value="ABS">ABS</option>
+        <option value="не ABS">не ABS</option>
+        <option value="Что-то типа ABS">Что-то типа ABS</option>
+        <option value="Обычные тормоза">Обычные тормоза</option>
+      </select>
+    </fieldset>
+  </div>
+  <button class="filters-form__submit-button visually-hidden" type="submit">Отправить форму</button>
+</form>
