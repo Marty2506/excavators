@@ -4,7 +4,6 @@ accordionButtons.forEach(accordionButton => {
   accordionButton.addEventListener('click', () => {
     accordionButton.classList.toggle('accordion-button--closed');
     const accordionPanel = accordionButton.nextElementSibling;
-    console.log(accordionPanel);
     if (accordionPanel.style.maxHeight) {
       accordionPanel.style.maxHeight = null;
     } else {
@@ -24,7 +23,6 @@ if (accordionButtons) {
   });
 }
 function disableAcButtons() {
-  console.log("test");
   if (window.innerWidth > 1348) {
     accordionButtons.forEach(accordionButton => {
       if (!accordionButton.disabled) {
