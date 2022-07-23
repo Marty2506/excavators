@@ -91,7 +91,8 @@
 .characteristics__ask-link {
   display: none;
   @media (min-width: $desktop-width) {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
     align-self: flex-end;
     margin-bottom: 30px;
     margin-right: 35px;
@@ -101,4 +102,17 @@
     color: $primary-color;
     text-decoration: none;
   }
+  &:hover {
+    transition: color 0.3s ease;
+    color: $secondary-color;
+
+    & .characteristics__ask-link-icon {
+      transition: fill 0.3s ease;
+      fill: $secondary-color;
+    }
+  }
+}
+.characteristics__ask-link-icon {
+  fill: $primary-color;
+  margin-right: 7px;
 }

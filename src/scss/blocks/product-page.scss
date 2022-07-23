@@ -21,7 +21,19 @@
   gap: 35px;
 
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    gap: 110px;
   }
 }
+
+.product-page__characteristics {
+  flex-grow: 1;
+}
+
+.product-page__advantages {
+  @media (min-width: $desktop-width) {
+    max-width: 500px;
+    padding-right: 40px;
+  }
+}
+
