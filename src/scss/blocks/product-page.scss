@@ -1,4 +1,8 @@
 .product-page {
+  margin-bottom: 50px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
 }
 .product-page__container {
 }
@@ -9,5 +13,15 @@
   @media (min-width: $desktop-width) {
     margin-top: 75px;
     margin-bottom: 55px;
+  }
+}
+.product-page__info {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }

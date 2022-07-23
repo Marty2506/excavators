@@ -3,7 +3,7 @@ const videoLocation  = document.querySelector('.index-header__video');
 window.onload = addAutoplay();
 function addAutoplay() {
   if (videoLocation) {
-    if(window.innerWidth > 1315){
+    if(window.innerWidth > 1348){
       videoLocation.setAttribute("preload", "");
       videoLocation.setAttribute("autoplay","");
     };
