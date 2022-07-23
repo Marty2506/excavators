@@ -1,0 +1,13 @@
+.product-page {
+}
+.product-page__container {
+}
+.product-page__breadcumbs {
+  margin-top: 25px;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 75px;
+    margin-bottom: 55px;
+  }
+}

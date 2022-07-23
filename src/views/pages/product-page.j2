@@ -1,0 +1,29 @@
+{% extends "layout.j2" %}
+
+{% set page = "product-page" %}
+
+{% block content %}
+  <main class="page-main product-page">
+    <div class="product-page__container container">
+      {% include "./blocks/breadcumbs.j2" %}
+    </div>
+    {% include "./blocks/product-page__card.j2" %}
+
+    {# {% include "./blocks/spareparts.j2" %}
+    {% include "./blocks/useful-systems.j2" %}
+    {% include "./blocks/repair.j2" %} #}
+    {# {% include "./blocks/contacts.j2" %} #}
+  </main>
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/jquery-3.4.1.slim.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# <script src="./js/slick.min.js"></script> #}
+  <script src="./js/custom-select.min.js"></script>
+  <script src="./js/swipers.min.js"></script>
+  <script src="./js/menu.min.js"></script>
+  <script src="./js/burger.min.js"></script>
+  <script src="./js/sliders.min.js"></script>
+  <script src="./js/main.min.js"></script>
+{% endblock %}

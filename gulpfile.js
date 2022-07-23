@@ -190,7 +190,9 @@ const imagesWebp = () => {
     ))
     .pipe(newer(path.build.images))
     .pipe(squoosh({
-      webp: {}
+      webp: {
+        quality: 90
+      }
     }))
     .pipe(gulp.dest(path.build.images))
     .pipe(browserSync.stream());
