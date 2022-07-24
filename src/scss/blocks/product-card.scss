@@ -400,3 +400,40 @@
     }
   }
 }
+
+// Для результатов поиска
+.product-card--search-result {
+  position: relative;
+  padding: 0;
+  border: none;
+  max-width: 325px;
+  transition: opacity 0.3s ease;
+
+  & .product-card__title {
+    font-size: 22px;
+    line-height: 29px;
+  }
+  & .product-card__attributes {
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -5px;
+    bottom: -5px;
+    right: -7px;
+    left: -7px;
+    border-radius: 10px;
+  }
+  &:hover {
+    opacity: 0.8;
+    &::after {
+      content: "";
+      outline: 2px solid $primary-color;
+    }
+  }
+}
