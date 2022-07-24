@@ -5,21 +5,18 @@
   padding: 0;
   list-style-type: none;
 
-
   @media (max-width: $max-tablet-width) {
     display: flex;
-    // gap: 15px;
-    // overflow: hidden;
     padding-bottom: 70px;
   }
   justify-content: space-between;
 
-  // @media (min-width: $desktop-width) {
-  //   display: grid;
-  //   column-gap: 55px;
-  //   row-gap: 53px;
-  //   grid-template-columns: repeat(3, auto);
-  // }
+  @media (min-width: $desktop-width) {
+    display: grid;
+    column-gap: 55px;
+    row-gap: 53px;
+    grid-template-columns: repeat(3, auto);
+  }
 }
 .cards__item {
 }
