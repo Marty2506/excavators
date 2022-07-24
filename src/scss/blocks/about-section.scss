@@ -1,18 +1,20 @@
 .about-section {
-  position: relative;
   color: $dark-color;
   @media (min-width: $tablet-width) {
-    padding: 0 65px;
-    padding-top: 105px;
-    padding-bottom: 75px;
     color: #fbfbfb;
-    background: linear-gradient(90deg, rgba(0,31,68,0.6) 30%, rgba(0,31,68,0.4) 56%, rgba(0,31,68,0.3) 69%);
   }
-}
-.about-section__container {
 }
 .about-section__content {
   width: 100%;
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 0 65px;
+    padding-top: 105px;
+    padding-bottom: 75px;
+    background: linear-gradient(90deg, rgba(0,31,68,0.6) 30%, rgba(0,31,68,0.4) 56%, rgba(0,31,68,0.3) 69%);
+    border-radius: 5px;
+    overflow: hidden;
+  }
 }
 .about-section__main {
   @media (min-width: $tablet-width) {
