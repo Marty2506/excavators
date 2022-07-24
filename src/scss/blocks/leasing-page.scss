@@ -1,0 +1,11 @@
+.leasing-page {
+
+}
+.leasing-page__sub-title {
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: $tablet-width) {
+    max-width: 600px;
+  }
+}

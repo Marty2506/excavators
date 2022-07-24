@@ -3,10 +3,13 @@
 {% set page = "leasing" %}
 
 {% block content %}
-  <main class="page-main">
+  <main class="page-main leasing-page">
     {% include "./blocks/leasing-header.j2" %}
     {% include "./blocks/leasing-terms.j2" %}
-
+    <div class="container">
+      <p class="leasing-page__sub-title section-header">Весь модельный ряд в нашем каталоге доступен в лизинг</p>
+    </div>
+    {% include "./blocks/tech-tabs.j2" %}
     {# {% include "./blocks/index-header.j2" %}
     {% include "./blocks/tech-tabs.j2" %}
     {% include "./blocks/new-offers.j2" %}
