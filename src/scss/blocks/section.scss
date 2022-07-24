@@ -134,6 +134,18 @@
     background-image: url('@img/icons/gear-icon.svg');
     transform: translate(-5px, 5px);
   }
+  &--docs::before {
+    background-image: url('@img/icons/docs-icon.svg');
+    transform: translate(-5px, 5px);
+  }
+  &--pasport::before {
+    background-image: url('@img/icons/pasport-icon.svg');
+    transform: translate(-5px, 5px);
+  }
+  &--graph::before {
+    background-image: url('@img/icons/graph-icon.svg');
+    transform: translate(-5px, 5px);
+  }
 }
 .section__item-text {
   margin: 0;
