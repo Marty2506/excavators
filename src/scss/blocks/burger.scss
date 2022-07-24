@@ -28,6 +28,7 @@
   }
 }
 .burger--opened {
+  top: 32px;
   width: 25px;
   height: 25px;
   background-image: url("@img/icons/burger-close.svg");

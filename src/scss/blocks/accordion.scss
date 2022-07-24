@@ -18,7 +18,7 @@
     right: 0;
     width: 25px;
     height: 25px;
-    transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%);
     background-image: url("@img/icons/accordion-arrow.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@
 }
 .accordion-button--closed {
   &::after {
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(90deg);
   }
 }
 .accordion-button:disabled {

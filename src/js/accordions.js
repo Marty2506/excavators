@@ -26,6 +26,9 @@ function disableAcButtons() {
   if (window.innerWidth > 1348) {
     accordionButtons.forEach(accordionButton => {
       if (!accordionButton.disabled) {
+        if (accordionButton.classList.contains('accordion-button--closed')) {
+          accordionButton.click();
+        }
         accordionButton.disabled = true;
       }
     });
@@ -33,6 +36,7 @@ function disableAcButtons() {
     accordionButtons.forEach(accordionButton => {
       if (accordionButton.disabled) {
         accordionButton.disabled = false;
+        accordionButton.click();
       }
     });
   }

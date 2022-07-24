@@ -11,3 +11,14 @@
 
   font-family: "Proxima Nova", "Arial", sans-serif;
 }
+
+.menu-opened {
+  @media (max-width: $max-tablet-width) {
+    & .page-main {
+      display: none;
+    }
+    & .page-footer {
+      display: none;
+    }
+  }
+}
