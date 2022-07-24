@@ -12,3 +12,11 @@
 .popular__title {
   margin-bottom: 35px;
 }
+.popular__cards-list {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    column-gap: 55px;
+    row-gap: 53px;
+    grid-template-columns: repeat(3, auto);
+  }
+}
