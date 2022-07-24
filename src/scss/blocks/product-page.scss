@@ -37,3 +37,10 @@
   }
 }
 
+.product-page__card {
+  margin-bottom: 35px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+

@@ -36,3 +36,27 @@ var mainSwiper = new Swiper(".swiper--main", {
     }
   }
 });
+
+// Слайдер карточек "Похожая техника"
+var similarSwiper = new Swiper(".swiper--similar", {
+  loop: false,
+  spaceBetween: 60,
+  slidesPerView: 1,
+  watchSlidesProgress: true,
+  speed: 700,
+  navigation: {
+    nextEl: ".swiper--cards .swiper-button-next",
+    prevEl: ".swiper--cards .swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1100: {
+      slidesPerView: 3,
+    }
+  }
+});
