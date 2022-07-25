@@ -53,6 +53,12 @@
     width: 29px;
     height: 29px;
   }
+  &:hover {
+    & .search__icon {
+      transition: fill 0.3s ease;
+      fill: $secondary-color;
+    }
+  }
 }
 .search__icon {
   position: absolute;
@@ -63,4 +69,10 @@
   @media (max-width: $desktop-width) {
     width: 15px;
   }
+}
+.search__input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.search__input::-webkit-search-results-button{
+  -webkit-appearance: none;
 }
