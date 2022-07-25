@@ -19,7 +19,7 @@
   &::after {
     position: absolute;
     content: "";
-    top: 2.2px;
+    top: 4px;
     bottom: 0;
     left: 70%;
     right: 0;
@@ -135,10 +135,11 @@
   width: 50%;
   justify-content: center;
   align-items: flex-end;
+  // background-image: url("@img/header-bg2.svg");
   background-image: url("@img/header-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top left;
+  background-position: 0 4px;
 
   @media (max-width: $desktop-width) {
     display: none;
