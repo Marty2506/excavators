@@ -4,7 +4,8 @@
   background-color: #fff;
   border-top: solid 2px $primary-color;
   color: $dark-color;
-  // border: 2px solid $primary-color;
+  border: 0.2px solid fade-out(#9B9B9B, 0.7);
+  box-shadow: 0 5px 5px 5px fade-out(#9B9B9B, 0.7);
 }
 .dropdown__list {
   min-width: 315px;
@@ -63,6 +64,8 @@
   transform: translateX(100%);
   background-color: #fff;
   animation: showing-animation 0.3s forwards;
+  border: 0.2px solid fade-out(#9B9B9B, 0.7);
+  box-shadow: 3px 0 5px 5px fade-out(#9B9B9B, 0.7);
   // border: 2px solid $primary-color;
 }
 .dropdown__tab-header {
