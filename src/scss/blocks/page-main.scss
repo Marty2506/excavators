@@ -4,3 +4,13 @@
   flex-grow: 1;
   flex-direction: column;
 }
+
+.page-main__breadcumbs {
+  margin-top: 25px;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 75px;
+    margin-bottom: 55px;
+  }
+}

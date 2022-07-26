@@ -1,0 +1,44 @@
+.filter-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 10px 42px 10px 42px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $dark-color;
+
+  background-color: transparent;
+  border: 1px solid $secondary-color;
+  border-radius: 1px;
+  cursor: pointer;
+  text-align: center;
+
+  transition: color 0.3s, background-color 0.3s;
+  &:hover {
+    color: $primary-color;
+    // font-weight: 700;
+    background-color: $secondary-color;
+  }
+}
+.filter-button--active {
+  position: relative;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    color: $primary-color;
+    background-color: $secondary-color;
+  }
+}

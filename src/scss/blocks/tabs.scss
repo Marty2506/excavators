@@ -46,4 +46,8 @@
 }
 .tabs__panel--active  {
   display: block;
+  margin-top: 30px;
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+  }
 }

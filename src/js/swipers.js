@@ -118,14 +118,53 @@ const destroyPopularSwiper = () => {
     popularSwiper = null;
   }
 }
+// Слайдер карточек Оборудование"
+const equipmentSwiperSelector = document.querySelector('.swiper--equipment');
+var equipmentSwiper = null;
+const initEquipmentSwiper = () => {
+  if (equipmentSwiperSelector) {
+    if(!equipmentSwiper) {
+      equipmentSwiper = new Swiper(equipmentSwiperSelector, {
+        loop: false,
+        spaceBetween: 60,
+        slidesPerView: 3,
+        watchSlidesProgress: true,
+        speed: 700,
+        navigation: {
+          nextEl: ".swiper--cards .swiper-button-next",
+          prevEl: ".swiper--cards .swiper-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    }
+  }
+}
+const destroyEquipmentSwiper = () => {
+  if(equipmentSwiper) {
+    equipmentSwiper.destroy();
+    equipmentSwiper = null;
+  }
+}
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1348) {
     destroyPopularSwiper();
     destroySimilarSwiper();
+    destroyEquipmentSwiper();
   } else {
     initPopularSwiper();
     initSimilarSwiper();
+    initEquipmentSwiper();
   }
 });
 
@@ -133,5 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth <= 1348) {
     initPopularSwiper();
     initSimilarSwiper();
+    initEquipmentSwiper();
   }
 });

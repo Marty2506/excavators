@@ -10,9 +10,32 @@
 }
 .new-offers__container {
 }
+.new-offers__buttons {
+  display: none;
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+.new-offers__buttons-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 9px;
+  margin-bottom: 30px;
+}
 .new-offers__tabs-list {
   @media (max-width: $desktop-width) {
     display: none;
+  }
+}
+.new-offers .tabs__button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  &--active {
+    font-weight: 700;
   }
 }
 .new-offers__title {
@@ -46,10 +69,6 @@
     display: none;
   }
 }
-// .new-offers__slider-arrows {
-//   display: flex;
-//   gap: 5px;
-// }
 
 // Стили для селекта
 
@@ -60,6 +79,7 @@
   font-size: 17px;
   line-height: 21px;
   color: $dark-color;
+  z-index: 100;
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -73,7 +93,8 @@
 }
 .new-offers__select-opener {
   display: block;
-  height: 55px;
+  // height: 55px;
+  // TODO Спросить у Ромы
   cursor: pointer;
   width: 100%;
   padding: 17px 32px;
@@ -117,7 +138,8 @@
   border-radius: 1px;
 }
 .new-offers__select-option {
-  height: 50px;
+  // height: 50px;
+  // TODO Спросить у Ромы
   padding: 14.5px 32px;
   border: 1px solid $secondary-color;
   border-radius: 1px;
