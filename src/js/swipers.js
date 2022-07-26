@@ -149,10 +149,53 @@ const initEquipmentSwiper = () => {
     }
   }
 }
+
 const destroyEquipmentSwiper = () => {
   if(equipmentSwiper) {
     equipmentSwiper.destroy();
     equipmentSwiper = null;
+  }
+}
+
+// Слайдер карточек спецпредложения
+const offersSwiperSelector = document.querySelectorAll('.swiper--offers');
+var offersSwipers = new Array(offersSwiperSelector.length);
+
+const initOffersSwipers = () => {
+  for (let i = 0; i < offersSwipers.length; i++) {
+    if (!offersSwipers[i]) {
+      offersSwipers[i] = new Swiper(offersSwiperSelector[i], {
+        loop: false,
+        spaceBetween: 60,
+        slidesPerView: 3,
+        watchSlidesProgress: true,
+        speed: 700,
+        navigation: {
+          nextEl: ".swiper--cards .swiper-button-next",
+          prevEl: ".swiper--cards .swiper-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    }
+  }
+}
+
+const destroyOffersSwipers = () => {
+  for (let i = 0; i < offersSwipers.length; i++) {
+    if(offersSwipers[i]) {
+      offersSwipers[i].destroy();
+      offersSwipers[i] = null;
+    }
   }
 }
 
@@ -161,10 +204,12 @@ window.addEventListener("resize", () => {
     destroyPopularSwiper();
     destroySimilarSwiper();
     destroyEquipmentSwiper();
+    destroyOffersSwipers();
   } else {
     initPopularSwiper();
     initSimilarSwiper();
     initEquipmentSwiper();
+    initOffersSwipers();
   }
 });
 
@@ -173,5 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initPopularSwiper();
     initSimilarSwiper();
     initEquipmentSwiper();
+    initOffersSwipers();
   }
 });

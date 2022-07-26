@@ -2,12 +2,15 @@
 
 {% set page = "index" %}
 
+{% set offersType = "new"%}
+{% set offersTitle= "Свежие спецпредложения"%}
+
 {% block content %}
   <main class="page-main">
     <h1 class="visually-hidden">Главная страница компании техстройпроект - федерального дилера спецтехники XCMG</h1>
     {% include "./blocks/index-header.j2" %}
     {% include "./blocks/tech-tabs.j2" %}
-    {% include "./blocks/new-offers.j2" %}
+    {% include "./blocks/offers.j2" %}
     {% include "./blocks/leasing-section.j2" %}
     {% include "./blocks/spareparts.j2" %}
     {% include "./blocks/useful-systems.j2" %}
@@ -18,6 +21,8 @@
 
 {% block js %}
   <script src="./js/jquery-3.4.1.slim.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/swipers.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/tabs.min.js"></script>
   <script src="./js/custom-select.min.js"></script>

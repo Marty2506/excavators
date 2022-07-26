@@ -19,7 +19,6 @@
   transition: color 0.3s, background-color 0.3s;
   &:hover {
     color: $primary-color;
-    // font-weight: 700;
     background-color: $secondary-color;
   }
 }

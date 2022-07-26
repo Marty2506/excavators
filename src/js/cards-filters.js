@@ -13,7 +13,7 @@ if (filterButtons) {
 }
 
 // Добавление действий при смене фильтра в селекторе
-const newOffersBaseSelect = document.querySelector('.new-offers__select');
+const newOffersBaseSelect = document.querySelector('.offers__select');
 newOffersBaseSelect.addEventListener('change', () => {
   // console.log(newOffersBaseSelect.selectedIndex);
   // Описать смену фильтра??

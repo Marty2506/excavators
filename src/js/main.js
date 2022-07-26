@@ -25,65 +25,53 @@ const selectDefaultParams = {
 const contactsSelect = customSelect(document.querySelector('.contacts__select'), selectDefaultParams);
 
 const newOffersSelectParams = {
-  containerClass: 'new-offers__select-container',
-  openerClass: 'new-offers__select-opener',
-  panelClass: 'new-offers__select-panel',
-  optionClass: 'new-offers__select-option',
-  optgroupClass: 'new-offers__select-optgroup',
+  containerClass: 'offers__select-container',
+  openerClass: 'offers__select-opener',
+  panelClass: 'offers__select-panel',
+  optionClass: 'offers__select-option',
+  optgroupClass: 'offers__select-optgroup',
   isSelectedClass: 'is-selected',
   hasFocusClass: 'has-focus',
   isDisabledClass: 'is-disabled',
   isOpenClass: 'is-open'
 };
-const newOffersSelect = customSelect(document.querySelector('.new-offers__select'), newOffersSelectParams);
+const newOffersSelect = customSelect(document.querySelector('.offers__select'), newOffersSelectParams);
 
 
 // Слайдеры
-let newOffersSlider = false;
-let isSliderInit = false;
+// let newOffersSlider = false;
+// let isSliderInit = false;
 
-window.addEventListener("resize", onWindowResize);
+// window.addEventListener("resize", onWindowResize);
 
-function onWindowResize() {
-  if (window.innerWidth < 930) {
-    if (!isSliderInit) {
-      $('.new-offers__slider').slick({
-        arrows: false,
-        mobileFirst: true,
-        dots: false,
-        arrows: true,
-        infinite: false,
-        responsive: [
-          {
-            breakpoint: 660,
-            settings: {
-              slidesToShow: 2
-            }
-          }
-        ]
-      });
-      isSliderInit = true;
-    }
-  } else {
-    if (isSliderInit) {
-      $('.new-offers__slider').slick('unslick');
-      isSliderInit = false;
-    }
-  }
-};
-
-$(document).ready(function(){
-  onWindowResize();
-});
-
-// $('select').amsifySelect({
-//   type : 'amsify',
-//   classes: {
-//     clear : '',
-//     close : 'button',
-//     label: '.myLabelArea'
+// function onWindowResize() {
+//   if (window.innerWidth < 930) {
+//     if (!isSliderInit) {
+//       $('.offers__slider').slick({
+//         arrows: false,
+//         mobileFirst: true,
+//         dots: false,
+//         arrows: true,
+//         infinite: false,
+//         responsive: [
+//           {
+//             breakpoint: 660,
+//             settings: {
+//               slidesToShow: 2
+//             }
+//           }
+//         ]
+//       });
+//       isSliderInit = true;
+//     }
+//   } else {
+//     if (isSliderInit) {
+//       $('.offers__slider').slick('unslick');
+//       isSliderInit = false;
+//     }
 //   }
+// };
+
+// $(document).ready(function(){
+//   onWindowResize();
 // });
-// const multiSelectCloseButton = document.querySelector('.amsify-select-close');
-// multiSelectCloseButton.textContent = "Применить";
-// multiSelectCloseButton.classList.add('button');
