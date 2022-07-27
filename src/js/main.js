@@ -35,8 +35,7 @@ const newOffersSelectParams = {
   isDisabledClass: 'is-disabled',
   isOpenClass: 'is-open'
 };
-const newOffersSelect = customSelect(document.querySelector('.offers__select'), newOffersSelectParams);
-
+const newOffersSelect = customSelect(document.querySelector('.offers__select'), newOffersSelectParams)[0];
 
 // Слайдеры
 // let newOffersSlider = false;

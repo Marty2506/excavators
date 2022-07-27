@@ -10,10 +10,8 @@ tabs.forEach(tabsElement => {
         evt.preventDefault();
       }
       tabButtons.forEach((element, j) => {
-        if (element.classList.contains('tabs__button--active')) {
-          element.classList.remove('tabs__button--active');
-          panels[j].classList.remove('tabs__panel--active');
-        }
+        panels[j].classList.remove('tabs__panel--active');
+        element.classList.remove('tabs__button--active');
       });
       evt.target.classList.add('tabs__button--active');
       panels[i].classList.add('tabs__panel--active');
@@ -23,7 +21,6 @@ tabs.forEach(tabsElement => {
 
 // Расширение для кнопок в offers
 const offersButtons = document.querySelectorAll('.offers__button');
-// console.log(offersButtons);
 offersButtons.forEach((offersButton, index) => {
   offersButton.addEventListener('click', () => {
     offersButtons.forEach(element => {
@@ -31,7 +28,15 @@ offersButtons.forEach((offersButton, index) => {
     });
     offersButton.classList.add('offers__button--active');
     const select = offersButton.closest('.offers').querySelector('.offers__select');
-    newOffersSelect[0].value = select.options[index].value;
-    console.log(select.options[select.selectedIndex].value);
+    newOffersSelect.value = select.options[index].value;
   })
 });
+
+
+// newOffersSelect Объявлен в main
+if (newOffersSelect) {
+  newOffersSelect.select.addEventListener('change', (e) => {
+    const buttons = e.target.closest('.offers').querySelectorAll('.offers__button');
+    buttons[e.target.selectedIndex].click();
+  })
+}
