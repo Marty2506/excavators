@@ -1,0 +1,39 @@
+{% extends "layout.j2" %}
+
+{% set page = "spareparts" %}
+
+{% set offersType = "spec"%}
+{% set offersTitle= "Спецпредложения"%}
+
+{% block content %}
+  <main class="page-main spareparts-page">
+    <h1 class="visually-hidden">Запчасти</h1>
+    <div class="container">
+      <div class="page-main__breadcumbs breadcumbs breadcumbs--blue">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item breadcumbs__item--home">
+            <a class="breadcumbs__link breadcumbs__link--home" href="index.html">
+              <svg class="breadcumbs__link-icon" width="19" height="17" viewBox="0 0 19 17">
+                <use xlink:href="img/sprite.svg#home-icon"></use>
+              </svg>
+              <span>На Главную</span>
+            </a>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Запчасти</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% include "./blocks/spareparts.j2" %}
+    {% include "./blocks/spareparts-form.j2" %}
+  </main>
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/jquery-3.4.1.slim.js"></script>
+  <script src="./js/custom-select.min.js"></script>
+  <script src="./js/menu.min.js"></script>
+  <script src="./js/burger.min.js"></script>
+  <script src="./js/main.min.js"></script>
+{% endblock %}

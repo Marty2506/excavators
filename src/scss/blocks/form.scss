@@ -1,0 +1,116 @@
+.form {
+  margin: 0;
+  padding: 0;
+}
+.form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 33px;
+    row-gap: 30px;
+    margin-bottom: 30px;
+  }
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 33px;
+    row-gap: 30px;
+    margin-bottom: 30px;
+  }
+}
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form__label--checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form__label--politics {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  & a {
+    color: $primary-color;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+  }
+}
+.form__label-text {
+  display: inline-flex;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  flex-grow: 0;
+}
+.form__field {
+  display: flex;
+  width: 100%;
+  padding: 16.5px 16px;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  border: 0.3px solid fade-out(#85939A, 0.7);
+  border-radius: 1px;
+
+  &::placeholder {
+    opacity: 0.4;
+  }
+  &:hover,
+  &:focus {
+    outline: 1px solid $primary-color;
+  }
+}
+.form__buttons {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
+}
+.form__submit-button {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  max-height: 65px;
+  margin-bottom: 10px;
+}
+.form__messengers {
+  display: flex;
+  margin-top: 5px;
+
+  .form__label-text {
+    max-width: 130px;
+  }
+}
+.form__checkbox {
+  display: none;
+}
+.form__mark {
+  width: 17px;
+  height: 17px;
+  background-color: #f0f0f3;;
+  transition: border 0.5s ease;
+}
+.form__checkbox[type="checkbox"]:checked + .form__mark {
+  background-image: url("@img/icons/list-check-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}

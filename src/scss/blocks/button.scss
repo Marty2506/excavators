@@ -2,10 +2,11 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: 300px;
+  min-width: 280px;
   height: 74px;
   padding: 10px 20px;
 
+  font-family: inherit;
   font-weight: 600;
   font-size: 17px;
   line-height: 22px;
@@ -18,6 +19,8 @@
   background-color: $primary-color;
 
   transition: color 0.3s, background-color 0.3s;
+
+  cursor: pointer;
 
   @media (max-width: $desktop-width) {
     width: 100%;
