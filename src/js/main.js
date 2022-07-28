@@ -37,40 +37,9 @@ const newOffersSelectParams = {
 };
 const newOffersSelect = customSelect(document.querySelector('.offers__select'), newOffersSelectParams)[0];
 
-// Слайдеры
-// let newOffersSlider = false;
-// let isSliderInit = false;
-
-// window.addEventListener("resize", onWindowResize);
-
-// function onWindowResize() {
-//   if (window.innerWidth < 930) {
-//     if (!isSliderInit) {
-//       $('.offers__slider').slick({
-//         arrows: false,
-//         mobileFirst: true,
-//         dots: false,
-//         arrows: true,
-//         infinite: false,
-//         responsive: [
-//           {
-//             breakpoint: 660,
-//             settings: {
-//               slidesToShow: 2
-//             }
-//           }
-//         ]
-//       });
-//       isSliderInit = true;
-//     }
-//   } else {
-//     if (isSliderInit) {
-//       $('.offers__slider').slick('unslick');
-//       isSliderInit = false;
-//     }
-//   }
-// };
-
-// $(document).ready(function(){
-//   onWindowResize();
-// });
+var phoneInput = document.querySelector('#phone');
+var maskOptions = {
+  mask: '+{7}(000)000-00-00',
+  // lazy: false,  // make placeholder always visible
+};
+var mask = IMask(phoneInput, maskOptions)
