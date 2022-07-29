@@ -23,11 +23,17 @@
   </main>
 {% endblock content %}
 
+{% block modal %}
+  {% include "./blocks/modals/modal-leasing.j2" %}
+  {% include "./blocks/modals/modal-price.j2" %}
+  {% include "./blocks/modals/modal-offer.j2" %}
+{% endblock modal %}
+
 {% block js %}
   <script src="./js/jquery-3.4.1.slim.js"></script>
-  <script src="./js/slick.min.js"></script>
   <script src="./js/tabs.min.js"></script>
   <script src="./js/custom-select.min.js"></script>
+  <script src="./js/imask.js"></script>
   <script src="./js/menu.min.js"></script>
   <script src="./js/burger.min.js"></script>
   <script src="./js/main.min.js"></script>

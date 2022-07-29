@@ -97,8 +97,8 @@
                     </div>
                   </div>
                   <div class="product-card__buttons">
-                    <a class="product-card__button button" href="#">Запросить предложение</a>
-                    <a class="product-card__button product-card__button--no-price button" href="#">Запросить цену</a>
+                    <a class="product-card__button product-card__button--offer button" href="#!">Запросить предложение</a>
+                    <a class="product-card__button product-card__button--no-price button" href="#!">Запросить цену</a>
                   </div>
                 </div>
               </div>
@@ -142,8 +142,8 @@
                     </div>
                   </div>
                   <div class="product-card__buttons">
-                    <a class="product-card__button button" href="#">Запросить предложение</a>
-                    <a class="product-card__button product-card__button--no-price button" href="#">Запросить цену</a>
+                    <a class="product-card__button product-card__button--offer button" href="#!">Запросить предложение</a>
+                    <a class="product-card__button product-card__button--no-price button" href="#!">Запросить цену</a>
                   </div>
                 </div>
               </div>
@@ -187,8 +187,8 @@
                     </div>
                   </div>
                   <div class="product-card__buttons">
-                    <a class="product-card__button button" href="#">Запросить предложение</a>
-                    <a class="product-card__button product-card__button--no-price button" href="#">Запросить цену</a>
+                    <a class="product-card__button product-card__button--offer button" href="#!">Запросить предложение</a>
+                    <a class="product-card__button product-card__button--no-price button" href="#!">Запросить цену</a>
                   </div>
                 </div>
               </div>
@@ -232,8 +232,8 @@
                     </div>
                   </div>
                   <div class="product-card__buttons">
-                    <a class="product-card__button button" href="#">Запросить предложение</a>
-                    <a class="product-card__button product-card__button--no-price button" href="#">Запросить цену</a>
+                    <a class="product-card__button product-card__button--offer button" href="#!">Запросить предложение</a>
+                    <a class="product-card__button product-card__button--no-price button" href="#!">Запросить цену</a>
                   </div>
                 </div>
               </div>
@@ -277,8 +277,8 @@
                     </div>
                   </div>
                   <div class="product-card__buttons">
-                    <a class="product-card__button button" href="#">Запросить предложение</a>
-                    <a class="product-card__button product-card__button--no-price button" href="#">Запросить цену</a>
+                    <a class="product-card__button product-card__button--offer button" href="#!">Запросить предложение</a>
+                    <a class="product-card__button product-card__button--no-price button" href="#!">Запросить цену</a>
                   </div>
                 </div>
               </div>
@@ -294,12 +294,18 @@
   </main>
 {% endblock content %}
 
+{% block modal %}
+  {% include "./blocks/modals/modal-leasing.j2" %}
+  {% include "./blocks/modals/modal-price.j2" %}
+  {% include "./blocks/modals/modal-offer.j2" %}
+{% endblock modal %}
+
 {% block js %}
   <script src="./js/jquery-3.4.1.slim.js"></script>
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/swipers.min.js"></script>
+  <script src="./js/imask.js"></script>
   <script src="./js/cards-filters.min.js"></script>
-  <script src="./js/slick.min.js"></script>
   <script src="./js/tabs.min.js"></script>
   <script src="./js/custom-select.min.js"></script>
   <script src="./js/menu.min.js"></script>

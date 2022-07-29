@@ -1,0 +1,38 @@
+<div class="modal modal--{{ suffix }}">
+  <div class="modal__wrapper container">
+    <h3 class="visually-hidden">Окно обратной связи</h3>
+    <p class="modal__title">{{ title }}</p>
+    <div class="modal__content">
+      <form class="modal__form form" action="https://echo.htmlacademy.ru" method="get">
+        <label class="form__label">
+          <span class="form__label-text">Ваше имя</span>
+          <input class="form__field" type="text" id="client-name" name="client-name" placeholder="Иван Иванович" required>
+        </label>
+        <label class="form__label">
+          <span class="form__label-text">Телефон</span>
+          <input class="form__field" type="tel" id="phone" name="phone" placeholder="+7(___)___-__-__" required>
+        </label>
+        <div class="form__buttons">
+          <button class="button form__submit-button">{{ buttonText }}</button>
+          <label class="form__label form__label--checkbox form__label--politics">
+            <input class="form__checkbox" type="checkbox" name="privacy-policy" id="privacy policy "value="agree" checked>
+            <span class="form__mark"></span>
+            <span>Согласен с <a href="#!">Политикой конфиденциальности</a></span>
+          </label>
+        </div>
+        <div class="form__messengers">
+          <span class="form__label-text">или напишите в&nbsp;мессенджер</span>
+          <a class="messenger messenger--telegram messenger--form" href="#!">
+            <span class="visually-hidden">Контакт телеграма</span>
+          </a>
+          <a class="messenger messenger--whatsup messenger--form" href="#!">
+            <span class="visually-hidden">Контакт вотсапа</span>
+          </a>
+        </div>
+      </form>
+    </div>
+    <button class="modal__close-button" type="button">
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+  </div>
+</div>
