@@ -1,20 +1,48 @@
-<section class="about-section section">
-  <div class="about-section__container container">
+<div class="container">
+  <section class="about-section section {% if page == "about"%} about-section--page {% endif %}">
+    {% if page == "about"%}
+      <div class="about-section__breadcumbs breadcumbs breadcumbs--blue">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item breadcumbs__item--home">
+            <a class="breadcumbs__link breadcumbs__link--home" href="index.html">
+              <svg class="breadcumbs__link-icon" width="19" height="17" viewBox="0 0 19 17">
+                <use xlink:href="img/sprite.svg#home-icon"></use>
+              </svg>
+              <span>На Главную</span>
+            </a>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">О Нас</span>
+          </li>
+        </ul>
+      </div>
+    {% endif %}
     <div class="about-section__content section__content">
       <div class="about-section__main section__main">
         <h2 class="visually-hidden">О компании.</h2>
         <p class="about-section__title section__title">«Техстройпроект»</p>
         <p class="about-section__sub-title section__sub-title">— официальный дилер<br> бренда XCMG</p>
         <figure class="about-section__figure">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)" srcset="@img/index-header-bg-no-shadow.webp">
-            <source type="image/webp" srcset="@img/catalog-header-mobile.webp 1x, @img/catalog-header-mobile@2x.webp 2x">
-            <source media="(min-width: 768px)" srcset="@img/index-header-bg-no-shadow.jpg">
-            <img class="catalog-header__image" src="@img/catalog-header-mobile.jpg" srcset="@img/catalog-header-mobile@2x.jpg 2x" alt="">
-          </picture>
+          {% if page == "about"%}
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="@img/about-page-desktop.webp">
+              <source type="image/webp" srcset="@img/about-page-mobile.webp 1x, @img/about-page-mobile@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="@img/about-page-desktop.png">
+              <img class="about-section__image" src="@img/about-page-mobile.jpg" srcset="@img/about-page-mobile@2x.jpg 2x" alt="">
+            </picture>
+          {% else %}
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="@img/index-header-bg-no-shadow.webp">
+              <source type="image/webp" srcset="@img/catalog-header-mobile.webp 1x, @img/catalog-header-mobile@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="@img/index-header-bg-no-shadow.jpg">
+              <img class="about-section__image" src="@img/catalog-header-mobile.jpg" srcset="@img/catalog-header-mobile@2x.jpg 2x" alt="">
+            </picture>
+          {% endif %}
         </figure>
         <p class="about-section__text section__text">Поставляем технику, оборудование  и запчасти к ней по всей России</p>
-        <a class="button button--yellow about-section__button section__button" href="./about.html">Подробнее о компании</a>
+        {% if page != "about"%}
+          <a class="button button--yellow about-section__button section__button" href="./about.html">Подробнее о компании</a>
+        {% endif %}
       </div>
       <div class="about-section__features features">
         <dl class="about-section__features-list features__list">
@@ -35,5 +63,6 @@
         </dl>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
+
