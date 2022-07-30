@@ -1,0 +1,143 @@
+.docs {
+}
+.docs__content {
+}
+.docs__title {
+  margin-bottom: 15px;
+}
+.docs__swiper {
+  position: relative;
+  padding: 0 60px;
+
+  & .swiper-slide {
+    opacity: 1;
+  }
+  & .swiper-slide-visible {
+    opacity: 1;
+  }
+
+}
+.docs__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.docs__item {
+}
+.docs__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: $dark-color;
+
+
+  &:hover {
+    & .docs__image {
+      border-color: $primary-color;
+    }
+    & p {
+      opacity: 0.7;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.docs__image {
+  margin-bottom: 15px;
+  border: 1px solid fade-out(#9b9b9b, 0.7);
+  border-radius: 3px;
+  transition: border 0.5s ease;
+}
+.docs__firm {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: calc(27 / 22) * 100%;
+  transition: opacity 0.5s ease;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 19px;
+  }
+}
+.docs__worker-name,
+.docs__job-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  transition: opacity 0.5s ease;
+}
+.docs__job-title {
+}
+.docs__swiper-button {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: $primary-color;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #9b9b9b;
+    pointer-events: none;
+
+    & .docs__swiper-button-icon {
+      fill: $white-color;
+    }
+  }
+}
+.docs__swiper-button-icon {
+  fill: #fff;
+  transition: fill 0.3s ease;
+  width: 30%;
+}
+.docs__swiper-button--prev {
+  left: 0;
+  background-color: $secondary-color;
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+    & .docs__swiper-button-icon {
+      fill: $secondary-color;
+    }
+  }
+  & .docs__swiper-button-icon {
+    fill: $primary-color;
+  }
+}
+.docs__swiper-button--next {
+  right: 0;
+  background-color: $primary-color;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-color;
+    & .docs__swiper-button-icon {
+      fill: $primary-color;
+    }
+  }
+  & .docs__swiper-button-icon {
+    fill: $secondary-color;
+  }
+  & .docs__swiper-button-icon {
+    transform: rotate(180deg);
+  }
+}

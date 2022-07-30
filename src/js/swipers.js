@@ -250,6 +250,35 @@ const aboutGallerMainSwiperOptions = {
 aboutGalleryMainSwiper = new Swiper(aboutGalleryMainSwiperSelector, aboutGallerMainSwiperOptions);
 // initSwiper(aboutGalleryMainSwiperSelector, aboutGalleryMainSwiper, aboutGallerMainSwiperOptions);
 
+// docs Swiper
+const docsSwiperSelector = document.querySelector('.docs__swiper');
+const docsSwiperOptions = {
+  loop: false,
+  spaceBetween: 60,
+  slidesPerView: 4,
+  watchSlidesProgress: true,
+  speed: 700,
+  navigation: {
+    nextEl: ".docs__swiper .docs__swiper-button--next",
+    prevEl: ".docs__swiper .docs__swiper-button--prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1100: {
+      slidesPerView: 3,
+    },
+    1349: {
+      slidesPerView: 4,
+    }
+  }
+}
+var docsSwiper = new Swiper(docsSwiperSelector, docsSwiperOptions);
+
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1348) {

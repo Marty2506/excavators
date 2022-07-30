@@ -1,0 +1,96 @@
+{% set docsCounter = 1 %}
+<section class="docs section">
+  <div class="container">
+    <div class="docs__content">
+      <h2 class="docs__title section__title">Благодарности</h2>
+      <div class="docs__swiper swiper">
+        <ul class="docs__list swiper-wrapper">
+          <li class="docs__item swiper-slide">
+            <a class="docs__link" href="#!">
+              <picture>
+                <source type="image/webp" srcset="@img/thanks-1.webp 1x">
+                <img class="docs__image" src="@img/thanks-1.jpg" alt="Благодарность {{ docsCounter }}">
+                {% set docsCounter = docsCounter + 1 %}
+              </picture>
+              <p class="docs__firm">Роснефть</p>
+              <p class="docs__worker-name">Иван Иванов,</p>
+              <p class="docs__job-title">Генеральный директор</p>
+            </a>
+          </li>
+          <li class="docs__item swiper-slide">
+            <a class="docs__link" href="#!">
+              <picture>
+                <source type="image/webp" srcset="@img/thanks-1.webp 1x">
+                <img class="docs__image" src="@img/thanks-1.jpg" alt="Благодарность {{ docsCounter }}">
+                {% set docsCounter = docsCounter + 1 %}
+              </picture>
+              <p class="docs__firm">Сладуника</p>
+              <p class="docs__worker-name">Иван Иванов,</p>
+              <p class="docs__job-title">Генеральный директор</p>
+            </a>
+          </li>
+          <li class="docs__item swiper-slide">
+            <a class="docs__link" href="#!">
+              <picture>
+                <source type="image/webp" srcset="@img/thanks-2.webp 1x">
+                <img class="docs__image" src="@img/thanks-2.jpg" alt="Благодарность {{ docsCounter }}">
+                {% set docsCounter = docsCounter + 1 %}
+              </picture>
+              <p class="docs__firm">CMP-Production</p>
+              <p class="docs__worker-name">Иван Иванов,</p>
+              <p class="docs__job-title">Генеральный директор</p>
+            </a>
+          </li>
+          <li class="docs__item swiper-slide">
+            <a class="docs__link" href="#!">
+              <picture>
+                <source type="image/webp" srcset="@img/thanks-3.webp 1x">
+                <img class="docs__image" src="@img/thanks-3.jpg" alt="Благодарность {{ docsCounter }}">
+                {% set docsCounter = docsCounter + 1 %}
+              </picture>
+              <p class="docs__firm">Рунет Медиа Холдинг</p>
+              <p class="docs__worker-name">Иван Иванов,</p>
+              <p class="docs__job-title">Генеральный директор</p>
+            </a>
+          </li>
+          <li class="docs__item swiper-slide">
+            <a class="docs__link" href="#!">
+              <picture>
+                <source type="image/webp" srcset="@img/thanks-4.webp 1x">
+                <img class="docs__image" src="@img/thanks-4.jpg" alt="Благодарность {{ docsCounter }}">
+                {% set docsCounter = docsCounter + 1 %}
+              </picture>
+              <p class="docs__firm">Роснефть</p>
+              <p class="docs__worker-name">Иван Иванов,</p>
+              <p class="docs__job-title">Генеральный директор</p>
+            </a>
+          </li>
+          <li class="docs__item swiper-slide">
+            <a class="docs__link" href="#!">
+              <picture>
+                <source type="image/webp" srcset="@img/thanks-1.webp 1x">
+                <img class="docs__image" src="@img/thanks-1.jpg" alt="Благодарность {{ docsCounter }}">
+                {% set docsCounter = docsCounter + 1 %}
+              </picture>
+              <p class="docs__firm">Роснефть</p>
+              <p class="docs__worker-name">Иван Иванов,</p>
+              <p class="docs__job-title">Генеральный директор</p>
+            </a>
+          </li>
+        </ul>
+        <button class="docs__swiper-button docs__swiper-button--prev" type="button">
+          <svg class="docs__swiper-button-icon" width="15" height="24" viewBox="0 0 15 24">
+            <use xlink:href="img/sprite.svg#arrow-left-icon"></use>
+          </svg>
+          <span class="visually-hidden">Перелестнуть назад</span>
+        </button>
+        <button class="docs__swiper-button docs__swiper-button--next" type="button">
+          <svg class="docs__swiper-button-icon" width="15" height="24" viewBox="0 0 15 24">
+            <use xlink:href="img/sprite.svg#arrow-left-icon"></use>
+          </svg>
+          <span class="visually-hidden">Перелестнуть вперед</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
