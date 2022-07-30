@@ -92,9 +92,8 @@ document.addEventListener('click', onOutOfModalClick);
 const leasingSectionButton = document.querySelector('.leasing-section__button');
 if (leasingSectionButton) {
   leasingSectionButton.addEventListener('click', (evt) => {
-    document.body.classList.add('modal-opened');
+    // document.body.classList.add('modal-opened');
     evt.preventDefault(); // Запрет перехода по ссылке
-
     document.querySelector('.modal--leasing').classList.add('modal--open');
   })
 }
@@ -102,9 +101,8 @@ if (leasingSectionButton) {
 const productCardLeasingButton = document.querySelector('.product-card__button--leasing');
 if (productCardLeasingButton) {
   productCardLeasingButton.addEventListener('click', (evt) => {
-    document.body.classList.add('modal-opened');
+    // document.body.classList.add('modal-opened');
     evt.preventDefault(); // Запрет перехода по ссылке
-
     document.querySelector('.modal--leasing').classList.add('modal--open');
   })
 }
@@ -112,7 +110,7 @@ if (productCardLeasingButton) {
 const requestPriceButtons = document.querySelectorAll('.product-card__button--no-price');
 requestPriceButtons.forEach(requestPriceButton => {
   requestPriceButton.addEventListener('click', (evt) => {
-    document.body.classList.add('modal-opened');
+    // document.body.classList.add('modal-opened');
     evt.preventDefault(); // Запрет перехода по ссылке
     document.querySelector('.modal--price').classList.add('modal--open');
   })
@@ -121,8 +119,17 @@ requestPriceButtons.forEach(requestPriceButton => {
 const requestOfferButtons = document.querySelectorAll('.product-card__button--offer');
 requestOfferButtons.forEach(requestOfferButton => {
   requestOfferButton.addEventListener('click', (evt) => {
-    document.body.classList.add('modal-opened');
+    // document.body.classList.add('modal-opened');
     evt.preventDefault(); // Запрет перехода по ссылке
     document.querySelector('.modal--offer').classList.add('modal--open');
   })
 });
+
+const leasingCallbackButton = document.querySelector('.spareparts__button--has-modal');
+if (leasingCallbackButton) {
+  leasingCallbackButton.addEventListener('click', (evt) => {
+    // document.body.classList.add('modal-opened');
+    evt.preventDefault(); // Запрет перехода по ссылке
+    document.querySelector('.modal--callback').classList.add('modal--open');
+  })
+}

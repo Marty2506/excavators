@@ -27,6 +27,7 @@
   height: 50px;
   border-radius: 50%;
   background-color: #f0f0f3;
+  transition: background-color 0.3s ease;
 
   &:hover {
     opacity: 1;

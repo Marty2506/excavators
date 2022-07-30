@@ -24,7 +24,11 @@
             </p>
           </li>
         </ul>
-        <a href="#!" class="spareparts__button button">Подробнее о запчастях</a>
+        {% if page == "spareparts"%}
+          <a class="spareparts__button spareparts__button--has-modal button" href="./spareparts.html">Получить консультацию</a>
+        {% else %}
+          <a class="spareparts__button button" href="./spareparts.html">Подробнее о запчастях</a>
+        {% endif %}
       </div>
       <figure class="spareparts__image-container section__image-container">
         <picture>
