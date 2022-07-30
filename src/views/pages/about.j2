@@ -9,18 +9,15 @@
     {% include "./blocks/about-section.j2" %}
     {% include "./blocks/partners.j2" %}
 
-    <section class="about-video section">
+    {# <section class="about-video section">
       <div class="about-video__container container">
         <h2 class="about-video__title section__title">Видео о производстве</h2>
-        {# <video class="about-video__video" controls poster="@img/about-video.jpg">
-          <source src="./files/bg-video.mp4" type="video/mp4">
-        </video> #}
         <div class="about-video__video-container">
           <iframe class="about-video__video" src="https://www.youtube.com/embed/nSaFstyQQbs"></iframe>
         </div>
       </div>
-    </section>
-
+    </section> #}
+    {% include "./blocks/about-gallery.j2" %}
     {# {% include "./blocks/contacts.j2" %} #}
   </main>
 {% endblock content %}

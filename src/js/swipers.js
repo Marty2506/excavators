@@ -199,6 +199,58 @@ const destroyOffersSwipers = () => {
   }
 }
 
+// Слайдер картинок на страничке "О нас"
+const aboutGalleryThumbsSwiperSelector = document.querySelector('.about-gallery__thumbnails');
+var aboutGalleryThumbsSwiper = null;
+const aboutGalleryThumbsSwiperoptions = {
+  loop: false,
+  spaceBetween: 20,
+  slidesPerView: "auto",
+  freeMode: true,
+  watchSlidesProgress: true,
+  // slidesOffsetBefore: 31,
+  // slidesOffsetAfter: 31,
+  // setWrapperSize: true
+};
+aboutGalleryThumbsSwiper = new Swiper(aboutGalleryThumbsSwiperSelector, aboutGalleryThumbsSwiperoptions);
+// initSwiper(aboutGalleryThumbsSwiperSelector, aboutGalleryThumbsSwiper, aboutGalleryThumbsSwiperoptions);
+
+const aboutGalleryMainSwiperSelector = document.querySelector('.about-gallery__main-swiper');
+var aboutGalleryMainSwiper = null;
+const aboutGallerMainSwiperOptions = {
+  loop: false,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: aboutGalleryThumbsSwiper,
+  },
+  navigation: {
+    nextEl: ".about-gallery__main-swiper .about-gallery__swiper-button--next",
+    prevEl: ".about-gallery__main-swiper .about-gallery__swiper-button--prev",
+  },
+  speed: 700,
+  autoplay: {
+    delay: 5000,
+  },
+  breakpoints: {
+    320: {
+      autoplay: false,
+    },
+    768: {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".about-gallery__thumbnails .about-gallery__swiper-button--next",
+        prevEl: ".about-gallery__thumbnails .about-gallery__swiper-button--prev",
+      },
+    }
+  }
+}
+aboutGalleryMainSwiper = new Swiper(aboutGalleryMainSwiperSelector, aboutGallerMainSwiperOptions);
+// initSwiper(aboutGalleryMainSwiperSelector, aboutGalleryMainSwiper, aboutGallerMainSwiperOptions);
+
+
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1348) {
     destroyPopularSwiper();
@@ -221,3 +273,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initOffersSwipers();
   }
 });
+
+function initSwiper(selector, swiper, swiperOptions) {
+  if (selector) {
+    if(!swiper) {
+      swiper = new Swiper(selector, swiperOptions);
+    }
+  }
+}
