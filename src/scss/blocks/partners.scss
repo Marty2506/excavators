@@ -38,10 +38,20 @@
   border: 1px solid rgba(79, 180, 77, 0.2);
   border-radius: 5px;
   height: 92px;
+  transition: border 0.5s ease;
+
+  &:hover,
+  &:focus-within {
+    border-color: $primary-color;
+  }
 }
 .partners__link {
   display: block;
   margin: auto;
+
+  &:focus {
+    outline: none;
+  }
 }
 .partners__image {
   width: 100%;
