@@ -1,0 +1,43 @@
+{% extends "layout.j2" %}
+
+{% set page = "contacts" %}
+
+{% block content %}
+  <main class="page-main">
+    <div class="container">
+      <div class="page-main__breadcumbs breadcumbs breadcumbs--blue">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item breadcumbs__item--home">
+            <a class="breadcumbs__link breadcumbs__link--home" href="index.html">
+              <svg class="breadcumbs__link-icon" width="19" height="17" viewBox="0 0 19 17">
+                <use xlink:href="img/sprite.svg#home-icon"></use>
+              </svg>
+              <span>На Главную</span>
+            </a>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Контакты</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% include "./blocks/contacts.j2" %}
+    {% include "./blocks/managers.j2" %}
+  </main>
+{% endblock content %}
+
+{% block modal %}
+  {% include "./blocks/modals/modal-leasing.j2" %}
+  {% include "./blocks/modals/modal-price.j2" %}
+  {% include "./blocks/modals/modal-offer.j2" %}
+{% endblock modal %}
+
+{% block js %}
+  <script src="./js/jquery-3.4.1.slim.js"></script>
+  <script src="./js/custom-select.min.js"></script>
+  <script src="./js/imask.js"></script>
+  <script src="./js/menu.min.js"></script>
+  <script src="./js/burger.min.js"></script>
+  <script src="./js/main.min.js"></script>
+  <script src="./js/contacts.min.js"></script>
+{% endblock %}
