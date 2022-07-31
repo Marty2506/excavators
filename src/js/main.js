@@ -44,12 +44,15 @@ const newOffersSelectParams = {
 };
 const newOffersSelect = customSelect(document.querySelector('.offers__select'), newOffersSelectParams)[0];
 
-var phoneInput = document.querySelector('#phone');
+var phoneInputs = document.querySelectorAll('#phone');
 var maskOptions = {
   mask: '+{7}(000)000-00-00',
   // lazy: false,  // make placeholder always visible
 };
-var mask = IMask(phoneInput, maskOptions);
+phoneInputs.forEach(phoneInput => {
+  IMask(phoneInput, maskOptions);
+});
+// var mask = IMask(phoneInput, maskOptions);
 
 
 // Настройка модалок
