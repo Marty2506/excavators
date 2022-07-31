@@ -9,28 +9,59 @@
           <option value="Санкт-Петербург">Санкт-Петербург</option>
         </select>
       </form>
-      <div class="contacts__phones">
-        <div class="contacts__messengers">
-          <a class="contacts__messenger messenger messenger--telegram" href="#!">
-            <span class="visually-hidden">Контакт телеграма</span>
-          </a>
-          <a class="contacts__messenger messenger messenger--whatsup" href="#!">
-            <span class="visually-hidden">Контакт вотсапа</span>
-          </a>
-          <a class="contacts__phone" href="tel:+74992131580">8 (499) 213-15-80</a>
-        </div>
-        <a class="contacts__back-call" href="#!">Обратный звонок</a>
-      </div>
-      <a class="contacts__mail" href="mailto:mail@tehstroiproekt.ru">mail@tehstroiproekt.ru</a>
-      <p class="contacts__address">111402, г. Москва, ул. Кетчерская, д. 16</p>
+      <ul class="contacts__address-list">
+        <li class="contacts__address-item contacts__address-item--active">
+          <div class="contacts__phones">
+            <div class="contacts__messengers">
+              <a class="contacts__messenger messenger messenger--telegram" href="#!">
+                <span class="visually-hidden">Контакт телеграма</span>
+              </a>
+              <a class="contacts__messenger messenger messenger--whatsup" href="#!">
+                <span class="visually-hidden">Контакт вотсапа</span>
+              </a>
+              <a class="contacts__phone" href="tel:+74992131580">8 (499) 213-15-80</a>
+            </div>
+            <a class="contacts__back-call" href="#!">Обратный звонок</a>
+          </div>
+          <a class="contacts__mail" href="mailto:mail@tehstroiproekt.ru">mail@tehstroiproekt.ru</a>
+          <p class="contacts__address">111402, г. Москва, ул.&nbsp;Кетчерская,&nbsp;д.&nbsp;16</p>
+        </li>
+        <li class="contacts__address-item">
+          <div class="contacts__phones">
+            <div class="contacts__messengers">
+              <a class="contacts__messenger messenger messenger--telegram" href="#!">
+                <span class="visually-hidden">Контакт телеграма</span>
+              </a>
+              <a class="contacts__messenger messenger messenger--whatsup" href="#!">
+                <span class="visually-hidden">Контакт вотсапа</span>
+              </a>
+              <a class="contacts__phone" href="tel:+74991234567">8 (499) 123-45-47</a>
+            </div>
+            <a class="contacts__back-call" href="#!">Обратный звонок</a>
+          </div>
+          <a class="contacts__mail" href="mailto:mail2@tehstroiproekt.ru">mail2@tehstroiproekt.ru</a>
+          <p class="contacts__address">000007, г. Санкт-Петербург, ул.&nbsp;Ботова,&nbsp;д.&nbsp;1</p>
+        </li>
+      </ul>
     </div>
     <div class="contacts__map contacts__map--no-js">
       <span class="visually-hidden">Мы на карте.</span>
-      <picture>
-        <source type="image/webp" srcset="./img/map.webp 1x">
-        <img class="contacts__map-image" src="./img/map.jpg" alt="">
-      </picture>
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f276236deea8bb58f3e3f66fc721b0148c095bd66658fb9940365ba05a6251e&amp;source=constructor" width="100%" height="446" frameborder="0"></iframe>
+      <ul class="contacts__maps-list">
+        <li class="contacts__maps-item contacts__maps-item--active">
+          <picture>
+            <source type="image/webp" srcset="./img/map.webp 1x">
+            <img class="contacts__map-image" src="./img/map.jpg" alt="">
+          </picture>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f276236deea8bb58f3e3f66fc721b0148c095bd66658fb9940365ba05a6251e&amp;source=constructor" width="100%" height="446" frameborder="0"></iframe>
+        </li>
+        <li class="contacts__maps-item">
+          <picture>
+            <source type="image/webp" srcset="./img/map.webp 1x">
+            <img class="contacts__map-image" src="./img/map.jpg" alt="">
+          </picture>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f276236deea8bb58f3e3f66fc721b0148c095bd66658fb9940365ba05a6251e&amp;source=constructor" width="100%" height="446" frameborder="0"></iframe>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

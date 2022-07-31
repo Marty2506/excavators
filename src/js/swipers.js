@@ -280,7 +280,6 @@ const docsSwiperOptions = {
 }
 var docsSwipers = new Array(docsSwiperItems.length);
 docsSwiperItems.forEach((docsSwiperItem, index) => {
-  console.log(index);
   docsSwipers[index] = new Swiper(docsSwiperItem, docsSwiperOptions);
 });
 
