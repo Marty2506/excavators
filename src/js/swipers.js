@@ -248,10 +248,9 @@ const aboutGallerMainSwiperOptions = {
   }
 }
 aboutGalleryMainSwiper = new Swiper(aboutGalleryMainSwiperSelector, aboutGallerMainSwiperOptions);
-// initSwiper(aboutGalleryMainSwiperSelector, aboutGalleryMainSwiper, aboutGallerMainSwiperOptions);
 
 // docs Swiper
-const docsSwiperSelector = document.querySelector('.docs__swiper');
+const docsSwiperItems = document.querySelectorAll('.docs__swiper');
 const docsSwiperOptions = {
   loop: false,
   spaceBetween: 60,
@@ -261,6 +260,8 @@ const docsSwiperOptions = {
   navigation: {
     nextEl: ".docs__swiper .docs__swiper-button--next",
     prevEl: ".docs__swiper .docs__swiper-button--prev",
+    lockClass: "docs__swiper-button--lock",
+    disabledClass: "docs__swiper-button--disabled",
   },
   breakpoints: {
     320: {
@@ -277,7 +278,11 @@ const docsSwiperOptions = {
     }
   }
 }
-var docsSwiper = new Swiper(docsSwiperSelector, docsSwiperOptions);
+var docsSwipers = new Array(docsSwiperItems.length);
+docsSwiperItems.forEach((docsSwiperItem, index) => {
+  console.log(index);
+  docsSwipers[index] = new Swiper(docsSwiperItem, docsSwiperOptions);
+});
 
 
 window.addEventListener("resize", () => {
