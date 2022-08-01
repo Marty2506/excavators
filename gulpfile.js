@@ -19,6 +19,7 @@ import data from 'gulp-data';
 import fs from 'fs';
 import render from 'gulp-nunjucks-render';
 import htmlmin from 'gulp-htmlmin';
+import { dir } from "console";
 
 /**
  *  Основные директории
@@ -51,7 +52,8 @@ const path = {
     fonts: `${dirs.src}/fonts/*.{woff,woff2}`,
     views: `${dirs.src}/views/`,
     pages: `${dirs.src}/views/pages/*.j2`,
-    json: `${dirs.src}/views/data.json`
+    json: `${dirs.src}/views/data.json`,
+    favicon: `${dirs.src}/img/*.ico`
   },
   watch: {
     js: `${dirs.src}/js/**/*.js`,
@@ -73,6 +75,12 @@ const path = {
 const copy = () => {
   return gulp.src(path.src.files)
   .pipe(gulp.dest((path.build.files)));
+}
+
+// Копирование фавиконки
+export const copyFavicon = () => {
+  return gulp.src(path.src.favicon)
+  .pipe(gulp.dest(dirs.dest));
 }
 
 // Очистка папки со сборкой
@@ -235,7 +243,7 @@ function watcher() {
   gulp.watch([path.src.svg, `!${path.src.sprite}`], svg);
 }
 
-const mainTasks = gulp.parallel(copy, fonts, views, styles, scripts, images, imagesWebp, sprite, svg);
+const mainTasks = gulp.parallel(copy, copyFavicon, fonts, views, styles, scripts, images, imagesWebp, sprite, svg);
 
 // Построение сценариев выполнения задач
 export const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));
