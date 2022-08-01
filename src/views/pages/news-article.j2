@@ -1,0 +1,74 @@
+{% extends "layout.j2" %}
+
+{% set page = "news-article" %}
+
+{% block content %}
+  <main class="page-main">
+    <div class="container">
+      <div class="page-main__breadcumbs breadcumbs breadcumbs--blue">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item breadcumbs__item--home">
+            <a class="breadcumbs__link breadcumbs__link--home" href="index.html">
+              <svg class="breadcumbs__link-icon" width="19" height="17" viewBox="0 0 19 17">
+                <use xlink:href="img/sprite.svg#home-icon"></use>
+              </svg>
+              <span>На Главную</span>
+            </a>
+          </li>
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./subcatalog.html">Новости</a>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">В продуктовой линейке XCMG в России пополнение!</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <article class="news-article">
+      <div class="container">
+        <div class="news-article__content">
+          <div class="news-article__header">
+            <h1 class="news-article__title">В продуктовой линейке XCMG в России пополнение!</h1>
+            <div class="news-article__tags">
+              <span class="news-article__tag news-article__tag--date">06.07.22</span>
+            </div>
+          </div>
+          <div class="news-article__body">
+            <p class="news-article__paragraph">Теперь мы поставляем телескопические погрузчики серии XC6.</p>
+            <p class="news-article__paragraph">ХС6 — это обновлённая версия телескопических погрузчиков XCMG. Их отличают простота дизайна, безопасность и эффективность в эксплуатации.</p>
+            <p class="news-article__paragraph">Погрузчики этой серии широко применяются в сельском хозяйстве, но при этом справляются с задачами подъёмного крана и погрузчика. Преимущество этих машин в телескопической стреле для работы на высоте. С её помощью погрузчик загружает тюки сена, транспортирует грузы, расчищает дороги и помогает в строительстве крупных объектов.</p>
+            <p class="news-article__paragraph">Что нового в серии XC6:<br>— Телескопическая стрела стала прочнее. Это подтверждают успешные испытания модели XC6- 4517 в условиях максимальной нагрузки<br>— Интеллектуальная система охлаждения тратит меньше энергии<br>— Улучшилась система гидростатического привода с электронным управлением и технология непрерывного привода</p>
+            <p class="news-article__paragraph">Теперь мы поставляем телескопические погрузчики серии XC6.</p>
+            <p class="news-article__paragraph">ХС6 — это обновлённая версия телескопических погрузчиков XCMG. Их отличают простота дизайна, безопасность и эффективность в эксплуатации.</p>
+            <p class="news-article__paragraph">Погрузчики этой серии широко применяются в сельском хозяйстве, но при этом справляются с задачами подъёмного крана и погрузчика. Преимущество этих машин в телескопической стреле для работы на высоте. С её помощью погрузчик загружает тюки сена, транспортирует грузы, расчищает дороги и помогает в строительстве крупных объектов.</p>
+            <p class="news-article__paragraph">Что нового в серии XC6:<br>— Телескопическая стрела стала прочнее. Это подтверждают успешные испытания модели XC6- 4517 в условиях максимальной нагрузки<br>— Интеллектуальная система охлаждения тратит меньше энергии<br>— Улучшилась система гидростатического привода с электронным управлением и технология непрерывного привода</p>
+
+            <figure class="news-article__figure">
+              <picture>
+                <source type="image/webp" srcset="@img/news-article-image.webp 1x">
+                <img class="news-article__image" src="@img/news-article-image.jpg" alt="">
+              </picture>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </article>
+    {% include "./blocks/contacts.j2" %}
+  </main>
+{% endblock content %}
+
+{% block modal %}
+  {% include "./blocks/modals/modal-leasing.j2" %}
+  {% include "./blocks/modals/modal-price.j2" %}
+  {% include "./blocks/modals/modal-offer.j2" %}
+{% endblock modal %}
+
+{% block js %}
+  <script src="./js/jquery-3.4.1.slim.js"></script>
+  <script src="./js/custom-select.min.js"></script>
+  <script src="./js/imask.js"></script>
+  <script src="./js/menu.min.js"></script>
+  <script src="./js/burger.min.js"></script>
+  <script src="./js/main.min.js"></script>
+  <script src="./js/contacts.min.js"></script>
+{% endblock %}
