@@ -37,6 +37,7 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     column-gap: 30px;
+    order: -1;
   }
   @media (min-width: $desktop-width) {
     display: grid;
