@@ -189,7 +189,7 @@ resetFiltersButton.addEventListener('click', (evt) => {
 
   // Сброс чекбосков
   document.querySelectorAll('.filters-form__checbox').forEach(el => {
-    el.checked = true;
+    el.checked = false;
   });
 });
 
