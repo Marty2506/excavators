@@ -283,6 +283,37 @@ docsSwiperItems.forEach((docsSwiperItem, index) => {
   docsSwipers[index] = new Swiper(docsSwiperItem, docsSwiperOptions);
 });
 
+// News Swiper
+const newsSwiperItem = document.querySelector('.news-carousel__swiper');
+const newsSwiperOptions = {
+  loop: false,
+  spaceBetween: 60,
+  slidesPerView: 4,
+  watchSlidesProgress: true,
+  speed: 700,
+  navigation: {
+    nextEl: ".news-carousel__swiper-button--next",
+    prevEl: ".news-carousel__swiper-button--prev",
+    lockClass: "docs__swiper-button--lock",
+    disabledClass: "docs__swiper-button--disabled",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1100: {
+      slidesPerView: 3,
+    },
+    1349: {
+      slidesPerView: 4,
+    },
+  }
+}
+var newsSwiper = new Swiper(newsSwiperItem, newsSwiperOptions);
+
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1348) {
