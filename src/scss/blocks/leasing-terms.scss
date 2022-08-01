@@ -1,8 +1,7 @@
 .leasing-terms {
   margin-bottom: 50px;
 }
-.leasing-terms__container {
-}
+
 .leasing-terms__content {
   display: flex;
   flex-direction: column;
@@ -16,18 +15,20 @@
 .leasing-terms__list {
   @media (min-width: $desktop-width) {
     display: grid;
-    margin-left: 100px;
     margin-right: 50px;
-    grid-template-columns: repeat(3, auto);
+    margin-left: 100px;
+
     column-gap: 55px;
+
+    grid-template-columns: repeat(3, auto);
   }
 }
 .leasing-terms__item {
   align-items: flex-start;
 }
 .leasing-terms__item-text {
-  color: $dark-color;
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
+  color: $dark-color;
 }

@@ -1,22 +1,22 @@
-.cards {
-}
+
 .cards__list {
+  justify-content: space-between;
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 
   @media (max-width: $max-tablet-width) {
     display: flex;
     padding-bottom: 70px;
   }
-  justify-content: space-between;
 
   @media (min-width: $desktop-width) {
     display: grid;
+
     column-gap: 55px;
-    row-gap: 53px;
+
     grid-template-columns: repeat(3, auto);
+    row-gap: 53px;
   }
-}
-.cards__item {
 }

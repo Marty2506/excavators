@@ -1,20 +1,18 @@
 .leasing-section {
+  margin-bottom: 50px;
 
   color: $dark-color;
 
-  margin-bottom: 50px;
-
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
+
     color: #fbfbfb;
   }
   @media (min-width: $desktop-width) {
     margin-bottom: 110px;
-
   }
 }
 .leasing-section__container {
-
   display: flex;
   flex-direction: column;
 
@@ -23,43 +21,40 @@
     padding: 50px 30px;
     padding-left: 50px;
     // background-color: fade-out($grey-color, 0.5);
-
   }
   @media (min-width: $desktop-width) {
-
-
   }
 }
 .leasing-section__content {
   position: relative;
+
   display: flex;
   flex-direction: column;
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-
   }
   @media (min-width: $tablet-width) {
     padding: 105px 65px 75px;
+    overflow: hidden;
+
+    background: linear-gradient(90deg, rgba(5, 21, 39, 0.62) 40.36%, rgba(0, 0, 0, 0) 75.26%);
     border: 5px solid $primary-color;
     border-radius: 2px;
-    overflow: hidden;
-    background: linear-gradient(90deg, rgba(5, 21, 39, 0.62) 40.36%, rgba(0, 0, 0, 0) 75.26%);
   }
   @media (min-width: $min-mobile-width) and (max-width: $max-tablet-width) {
     margin-bottom: 15px;
   }
 }
 .leasing-section__text-content {
-
   width: 100%;
 
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     width: 50%;
     margin-right: 50px;
-    flex-shrink: 0;
   }
 }
 .leasing-section__title {
@@ -73,47 +68,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
     width: 100%;
-    border-radius: 10px;
+    margin-bottom: 15px;
     overflow: hidden;
+
+    border-radius: 10px;
   }
 
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
+
     width: 100%;
     height: 100%;
-    z-index: -1;
   }
 }
 .leasing-section__image {
   display: block;
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
-.leasing-section__list {
-}
-.leasing-section__item {
-}
+
+
 .leasing-section__button {
   width: 280px;
   margin-top: auto;
-  color: $primary-color;
-  background-color: $secondary-color;
+
   font-size: 20px;
+  color: $primary-color;
+
+  background-color: $secondary-color;
 
   &:hover {
     color: $secondary-color;
+
     background-color: $primary-color;
   }
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
-    font-size: 17px;
     max-width: 480px;
+
+    font-size: 17px;
   }
 }
 .leasing-section__features {
@@ -122,13 +122,15 @@
 .leasing-section__features-list {
   @media (min-width: $desktop-width) {
     display: grid;
-    row-gap: 80px;
+
     column-gap: 60px;
+
     grid-template-columns: auto auto;
+    row-gap: 80px;
   }
   @media (max-width: $max-mobile-width) {
-    padding-top: 30px;
     margin-bottom: 15px;
+    padding-top: 30px;
   }
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-top: 35px;
@@ -136,13 +138,15 @@
 }
 .leasing-section__feature-item {
   width: 250px;
-  font-size: 22px;
   padding-right: 20px;
-  padding-left: 25px;
   padding-bottom: 20px;
+  padding-left: 25px;
+
+  font-size: 22px;
 
   @media (max-width: $desktop-width) {
     width: 210px;
+
     font-size: 17px;
     line-height: 21px;
   }

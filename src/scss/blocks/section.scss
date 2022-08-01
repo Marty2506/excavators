@@ -1,9 +1,9 @@
 .section {
+  margin-bottom: 50px;
+
   font-size: 17px;
   line-height: calc(21 / 17) * 100%;
   color: $dark-color;
-
-  margin-bottom: 50px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
@@ -51,11 +51,12 @@
 }
 .section__sub-title {
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
+
   font-weight: 700;
   font-size: 22px;
   line-height: calc(37 / 30) * 100%;
-  margin-bottom: 10px;
 
   @media (min-width: $desktop-width) {
     font-size: 30px;
@@ -64,14 +65,15 @@
 .section__text {
   margin: 0;
   padding: 0;
+
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
 }
 .section__list {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -88,23 +90,25 @@
 }
 .section__item-icon {
   position: relative;
-  flex-shrink: 0;
+
   display: block;
+  flex-shrink: 0;
   box-sizing: content-box;
   width: 36px;
   height: 36px;
   margin: 10px 0;
   margin-right: 45px;
-  border-radius: 50%;
+
   background-color: $secondary-color;
+  border-radius: 50%;
 
   &::before {
     content: "";
     position: absolute;
-    display: block;
     bottom: 50%;
     left: 50%;
 
+    display: block;
     width: 40px;
     height: 50px;
 
@@ -114,35 +118,35 @@
   }
 
   &--urgent::before {
-    background-image: url('@img/icons/urgently-icon.svg');
+    background-image: url("@img/icons/urgently-icon.svg");
     transform: translate(-5px, 5px);
   }
   &--warehouse::before {
-    background-image: url('@img/icons/delivery-icon.svg');
+    background-image: url("@img/icons/delivery-icon.svg");
     transform: translate(-5px, 5px);
   }
   &--spec::before {
-    background-image: url('@img/icons/gear_and_search-icon.svg');
+    background-image: url("@img/icons/gear_and_search-icon.svg");
     transform: translate(-5px, 5px);
   }
   &--help::before {
-    background-image: url('@img/icons/repair-icon.svg');
+    background-image: url("@img/icons/repair-icon.svg");
     transform: translate(-5px, 5px);
   }
   &--gear::before {
-    background-image: url('@img/icons/gear-icon.svg');
+    background-image: url("@img/icons/gear-icon.svg");
     transform: translate(-5px, 5px);
   }
   &--docs::before {
-    background-image: url('@img/icons/docs-icon.svg');
+    background-image: url("@img/icons/docs-icon.svg");
     transform: translate(-5px, 5px);
   }
   &--pasport::before {
-    background-image: url('@img/icons/pasport-icon.svg');
+    background-image: url("@img/icons/pasport-icon.svg");
     transform: translate(-5px, 5px);
   }
   &--graph::before {
-    background-image: url('@img/icons/graph-icon.svg');
+    background-image: url("@img/icons/graph-icon.svg");
     transform: translate(-5px, 5px);
   }
 }
@@ -152,28 +156,31 @@
 }
 .section__image-container {
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   max-width: 860px;
+  margin: 0;
   margin-left: auto;
-  flex-grow: 1;
+  padding: 0;
+
   border: 4px solid #004496;
   border-radius: 1px;
 
   @media (max-width: $max-mobile-width) {
     margin: 0;
     margin-bottom: 10px;
+    overflow: hidden;
+
     border: none;
     border-radius: 10px;
-    overflow: hidden;
   }
 }
 .section__image {
   display: block;
-  height: 100%;
   width: 100%;
+  height: 100%;
+
   object-fit: cover;
 
   @media (min-width: $desktop-width) {

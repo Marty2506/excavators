@@ -8,8 +8,7 @@
     margin-bottom: 110px;
   }
 }
-.offers__container {
-}
+
 .offers__buttons {
   display: none;
   @media (min-width: $desktop-width) {
@@ -17,12 +16,14 @@
   }
 }
 .offers__buttons-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
-  gap: 9px;
+  margin: 0;
   margin-bottom: 30px;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 9px;
 }
 .offers__tabs-list {
   margin-bottom: 35px;
@@ -42,15 +43,18 @@
     content: attr(data-text);
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    font-weight: 700;
+
     display: flex;
+    flex-grow: 0;
     justify-content: center;
     align-items: center;
-    flex-grow: 0;
+
+    font-weight: 700;
     color: $primary-color;
+
     background-color: $secondary-color;
   }
 }
@@ -66,6 +70,7 @@
   margin: 0;
   margin-top: 38px;
   padding: 0;
+
   list-style-type: none;
 
   @media (max-width: $max-mobile-width) {
@@ -73,9 +78,9 @@
   }
   @media (max-width: $max-tablet-width) {
     flex-direction: row;
+
     gap: 15px;
   }
-
 }
 .offers__item {
   // height: 100%;
@@ -90,13 +95,15 @@
 
 .offers__select-container {
   position: relative;
+  z-index: 100;
+
   box-sizing: border-box;
+  margin-bottom: 35px;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
   color: $dark-color;
-  z-index: 100;
-  margin-bottom: 35px;
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -106,25 +113,29 @@
   box-sizing: border-box;
 }
 .offers__select-container.is-disabled {
-  opacity: .333;
+  opacity: 0.333;
 }
 .offers__select-opener {
   display: block;
+  width: 100%;
+  padding: 17px 32px;
+
+  color: $primary-color;
+
+  background-color: $secondary-color;
   // height: 55px;
   // TODO Спросить у Ромы
   cursor: pointer;
-  width: 100%;
-  padding: 17px 32px;
-  background-color: $secondary-color;
-  color: $primary-color;
 
   &::after {
     content: "";
     position: absolute;
     top: 50%;
     right: 20px;
+
     width: 19px;
     height: 13px;
+
     background-image: url("@img/icons/select-arrow-blue.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -132,24 +143,28 @@
   }
 }
 .offers__select-container select {
-  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
+
+  visibility: hidden;
 }
 .offers__select-panel {
-  max-height: 0;
-  // transition: max-height .5s ease-out, overflow-y 0.1s 0.5s;
-  overflow: hidden;
-  background-color: #fff;
   position: absolute;
   top: 100%;
   z-index: 1;
+
   width: 100%;
+  max-height: 0;
+  // transition: max-height .5s ease-out, overflow-y 0.1s 0.5s;
+  overflow: hidden;
+
+  background-color: #ffffff;
 }
 .offers__select-container.is-open .offers__select-panel {
   max-height: 10.7em;
   overflow-y: auto;
+
   border: 0.3px solid $secondary-color;
   border-top: none;
   border-radius: 1px;
@@ -158,6 +173,7 @@
   // height: 50px;
   // TODO Спросить у Ромы
   padding: 14.5px 32px;
+
   border: 1px solid $secondary-color;
   border-radius: 1px;
 }
@@ -169,6 +185,7 @@
 }
 .offers__select-option.is-selected::before {
   content: "✔";
+
   padding-right: 0.5em;
 }
 .offers__select-optgroup > .offers__select-option {

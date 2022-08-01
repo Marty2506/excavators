@@ -1,12 +1,11 @@
-.docs {
-}
-.docs__content {
-}
+
+
 .docs__title {
   margin-bottom: 15px;
 }
 .docs__swiper {
   position: relative;
+
   padding: 0 60px;
 
   & .swiper-slide {
@@ -15,15 +14,15 @@
   & .swiper-slide-visible {
     opacity: 1;
   }
-
 }
 .docs__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   // justify-content: space-between;
   align-items: flex-start;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 .docs__item {
   // max-width: 280px;
@@ -31,9 +30,10 @@
 .docs__link {
   display: flex;
   flex-direction: column;
-  text-decoration: none;
-  color: $dark-color;
   max-width: 280px;
+
+  color: $dark-color;
+  text-decoration: none;
 
   &:hover {
     & .docs__image {
@@ -49,17 +49,21 @@
 }
 .docs__image {
   margin-bottom: 15px;
+
   border: 1px solid fade-out(#9b9b9b, 0.7);
   border-radius: 3px;
+
   transition: border 0.5s ease;
 }
 .docs__firm {
   margin: 0;
-  padding: 0;
   margin-bottom: 5px;
+  padding: 0;
+
   font-weight: 600;
   font-size: 22px;
   line-height: calc(27 / 22) * 100%;
+
   transition: opacity 0.5s ease;
 
   @media (max-width: $max-mobile-width) {
@@ -70,41 +74,45 @@
 .docs__job-title {
   margin: 0;
   padding: 0;
+
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+
   transition: opacity 0.5s ease;
 }
-.docs__job-title {
-}
+
 .docs__swiper-button {
   position: absolute;
   top: 50%;
   z-index: 10;
-  transform: translateY(-50%);
 
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  background-color: $primary-color;
-  border: none;
   width: 40px;
   height: 40px;
+  margin: 0;
+  padding: 0;
+
+  background-color: $primary-color;
+  border: none;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  transform: translateY(-50%);
   cursor: pointer;
 
-
+  transition: background-color 0.3s ease;
 }
 .docs__swiper-button-icon {
-  fill: #fff;
-  transition: fill 0.3s ease;
   width: 30%;
+
+  transition: fill 0.3s ease;
+
+  fill: #ffffff;
 }
 .docs__swiper-button--prev {
   left: 0;
+
   background-color: $secondary-color;
   &:hover,
   &:focus {
@@ -119,6 +127,7 @@
 }
 .docs__swiper-button--next {
   right: 0;
+
   background-color: $primary-color;
 
   &:hover,
@@ -140,6 +149,7 @@
 }
 .docs__swiper-button--disabled {
   background-color: #9b9b9b;
+
   pointer-events: none;
 
   & .docs__swiper-button-icon {

@@ -5,29 +5,35 @@
 .form__fields {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   margin-bottom: 20px;
+
+  gap: 15px;
   &:last-of-type {
     margin-bottom: 0;
   }
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 33px;
-    row-gap: 30px;
     margin-bottom: 30px;
+
+    column-gap: 33px;
+
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
   }
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 33px;
-    row-gap: 30px;
     margin-bottom: 30px;
+
+    column-gap: 33px;
+
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
   }
 }
 .form__label {
   display: flex;
   flex-direction: column;
+
   gap: 8px;
 }
 .form__label--checkbox {
@@ -41,6 +47,7 @@
   line-height: 16px;
   & a {
     color: $primary-color;
+
     transition: color 0.3s ease;
 
     &:hover,
@@ -55,20 +62,23 @@
 }
 .form__label-text {
   display: inline-flex;
+  flex-grow: 0;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  flex-grow: 0;
 }
 .form__field {
   display: flex;
   width: 100%;
   padding: 16.5px 16px;
-  font-family: inherit;
+
   font-weight: 300;
   font-size: 18px;
   line-height: 22px;
-  border: 0.3px solid fade-out(#85939A, 0.7);
+  font-family: inherit;
+
+  border: 0.3px solid fade-out(#85939a, 0.7);
   border-radius: 1px;
 
   &::placeholder {
@@ -85,11 +95,12 @@
   }
 }
 .form__submit-button {
+  max-height: 65px;
+  margin-bottom: 10px;
+
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  max-height: 65px;
-  margin-bottom: 10px;
 }
 .form__messengers {
   display: flex;
@@ -105,8 +116,10 @@
 .form__mark {
   width: 17px;
   height: 17px;
-  background-color: #f0f0f3;;
-  transition: border 0.5s ease;
+
+  background-color: #f0f0f3;
+
+  transition: border 0.5s ease;;
 }
 .form__checkbox[type="checkbox"]:checked + .form__mark {
   background-image: url("@img/icons/list-check-icon.svg");

@@ -1,7 +1,8 @@
 .hide-br--mobile {
   @media (max-width: $max-mobile-width) {
-    display: inline;
     content: " ";
+
+    display: inline;
 
     &::after {
       content: " ";
@@ -11,8 +12,9 @@
 
 .hide-br--tablet {
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    display: inline;
     content: " ";
+
+    display: inline;
 
     &::after {
       content: " ";
@@ -22,8 +24,9 @@
 
 .hide-br--desktop {
   @media (min-width: $desktop-width) {
-    display: inline;
     content: " ";
+
+    display: inline;
 
     &::after {
       content: " ";

@@ -1,17 +1,20 @@
 .filters-form {
   position: relative;
+
   display: flex;
   flex-direction: column;
-  color: $dark-color;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
+  color: $dark-color;
 }
 .filters-form__show-button {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -29,37 +32,45 @@
 .filters-form__group--sliders-selects {
   @media (max-width: $max-mobile-width) {
     position: relative;
+
     display: none;
     padding-top: 50px;
     padding-bottom: 30px;
   }
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    column-gap: 30px;
     order: -1;
+
+    column-gap: 30px;
+
+    grid-template-columns: repeat(3, auto);
   }
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+
     column-gap: 47px;
+
+    grid-template-columns: repeat(5, auto);
   }
 }
 .filters-form__fieldset {
   display: flex;
   flex-direction: column;
+  min-width: 219px;
+  max-width: 100%;
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
+
   border: none;
-  max-width: 100%;
-  min-width: 219px;
 }
 .filters-form__fieldset--checkboxes {
   width: 100%;
+
   gap: 16px;
   @media (min-width: $tablet-width) {
     flex-direction: row;
+
     gap: 30px;
   }
 }
@@ -75,14 +86,16 @@
 }
 .filters-form__legend {
   margin-bottom: 13px;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
 }
 .filters-form__controls {
   display: flex;
-  gap: 13px;
   margin-bottom: 15px;
+
+  gap: 13px;
 }
 .filters-form__field {
   display: flex;
@@ -94,23 +107,24 @@
 }
 .filters-form__label:hover {
   & .filters-form__text {
-    transition: opacity 0.3s ease;
     opacity: 0.7;
+
+    transition: opacity 0.3s ease;
   }
 
   & .filters-form__mark {
     border: 1px solid $primary-color;
   }
 }
-.filters-form__label--checkbox {
 
-}
 .filters-form__mark {
   width: 20px;
   height: 20px;
   margin-right: 9px;
+
   background-color: $secondary-color;
   border: 1px solid $secondary-color;
+
   transition: border 0.5s ease;
 }
 .filters-form__text {
@@ -123,22 +137,26 @@
   display: inline-flex;
   margin: 0;
   padding: 0;
-  background-color: transparent;
-  border: none;
-  font-family: inherit;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
+  font-family: inherit;
   color: $primary-color;
+
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 .filters-form__input {
   display: flex;
   width: 100%;
   padding: 12.5px 16px;
+
   font-size: 18px;
   line-height: 22px;
-  border: 0.3px solid fade-out(#85939A, 0.7);
+
+  border: 0.3px solid fade-out(#85939a, 0.7);
   border-radius: 1px;
 }
 .filters-form__checbox[type="checkbox"]:checked + .filters-form__mark {
@@ -160,16 +178,15 @@
   font-size: 16px;
   line-height: 20px;
 }
-.filters-form__slider-value--min {
-}
-.filters-form__slider-value--max {
-}
+
+
 .filters-form__select-submit {
-  height: 51px;
-  min-width: 0;
   width: 100%;
+  min-width: 0;
   max-width: 170px;
+  height: 51px;
   margin-top: 20px;
+
   cursor: pointer;
 }
 
@@ -200,16 +217,19 @@
   display: none;
   margin: 0;
   padding: 0;
-  border: none;
+
   background-color: transparent;
+  border: none;
 
   @media (max-width: $max-mobile-width) {
     position: absolute;
     top: 15px;
+
     display: inline-flex;
     width: 20px;
     height: 20px;
-    background-image: url('@img/icons/select-arrow-blue.svg');
+
+    background-image: url("@img/icons/select-arrow-blue.svg");
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(90deg);

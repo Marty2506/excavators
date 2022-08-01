@@ -9,22 +9,25 @@
 }
 .page-header__top {
   position: relative;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   min-height: 120px;
   margin-bottom: 2px;
-  z-index: 1;
+
   background-color: #014898;
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 4px;
+    right: 0;
     bottom: 0;
     left: 70%;
-    right: 0;
-    background-color: #fcc200;
     z-index: -1;
+
+    background-color: #fcc200;
     @media (min-width: $br5) {
       left: 55%;
     }
@@ -34,10 +37,11 @@
   }
 
   @media (max-width: $desktop-width) {
-    min-height: auto;
     height: 99px;
+    min-height: auto;
     padding-top: 5px;
     padding-bottom: 14px;
+
     background-image: url("@img/header-bg-mobile.svg");
     background-repeat: no-repeat;
     background-position: left;
@@ -50,6 +54,7 @@
   // top: 0;
   // left: 0;
   // z-index: 1;
+
   padding-top: 2px;
   padding-bottom: 2px;
 
@@ -57,6 +62,7 @@
   @media (max-width: $desktop-width) {
     display: none;
     overflow: hidden;
+
     background-color: $primary-color;
   }
 }
@@ -67,12 +73,14 @@
 }
 .page-header__bottom--opened {
   @media (max-width: $desktop-width) {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1;
+
+    display: block;
+    width: 100%;
+
     animation: showing-animation 0.5s forwards;
   }
 }
@@ -80,9 +88,9 @@
 .page-header__logos {
   display: flex;
   align-items: center;
+  align-self: center;
   max-width: 580px;
   height: 100%;
-  align-self: center;
   @media (max-width: $desktop-width) {
     justify-content: center;
     margin: 0 auto;
@@ -99,29 +107,28 @@
   height: 100%;
 }
 .page-header__logo {
+  width: 100%;
   min-height: 0;
   max-height: 100%;
-  width: 100%;
   & img {
     display: block;
+
     object-fit: contain;
   }
 }
 .page-header__logo--techstroiproject {
-  margin-right: 39px;
   max-width: 100%;
+  margin-right: 39px;
   @media (max-width: $desktop-width) {
-
   }
   @media (max-width: $max-mobile-width) {
     max-width: 151px;
-    margin-right: 0px;
+    margin-right: 0;
     margin-bottom: 9px;
   }
 }
 .page-header__logo--xcmg {
   @media (max-width: $desktop-width) {
-
   }
   @media (max-width: $max-mobile-width) {
     max-width: 87px;
@@ -131,15 +138,16 @@
 .page-header__contacts {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  width: 50%;
   justify-content: center;
   align-items: flex-end;
+  width: 50%;
+  margin-left: auto;
   // background-image: url("@img/header-bg2.svg");
+
   background-image: url("@img/header-bg.svg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: 0 4px;
+  background-size: cover;
 
   @media (max-width: $desktop-width) {
     display: none;
@@ -151,6 +159,7 @@
 .page-header__messengers {
   display: flex;
   max-width: 400px;
+
   gap: 3px;
 }
 .page-header__messenger {

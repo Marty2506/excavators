@@ -6,26 +6,26 @@
   height: 74px;
   padding: 10px 20px;
 
-  font-family: inherit;
   font-weight: 600;
   font-size: 17px;
   line-height: 22px;
+  font-family: inherit;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-  border: none;
-  border-radius: 1px;
 
   background-color: $primary-color;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
 
   transition: color 0.3s, background-color 0.3s;
 
-  cursor: pointer;
-
   @media (max-width: $desktop-width) {
     width: 100%;
-    height: 60px;
     min-width: 200px;
+    height: 60px;
+
     font-size: 16px;
     line-height: 19px;
   }
@@ -39,10 +39,12 @@
 
 .button--yellow {
   color: $primary-color;
+
   background-color: $secondary-color;
 
   &:hover {
-    color: #fff;
+    color: #ffffff;
+
     background-color: $primary-color;
   }
 }

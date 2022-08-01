@@ -1,20 +1,18 @@
 .equipment-page__filters {
   margin-bottom: 30px;
 }
-.equipment-page__filter-buttons {
 
-}
 .equipment-page__buttons-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
   gap: 9px;
 
   @media (max-width: $max-tablet-width) {
     display: none;
   }
-}
-.equipment-page__buttons-item {
 }

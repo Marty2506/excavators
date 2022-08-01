@@ -1,21 +1,14 @@
-.repair {
-}
-.repair__container {
-}
-.repair__content {
-}
-.repair__main {
 
+
+
+.repair__main {
   @media (min-width: $tablet-width) {
     // width: 40%;
     // flex-shrink: 0;
   }
 }
-.repair__title {
-}
-.repair__text {
 
-}
+
 .repair__list {
   width: 90%;
   margin-top: 30px;
@@ -24,8 +17,7 @@
 .repair__list-item {
   padding-right: 82px;
 }
-.repair__item-text {
-}
+
 .repair__item--gear::before {
   background-image: url("@img/icons/gear-icon.svg");
 }
@@ -37,9 +29,7 @@
 }
 .repair__image-container {
   @media (min-width: $desktop-width) {
-    max-width: 794px;
     flex-shrink: 0;
+    max-width: 794px;
   }
-}
-.repair__image {
 }

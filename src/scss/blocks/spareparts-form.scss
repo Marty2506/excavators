@@ -1,21 +1,15 @@
-.spareparts-form {
-}
-.spareparts-form__container {
 
-}
+
 .spareparts-form__wrapper {
-
   @media (min-width: $desktop-width) {
     padding: 50px 330px 75px 68px;
+
     border: 4px solid $primary-color;
   }
-
 }
 .spareparts-form__title {
   @media (min-width: $tablet-width) {
     max-width: 520px;
     margin-bottom: 25px;
   }
-}
-.spareparts-page__form {
 }

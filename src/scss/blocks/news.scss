@@ -11,28 +11,31 @@
     margin-bottom: 50px;
   }
 }
-.news__cards {
-}
+
 .news__cards-list {
   display: flex;
   flex-direction: column;
-  gap: 35px;
   padding-bottom: 0;
+
+  gap: 35px;
 
   @media (min-width: calc($tablet-width - 150px)) {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
     row-gap: 55px;
   }
   @media (min-width: calc($tablet-width + 200px)) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
 
+    grid-template-columns: repeat(3, 1fr);
   }
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
     column-gap: 58px;
+
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

@@ -8,17 +8,18 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  text-align: center;
   color: $dark-color;
 
   background-color: transparent;
   border: 1px solid $secondary-color;
   border-radius: 1px;
   cursor: pointer;
-  text-align: center;
 
   transition: color 0.3s, background-color 0.3s;
   &:hover {
     color: $primary-color;
+
     background-color: $secondary-color;
   }
 }
@@ -29,15 +30,18 @@
     content: attr(data-text);
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    font-weight: 700;
+
     display: flex;
+    flex-grow: 0;
     justify-content: center;
     align-items: center;
-    flex-grow: 0;
+
+    font-weight: 700;
     color: $primary-color;
+
     background-color: $secondary-color;
   }
 }

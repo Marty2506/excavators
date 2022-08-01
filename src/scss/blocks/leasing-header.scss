@@ -11,12 +11,11 @@
     margin-bottom: 50px;
   }
   @media (min-width: $desktop-width) {
-    margin-top: 20px;
     max-width: 700px;
+    margin-top: 20px;
   }
 }
-.leasing-header__figure {
-}
+
 .leasing-header__features {
   @media (max-width: $max-tablet-width) {
     margin-top: 20px;
@@ -24,26 +23,31 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     bottom: 0;
+
     transform: translateY(50%);
   }
 }
 .leasing-header__features-list {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+
     column-gap: 83px;
+
+    grid-template-columns: repeat(4, auto);
   }
 }
 .leasing-header__feature-item {
   width: 250px;
-  font-size: 22px;
   padding-right: 25px;
-  padding-left: 25px;
   padding-bottom: 15px;
+  padding-left: 25px;
+
+  font-size: 22px;
   text-align: center;
 
   @media (max-width: $desktop-width) {
     width: 210px;
+
     font-size: 17px;
     line-height: 21px;
   }

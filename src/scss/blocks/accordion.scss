@@ -1,14 +1,16 @@
 .accordion-button {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
   position: absolute;
-  display: inline-block;
   top: 0;
   left: 0;
+
+  display: inline-block;
   width: 100%;
   height: 45px;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
 
 
   &::after {
@@ -16,12 +18,15 @@
     position: absolute;
     top: 45%;
     right: 0;
+
     width: 25px;
     height: 25px;
-    transform: translateY(-50%);
+
     background-image: url("@img/icons/accordion-arrow.svg");
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+
     transition: transform 0.3s ease;
   }
 }
@@ -36,5 +41,6 @@
 .accordion-panel {
   max-height: 0;
   overflow: hidden;
+
   transition: max-height 0.45s ease-out;
 }

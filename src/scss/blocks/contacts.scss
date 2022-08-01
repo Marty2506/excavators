@@ -1,6 +1,7 @@
 .contacts {
-  color: $dark-color;
   margin-bottom: 135px;
+
+  color: $dark-color;
 }
 .contacts__container {
   display: flex;
@@ -17,9 +18,9 @@
   margin-bottom: 20px;
 
   @media (min-width: $desktop-width) {
+    flex-shrink: 0;
     width: 25%;
     margin-right: 50px;
-    flex-shrink: 0;
   }
 }
 .contacts__title {
@@ -30,15 +31,15 @@
   width: 270px;
   margin-bottom: 20px;
 }
-.contacts__select {
-}
+
 
 .contacts__address-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 .contacts__address-item {
   display: none;
@@ -56,22 +57,22 @@
   align-items: center;
   max-width: 350px;
 }
-.contacts__messenger {
-}
+
 .contacts__phone {
   margin-left: 10px;
-  font-family: "Gilroy", "Arial", sans-serif;
+
   font-weight: 500;
   font-size: 31px;
   line-height: calc(37 / 31) * 100%;
+  font-family: "Gilroy", "Arial", sans-serif;
   color: $dark-color;
   text-decoration: none;
+
+  transition: opacity 0.3s ease;
 
   @media (max-width: $max-mobile-width) {
     font-size: 25px;
   }
-
-  transition: opacity 0.3s ease;
   &:hover {
     opacity: 0.6;
   }
@@ -107,16 +108,18 @@
 }
 .contacts__address {
   margin: 0;
+
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
 }
 .contacts__maps-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 .contacts__maps-item {
   display: none;
@@ -128,6 +131,7 @@
 
 .contacts__map {
   flex-grow: 1;
+
   border: 5px solid $primary-color;
   border-radius: 3px;
 }
@@ -153,5 +157,6 @@
 .contacts__map--no-js img {
   display: flex;
   width: 100%;
+
   object-fit: cover;
 }
