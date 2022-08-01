@@ -234,7 +234,7 @@
   height: 32px;
   padding: 7px 21px;
   font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #ffffff;
@@ -427,5 +427,40 @@
     position: absolute;
     top: 10px;
     left: 0;
+  }
+}
+
+// Для новостей
+
+.product-card--news {
+  position: relative;
+  padding: 0;
+  border: none;
+  min-width: 284px;
+  max-width: 320px;
+
+  & .product-card__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+
+  & .product-card__image {
+    border-radius: 10px;
+  }
+
+  & .product-card__attributes {
+    position: absolute;
+  }
+
+  & .product-card__attribute--date {
+    font-size: 14px;
+    line-height: 17px;
+    background-color: $primary-color;
+    // color: $primary-color;
+  }
+  & .product-card__attribute--date {
+    display: inline-flex;
   }
 }
