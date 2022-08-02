@@ -155,6 +155,14 @@ if (askCharacteristicsButton) {
   })
 }
 
+const menuCallbackButton = document.querySelector('.menu__back-call-button');
+if (menuCallbackButton) {
+  menuCallbackButton.addEventListener('click', (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    document.querySelector('.modal--callback').classList.add('modal--open');
+  })
+}
+
 
 // Закрытие модалки через 3 секунды
 function closeModalAfterDelay(mutationList, observer) {
