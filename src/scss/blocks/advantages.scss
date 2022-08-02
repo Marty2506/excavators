@@ -19,3 +19,9 @@
 .advantages__item:not(:last-of-type) {
   margin-bottom: 19px;
 }
+
+.advantages__item::before {
+  top: 0;
+  transform: none;
+}
+
