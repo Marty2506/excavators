@@ -111,7 +111,10 @@
 
   font-weight: 600;
   font-size: 25px;
-  line-height: 30px;
+  line-height: calc(30 / 25) * 100%;
+  @media (max-width: $max-mobile-width) {
+    font-size: 22px;
+  }
 }
 .manager__phone {
   display: inline-flex;
@@ -119,11 +122,15 @@
 
   font-weight: 700;
   font-size: 33px;
-  line-height: 40px;
+  line-height: calc(40 / 33) * 100%;
   color: $primary-color;
   text-decoration: none;
 
   transition: color 0.5s ease;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 22px;
+  }
 
   &:hover,
   &:focus {
