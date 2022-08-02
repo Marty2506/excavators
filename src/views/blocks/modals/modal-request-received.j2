@@ -1,0 +1,12 @@
+{% set title = "Мы получили вашу заявку и свяжемся с вами в течение  30 минут"%}
+{% set buttonText = "Оставить заявку"%}
+{% set suffix = "request-received"%}
+<div class="modal modal--{{ suffix }}">
+  <div class="modal__wrapper container">
+    <h3 class="visually-hidden">Окно обратной связи</h3>
+    <p class="modal__title">{{ title | safe }}</p>
+    <button class="modal__close-button" type="button">
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+  </div>
+</div>

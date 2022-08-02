@@ -186,3 +186,11 @@
     line-height: 17px;
   }
 }
+
+.modal--request-received {
+  & .modal__title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}

@@ -60,10 +60,12 @@ const modals = document.querySelectorAll('.modal');
 
 modals.forEach(modal => {
   const submitButton = modal.querySelector('.form__submit-button');
-  submitButton.addEventListener('click', (evt) => {
-    // evt.preventDefault();
-    // Сделать что-то
-  });
+  if (submitButton) {
+    submitButton.addEventListener('click', (evt) => {
+      // evt.preventDefault();
+      // Сделать что-то
+    });
+  }
   const closeButton = modal.querySelector('.modal__close-button');
   closeButton.addEventListener('click', hideModal);
 
@@ -143,4 +145,19 @@ contactsCallbackButtons.forEach(contactsCallbackButton => {
     evt.preventDefault(); // Запрет перехода по ссылке
     document.querySelector('.modal--callback').classList.add('modal--open');
   })
+});
+
+// Закрытие модалки через 3 секунды
+function closeModalAfterDelay(mutationList, observer) {
+  mutationList.forEach(mutation => {
+    if (mutation.attributeName === "class" && mutation.target.classList.contains('modal--open')) {
+      setTimeout(hideModal, 3000);
+    }
+  });
+}
+
+const requestReceivedModal = document.querySelector('.modal--request-received');
+const modalObserver = new MutationObserver(closeModalAfterDelay);
+modalObserver.observe(requestReceivedModal, {
+  attributes: true
 });
