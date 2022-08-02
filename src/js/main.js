@@ -147,6 +147,15 @@ contactsCallbackButtons.forEach(contactsCallbackButton => {
   })
 });
 
+const askCharacteristicsButton = document.querySelector('.characteristics__ask-link');
+if (askCharacteristicsButton) {
+  askCharacteristicsButton.addEventListener('click', (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    document.querySelector('.modal--callback').classList.add('modal--open');
+  })
+}
+
+
 // Закрытие модалки через 3 секунды
 function closeModalAfterDelay(mutationList, observer) {
   mutationList.forEach(mutation => {
