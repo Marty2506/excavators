@@ -163,6 +163,14 @@ if (menuCallbackButton) {
   })
 }
 
+const warehousesLinks = document.querySelectorAll('.warehouses__link');
+warehousesLinks.forEach(warehousesLink => {
+  warehousesLink.addEventListener('click', (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    document.querySelector('.modal--callback').classList.add('modal--open');
+  })
+});
+
 
 // Закрытие модалки через 3 секунды
 function closeModalAfterDelay(mutationList, observer) {
