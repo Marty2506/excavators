@@ -1,0 +1,164 @@
+.warehouses {
+  margin-bottom: 20px;
+  color: $dark-color;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 130px;
+  }
+}
+.warehouses__container {
+  overflow: hidden;
+}
+.warehouses__content {
+  position: relative;
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    min-height: 450px;
+  }
+  @media (min-width: $desktop-width) {
+    min-height: 745px;
+  }
+
+}
+.warehouses__title {
+  max-width: 196px;
+  margin-bottom: 10px;
+  @media (min-width: $tablet-width) {
+    max-width: 284px;
+  }
+}
+.warehouses__text {
+  margin: 0;
+  padding: 0;
+  display: none;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  @media (min-width: $desktop-width) {
+    display: block;
+    max-width: 300px;
+  }
+}
+.warehouses__map {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+
+  @media (max-width: $max-mobile-width) {
+    top: -25px;
+    right: -17px;
+    width: 55%;
+  }
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    top: -25px;
+    right: -170px;
+    width: 90%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -25px;
+    left: -108px;
+    width: 1464px;
+  }
+}
+.warehouses__image {
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+  }
+}
+.warehouses__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    max-width: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.warehouses__item {
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.warehouses__link {
+  display: inline-flex;
+  font-weight: 600;
+  padding: 5px 10px;
+  font-size: 18px;
+  line-height: 23px;
+  color: $primary-color;
+  background-color: $secondary-color;
+  transition: all 0.5s ease;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+    color: #fff;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.warehouses__item {
+}
+@media (min-width: $desktop-width) {
+  .warehouses__item--moscow {
+    transform: translate(99px, 475px);
+  }
+  .warehouses__item--spb {
+    transform: translate(25px, 408px);
+  }
+  .warehouses__item--nn {
+    transform: translate(203px, 447px);
+  }
+  .warehouses__item--ekb {
+    transform: translate(424px, 431px);
+  }
+  .warehouses__item--chlb {
+    transform: translate(496px, 477px);
+  }
+  .warehouses__item--smolensk {
+    transform: translate(0, 518px);
+  }
+  .warehouses__item--podolsk {
+    transform: translate(115px, 518px);
+  }
+  .warehouses__item--voronez {
+    transform: translate(67px, 583px);
+  }
+  .warehouses__item--krasnodar {
+    transform: translate(82px, 650px);
+  }
+  .warehouses__item--samara {
+    transform: translate(251px, 524px);
+  }
+  .warehouses__item--kurgan {
+    transform: translate(384px, 481px);
+  }
+  .warehouses__item--izevsk {
+    transform: translate(325px, 442px);
+  }
+  .warehouses__item--krasnoyarsk {
+    transform: translate(641px, 458px);
+  }
+  .warehouses__item--kemerovo {
+    transform: translate(572px, 519px);
+  }
+  .warehouses__item--zabaikalsk {
+    transform: translate(728px, 507px);
+  }
+  .warehouses__item--blago {
+    transform: translate(812px, 566px);
+  }
+
+}
