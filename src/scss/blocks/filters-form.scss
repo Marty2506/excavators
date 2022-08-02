@@ -225,14 +225,35 @@
     position: absolute;
     top: 15px;
 
-    display: inline-flex;
-    width: 20px;
-    height: 20px;
+    padding-left: 25px;
 
-    background-image: url("@img/icons/select-arrow-blue.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotate(90deg);
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $primary-color;
     cursor: pointer;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: "";
+      width: 20px;
+      height: 20px;
+
+      background-image: url("@img/icons/select-arrow-blue.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+
+
+}
+
+.filters-form__apply-button {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

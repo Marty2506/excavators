@@ -148,11 +148,15 @@ absSelectButton.addEventListener('click', closeFsDropdown);
 // Открытие/закртыие фильтра в мобилке
 const showFiltersButton = document.querySelector('.filters-form__show-button');
 const hideFiltersButton = document.querySelector('.filters-form__back-button');
+const applyFiltersButton = document.querySelector('.filters-form__apply-button');
 
 showFiltersButton.addEventListener('click', () => {
   document.body.classList.toggle('filter-opened');
 });
 hideFiltersButton.addEventListener('click', () => {
+  document.body.classList.remove('filter-opened');
+});
+applyFiltersButton.addEventListener('click', () => {
   document.body.classList.remove('filter-opened');
 });
 
