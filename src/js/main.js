@@ -136,3 +136,11 @@ if (leasingCallbackButton) {
     document.querySelector('.modal--callback').classList.add('modal--open');
   })
 }
+
+const contactsCallbackButtons = document.querySelectorAll('.contacts__back-call');
+contactsCallbackButtons.forEach(contactsCallbackButton => {
+  contactsCallbackButton.addEventListener('click', (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    document.querySelector('.modal--callback').classList.add('modal--open');
+  })
+});
