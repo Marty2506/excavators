@@ -1,5 +1,11 @@
 .leasing-terms {
   margin-bottom: 50px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 183px;
+    padding-bottom: 50px;
+    background-color: #fbfbfb;
+  }
 }
 
 .leasing-terms__content {
