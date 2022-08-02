@@ -34,7 +34,7 @@
         <ul class="site-nav__list nav__list">
           {% for link in menu %}
             <li class="site-nav__item nav__item {% if link.hasDropdown %} nav__item--dropdown {% endif %}">
-              <a class="site-nav__link {% if link.href == page %} site-nav__link--active {% endif %} {% if link.href == "catalog" %} site-nav__link--catalog {% endif %} nav__link" href="{{ link.href }}.html">{{ link.title }}</a>
+              <a class="site-nav__link {% if link.href == page %} site-nav__link--active {% endif %} {% if link.href == "catalog" %} site-nav__link--catalog {% endif %} nav__link" {% if link.href != "catalog" %}href="{{ link.href }}.html"{% endif %} >{{ link.title }}</a>
               {% if link.href == "catalog"%}
                 <div class="site-nav__dropdown dropdown">
                   <ul class="dropdown__list">
