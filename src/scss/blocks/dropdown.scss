@@ -99,6 +99,15 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 49px;
+
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+  }
 }
 .dropdown__tab-main {
   display: grid;
