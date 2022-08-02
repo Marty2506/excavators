@@ -54,6 +54,7 @@
 
   @media (min-width: $desktop-width) {
     height: 175px;
+    justify-content: center;
   }
 
   & .feature__value {
