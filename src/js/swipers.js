@@ -258,8 +258,8 @@ const docsSwiperOptions = {
   watchSlidesProgress: true,
   speed: 700,
   navigation: {
-    nextEl: ".docs__swiper .docs__swiper-button--next",
-    prevEl: ".docs__swiper .docs__swiper-button--prev",
+    nextEl: ".docs__swiper-button--next",
+    prevEl: ".docs__swiper-button--prev",
     lockClass: "docs__swiper-button--lock",
     disabledClass: "docs__swiper-button--disabled",
   },

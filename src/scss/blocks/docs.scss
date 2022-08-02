@@ -1,4 +1,6 @@
-
+.docs__content {
+  position: relative;
+}
 
 .docs__title {
   margin-bottom: 15px;
@@ -6,13 +8,17 @@
 .docs__swiper {
   position: relative;
 
-  padding: 0 60px;
+  // padding: 0 60px;
 
   & .swiper-slide {
     opacity: 1;
   }
   & .swiper-slide-visible {
     opacity: 1;
+  }
+
+  @media (max-width: calc($desktop-width + 149px)) {
+    padding-bottom: 80px;
   }
 }
 .docs__list {
@@ -102,6 +108,13 @@
   cursor: pointer;
 
   transition: background-color 0.3s ease;
+
+  @media (max-width: calc($desktop-width + 149px)) {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+  }
 }
 .docs__swiper-button-icon {
   width: 30%;
@@ -112,6 +125,10 @@
 }
 .docs__swiper-button--prev {
   left: 0;
+
+  @media (min-width: calc($desktop-width + 150px)) {
+    left: -70px;
+  }
 
   background-color: $secondary-color;
   &:hover,
@@ -129,6 +146,13 @@
   right: 0;
 
   background-color: $primary-color;
+
+  @media (max-width: calc($desktop-width + 149px)) {
+    left: 50px;
+  }
+  @media (min-width: calc($desktop-width + 150px)) {
+    right: -70px;
+  }
 
   &:hover,
   &:focus {
