@@ -225,20 +225,22 @@
     position: absolute;
     top: 15px;
 
+    display: inline-flex;
     padding-left: 25px;
 
-    display: inline-flex;
-    font-family: inherit;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
+    font-family: inherit;
     color: $primary-color;
+
     cursor: pointer;
     &::before {
+      content: "";
       position: absolute;
       top: 50%;
       left: 0;
-      content: "";
+
       width: 20px;
       height: 20px;
 
@@ -248,8 +250,6 @@
       transform: translateY(-50%) rotate(90deg);
     }
   }
-
-
 }
 
 .filters-form__apply-button {

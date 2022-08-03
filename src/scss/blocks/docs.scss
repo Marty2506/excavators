@@ -126,11 +126,11 @@
 .docs__swiper-button--prev {
   left: 0;
 
+  background-color: $secondary-color;
+
   @media (min-width: calc($desktop-width + 150px)) {
     left: -70px;
   }
-
-  background-color: $secondary-color;
   &:hover,
   &:focus {
     background-color: $primary-color;

@@ -1,5 +1,6 @@
 .warehouses {
   margin-bottom: 20px;
+
   color: $dark-color;
 
   @media (min-width: $desktop-width) {
@@ -17,7 +18,6 @@
   @media (min-width: $desktop-width) {
     min-height: 745px;
   }
-
 }
 .warehouses__title {
   max-width: 196px;
@@ -27,9 +27,10 @@
   }
 }
 .warehouses__text {
+  display: none;
   margin: 0;
   padding: 0;
-  display: none;
+
   font-weight: 600;
   font-size: 20px;
   line-height: 25px;
@@ -39,25 +40,29 @@
   }
 }
 .warehouses__map {
-  margin: 0;
-  padding: 0;
   position: absolute;
   z-index: -1;
+
+  margin: 0;
+  padding: 0;
 
   @media (max-width: $max-mobile-width) {
     top: -25px;
     right: -17px;
+
     width: 55%;
   }
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     top: -25px;
     right: -170px;
+
     width: 90%;
   }
 
   @media (min-width: $desktop-width) {
     top: -25px;
     left: -108px;
+
     width: 1464px;
   }
 }
@@ -67,21 +72,22 @@
   }
 }
 .warehouses__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
   gap: 10px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    max-width: 50%;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 50%;
   }
 }
 .warehouses__item {
-
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 0;
@@ -90,27 +96,30 @@
 }
 .warehouses__link {
   display: inline-flex;
-  font-weight: 600;
   padding: 5px 10px;
+
+  font-weight: 600;
   font-size: 18px;
   line-height: 23px;
   color: $primary-color;
-  background-color: $secondary-color;
-  transition: all 0.5s ease;
   text-decoration: none;
+
+  background-color: $secondary-color;
+
+  transition: all 0.5s ease;
 
   &:hover,
   &:focus {
+    color: #ffffff;
+
     background-color: $primary-color;
-    color: #fff;
   }
   &:active {
     opacity: 0.7;
   }
 }
 
-.warehouses__item {
-}
+
 @media (min-width: $desktop-width) {
   .warehouses__item--moscow {
     transform: translate(99px, 475px);
@@ -160,5 +169,4 @@
   .warehouses__item--blago {
     transform: translate(812px, 566px);
   }
-
 }
